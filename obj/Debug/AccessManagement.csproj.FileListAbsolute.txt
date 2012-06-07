@@ -1,0 +1,45 @@
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.exe.config
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\CamView.Form1.resources
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.Properties.Resources.resources
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\ResGen.read.1.tlog
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\ResGen.write.1.tlog
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.exe.manifest
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.application
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.exe
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.pdb
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.exe.manifest
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.application
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.exe
+C:\Users\lauperr\Desktop\A_Template\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.pdb
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.exe.config
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.exe
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.pdb
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.exe.manifest
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.application
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.exe
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\bin\Debug\$safeprojectname$.pdb
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\CamView.Form1.resources
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.Properties.Resources.resources
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\ResGen.read.1.tlog
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\ResGen.write.1.tlog
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.exe.manifest
+C:\Users\lauperr\Desktop\AccessManagement Komponenten CSharp\obj\Debug\$safeprojectname$.application
+C:\Users\lauperr\Desktop\WebCamDemo\bin\Debug\$safeprojectname$.exe.config
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\$safeprojectname$.exe
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\$safeprojectname$.pdb
+C:\Users\lauperr\Desktop\WebCamDemo\bin\Debug\$safeprojectname$.exe.manifest
+C:\Users\lauperr\Desktop\WebCamDemo\bin\Debug\$safeprojectname$.application
+C:\Users\lauperr\Desktop\WebCamDemo\bin\Debug\$safeprojectname$.exe
+C:\Users\lauperr\Desktop\WebCamDemo\bin\Debug\$safeprojectname$.pdb
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\CamView.Form1.resources
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\$safeprojectname$.Properties.Resources.resources
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\ResGen.read.1.tlog
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\ResGen.write.1.tlog
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\$safeprojectname$.exe.manifest
+C:\Users\lauperr\Desktop\WebCamDemo\obj\Debug\$safeprojectname$.application
+T:\Public\Applikationsentwicklung\Shoppy\Code\bin\Debug\$safeprojectname$.exe.config
+T:\Public\Applikationsentwicklung\Shoppy\Code\obj\Debug\$safeprojectname$.exe
+T:\Public\Applikationsentwicklung\Shoppy\Code\obj\Debug\$safeprojectname$.pdb

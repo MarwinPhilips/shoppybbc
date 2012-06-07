@@ -1,0 +1,52 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>AccessManagement</Name>
+    <Description>&lt;Keine Beschreibung verfügbar&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AccessManagement</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="AccessManagement.csproj" File="AccessManagement.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="AccessManagement_TemporaryKey.pfx">AccessManagement_TemporaryKey.pfx</ProjectItem>
+      <Folder Name="AlarmSend" TargetFolderName="AlarmSend">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AlarmSender.cs">AlarmSender.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="AlarmSenderTest.cs">AlarmSenderTest.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="amdb.dtd">amdb.dtd</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="amdb1.xml">amdb1.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <Folder Name="CamView" TargetFolderName="CamView">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BytesReceiver.cs">BytesReceiver.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CamViewer.cs">CamViewer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CamViewerPicture.cs">CamViewerPicture.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CamViewerTest.cs">CamViewerTest.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Form1.cs">Form1.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Form1.Designer.cs">Form1.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Form1.resx">Form1.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PictureBytesHolder.cs">PictureBytesHolder.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Db" TargetFolderName="Db">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DataBase.cs">DataBase.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DataBaseTest.cs">DataBaseTest.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Record.cs">Record.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Resources.resx">Resources.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.settings">Settings.settings</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Settings.Designer.cs">Settings.Designer.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Resources" TargetFolderName="Resources" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="Settings.cs">Settings.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
