@@ -6,18 +6,18 @@ using System.Windows.Forms;
 
 namespace Shoppy.Database
 {
-	class Abfragen
+	static class Abfragen
     {
         private static string verbindung = "Data Source=127.0.0.1; User=root;Password=pw; Database=tierheim;";
         private static MySqlConnection conn = new MySqlConnection(verbindung);
-        private MySqlCommand command = conn.CreateCommand();
-        private MySqlDataReader reader;
+        private static MySqlCommand command = conn.CreateCommand();
+        private static MySqlDataReader reader;
         
         public Abfragen()
         {
         }
 
-        public string[,] Select(String query)
+        public static string[,] Select(String query)
         {
             setCommandText(query);
             command.CommandText = query;
@@ -60,7 +60,7 @@ namespace Shoppy.Database
             return rueckgabe;
         }
 
-        public void Insert(String query)
+        public static void Insert(String query)
         {
             setCommandText(query);
             try
@@ -76,16 +76,16 @@ namespace Shoppy.Database
             command.ExecuteNonQuery();
             conn.Close();
         }
-        public void Update(String query)
+        public static void Update(String query)
         {
             Insert(query);
         }
-        public void Delete(String query)
+        public static void Delete(String query)
         {
             Insert(query);
         }
 
-        private void setCommandText(String query)
+        private static void setCommandText(String query)
         {
             command.CommandText = query;
         }
