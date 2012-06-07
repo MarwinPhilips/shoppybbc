@@ -71,6 +71,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MySql.Web.dll</HintPath>
     </Reference>
+    <Reference Include="Phidget21.NET, Version=2.1.8.105, Culture=neutral, PublicKeyToken=c2b1f2a3594bce52, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Phidget21.NET.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -88,6 +92,10 @@
     </Compile>
     <Compile Include="CamViewerTest.cs" />
     <Compile Include="Database\Abfragen.cs" />
+    <Compile Include="Database\CamAdmin.cs" />
+    <Compile Include="Database\ClientAdmin.cs" />
+    <Compile Include="Database\ProduktAdmin.cs" />
+    <Compile Include="Database\SellAdmin.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +160,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\CamAdminView.resx">
+      <DependentUpon>CamAdminView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ClientAdminView.resx">
+      <DependentUpon>ClientAdminView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\SellView.resx">
       <DependentUpon>SellView.cs</DependentUpon>
     </EmbeddedResource>

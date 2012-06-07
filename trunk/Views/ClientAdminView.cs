@@ -14,5 +14,12 @@ namespace Shoppy.Views
 		{
 			InitializeComponent();
 		}
+
+
+
+        private void ClientAdminView_Load(object sender, EventArgs e)
+        {
+
+        }
 	}
 }
