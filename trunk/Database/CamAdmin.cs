@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Shoppy.Database
 {
-	class CamAdmin : Abfragen
+	class CamAdmin
 	{
         public string[,] getCams()
         {
-            string[,] returner = Select("");
+            string[,] returner = Abfragen.Select("");
             return returner;
         }
 	}

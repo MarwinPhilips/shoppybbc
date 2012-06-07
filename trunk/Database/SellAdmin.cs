@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Shoppy.Database
 {
-	class SellAdmin : Abfragen
+	class SellAdmin
 	{
 	}
 }
