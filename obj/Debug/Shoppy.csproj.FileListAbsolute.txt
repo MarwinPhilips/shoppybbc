@@ -16,3 +16,6 @@ T:\Public\Applikationsentwicklung\Shoppy\Code\obj\Debug\shoppy.exe.manifest
 T:\Public\Applikationsentwicklung\Shoppy\Code\obj\Debug\shoppy.application
 T:\Public\Applikationsentwicklung\Shoppy\Code\obj\Debug\shoppy.exe
 T:\Public\Applikationsentwicklung\Shoppy\Code\obj\Debug\shoppy.pdb
+D:\Shoppy\shoppybbc\bin\Debug\shoppy.exe.config
+D:\Shoppy\shoppybbc\obj\Debug\shoppy.exe
+D:\Shoppy\shoppybbc\obj\Debug\shoppy.pdb
