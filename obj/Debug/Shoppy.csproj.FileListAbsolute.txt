@@ -59,3 +59,4 @@ C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\shoppy.application
 C:\Users\eprudd\Desktop\Neuer Ordner\bin\Debug\shoppy.pdb
 C:\Users\eprudd\Desktop\Shoppy\obj\Debug\Shoppy.Views.CamAdminView.resources
 C:\Users\eprudd\Desktop\Shoppy\obj\Debug\Shoppy.Views.ClientAdminView.resources
+C:\Users\eprudd\Desktop\Shoppy\obj\Debug\Shoppy.Views.SurveyViewCamSwitcher.resources

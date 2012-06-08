@@ -34,7 +34,6 @@
             this.btnNewClient = new System.Windows.Forms.Button();
             this.txtUpdateVorname = new System.Windows.Forms.TextBox();
             this.txtUpdateRFID = new System.Windows.Forms.TextBox();
-            this.txtNewRFID = new System.Windows.Forms.TextBox();
             this.txtNewVorname = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +53,7 @@
             // 
             // btnUpdateClient
             // 
-            this.btnUpdateClient.Location = new System.Drawing.Point(503, 62);
+            this.btnUpdateClient.Location = new System.Drawing.Point(501, 62);
             this.btnUpdateClient.Name = "btnUpdateClient";
             this.btnUpdateClient.Size = new System.Drawing.Size(178, 23);
             this.btnUpdateClient.TabIndex = 0;
@@ -73,7 +72,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(695, 297);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Löschen
             // 
@@ -83,7 +83,7 @@
             // 
             // btnNewClient
             // 
-            this.btnNewClient.Location = new System.Drawing.Point(503, 143);
+            this.btnNewClient.Location = new System.Drawing.Point(501, 143);
             this.btnNewClient.Name = "btnNewClient";
             this.btnNewClient.Size = new System.Drawing.Size(179, 20);
             this.btnNewClient.TabIndex = 2;
@@ -93,7 +93,7 @@
             // 
             // txtUpdateVorname
             // 
-            this.txtUpdateVorname.Location = new System.Drawing.Point(200, 62);
+            this.txtUpdateVorname.Location = new System.Drawing.Point(198, 62);
             this.txtUpdateVorname.Name = "txtUpdateVorname";
             this.txtUpdateVorname.Size = new System.Drawing.Size(99, 20);
             this.txtUpdateVorname.TabIndex = 4;
@@ -102,19 +102,13 @@
             // 
             this.txtUpdateRFID.Location = new System.Drawing.Point(3, 62);
             this.txtUpdateRFID.Name = "txtUpdateRFID";
-            this.txtUpdateRFID.Size = new System.Drawing.Size(86, 20);
+            this.txtUpdateRFID.ReadOnly = true;
+            this.txtUpdateRFID.Size = new System.Drawing.Size(85, 20);
             this.txtUpdateRFID.TabIndex = 5;
-            // 
-            // txtNewRFID
-            // 
-            this.txtNewRFID.Location = new System.Drawing.Point(3, 143);
-            this.txtNewRFID.Name = "txtNewRFID";
-            this.txtNewRFID.Size = new System.Drawing.Size(86, 20);
-            this.txtNewRFID.TabIndex = 9;
             // 
             // txtNewVorname
             // 
-            this.txtNewVorname.Location = new System.Drawing.Point(200, 143);
+            this.txtNewVorname.Location = new System.Drawing.Point(198, 143);
             this.txtNewVorname.Name = "txtNewVorname";
             this.txtNewVorname.Size = new System.Drawing.Size(99, 20);
             this.txtNewVorname.TabIndex = 8;
@@ -127,9 +121,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtNewRFID, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewVorname, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtUpdateRFID, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtUpdateVorname, 2, 1);
@@ -159,7 +152,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(404, 0);
+            this.label1.Location = new System.Drawing.Point(402, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 21;
@@ -168,7 +161,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 0);
+            this.label2.Location = new System.Drawing.Point(94, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 12;
@@ -177,7 +170,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(200, 0);
+            this.label3.Location = new System.Drawing.Point(198, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 13;
@@ -185,7 +178,7 @@
             // 
             // txtUpdateGeld
             // 
-            this.txtUpdateGeld.Location = new System.Drawing.Point(305, 62);
+            this.txtUpdateGeld.Location = new System.Drawing.Point(303, 62);
             this.txtUpdateGeld.Name = "txtUpdateGeld";
             this.txtUpdateGeld.Size = new System.Drawing.Size(93, 20);
             this.txtUpdateGeld.TabIndex = 14;
@@ -193,7 +186,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(305, 0);
+            this.label4.Location = new System.Drawing.Point(303, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 15;
@@ -201,7 +194,7 @@
             // 
             // txtNewGeld
             // 
-            this.txtNewGeld.Location = new System.Drawing.Point(305, 143);
+            this.txtNewGeld.Location = new System.Drawing.Point(303, 143);
             this.txtNewGeld.Name = "txtNewGeld";
             this.txtNewGeld.Size = new System.Drawing.Size(93, 20);
             this.txtNewGeld.TabIndex = 16;
@@ -217,30 +210,30 @@
             // 
             // txtUpdatePasswort
             // 
-            this.txtUpdatePasswort.Location = new System.Drawing.Point(404, 62);
+            this.txtUpdatePasswort.Location = new System.Drawing.Point(402, 62);
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
             this.txtUpdatePasswort.Size = new System.Drawing.Size(93, 20);
             this.txtUpdatePasswort.TabIndex = 17;
             // 
             // txtNewPasswort
             // 
-            this.txtNewPasswort.Location = new System.Drawing.Point(404, 143);
+            this.txtNewPasswort.Location = new System.Drawing.Point(402, 143);
             this.txtNewPasswort.Name = "txtNewPasswort";
             this.txtNewPasswort.Size = new System.Drawing.Size(93, 20);
             this.txtNewPasswort.TabIndex = 18;
             // 
             // txtUpdateName
             // 
-            this.txtUpdateName.Location = new System.Drawing.Point(95, 62);
+            this.txtUpdateName.Location = new System.Drawing.Point(94, 62);
             this.txtUpdateName.Name = "txtUpdateName";
-            this.txtUpdateName.Size = new System.Drawing.Size(99, 20);
+            this.txtUpdateName.Size = new System.Drawing.Size(98, 20);
             this.txtUpdateName.TabIndex = 19;
             // 
             // txtNewName
             // 
-            this.txtNewName.Location = new System.Drawing.Point(95, 143);
+            this.txtNewName.Location = new System.Drawing.Point(94, 143);
             this.txtNewName.Name = "txtNewName";
-            this.txtNewName.Size = new System.Drawing.Size(99, 20);
+            this.txtNewName.Size = new System.Drawing.Size(98, 20);
             this.txtNewName.TabIndex = 20;
             // 
             // ClientAdminView
@@ -266,7 +259,6 @@
         private System.Windows.Forms.Button btnNewClient;
         private System.Windows.Forms.TextBox txtUpdateVorname;
         private System.Windows.Forms.TextBox txtUpdateRFID;
-        private System.Windows.Forms.TextBox txtNewRFID;
         private System.Windows.Forms.TextBox txtNewVorname;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label Anzeigename;
