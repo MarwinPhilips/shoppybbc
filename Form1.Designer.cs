@@ -42,9 +42,9 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.sellAdminView1 = new Shoppy.Views.SellAdminView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.camAdminView2 = new Shoppy.Views.CamAdminView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.sellerAdminView1 = new Shoppy.Views.SellerAdminView();
-            this.camAdminView2 = new Shoppy.Views.CamAdminView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -174,7 +174,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(184, 48);
+            this.tabPage6.Size = new System.Drawing.Size(798, 581);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sell";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -192,10 +192,18 @@
             this.tabPage7.Controls.Add(this.camAdminView2);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(798, 581);
+            this.tabPage7.Size = new System.Drawing.Size(184, 48);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Survey";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // camAdminView2
+            // 
+            this.camAdminView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.camAdminView2.Location = new System.Drawing.Point(0, 0);
+            this.camAdminView2.Name = "camAdminView2";
+            this.camAdminView2.Size = new System.Drawing.Size(798, 581);
+            this.camAdminView2.TabIndex = 0;
             // 
             // tabPage8
             // 
@@ -214,14 +222,6 @@
             this.sellerAdminView1.Name = "sellerAdminView1";
             this.sellerAdminView1.Size = new System.Drawing.Size(798, 581);
             this.sellerAdminView1.TabIndex = 0;
-            // 
-            // camAdminView2
-            // 
-            this.camAdminView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.camAdminView2.Location = new System.Drawing.Point(0, 0);
-            this.camAdminView2.Name = "camAdminView2";
-            this.camAdminView2.Size = new System.Drawing.Size(798, 581);
-            this.camAdminView2.TabIndex = 0;
             // 
             // Form1
             // 

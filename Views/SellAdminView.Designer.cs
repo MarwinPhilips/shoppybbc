@@ -58,7 +58,7 @@
             // 
             // txtNewPreis
             // 
-            this.txtNewPreis.Location = new System.Drawing.Point(299, 143);
+            this.txtNewPreis.Location = new System.Drawing.Point(297, 143);
             this.txtNewPreis.Name = "txtNewPreis";
             this.txtNewPreis.Size = new System.Drawing.Size(99, 20);
             this.txtNewPreis.TabIndex = 8;
@@ -72,7 +72,7 @@
             // 
             // txtUpdatePreis
             // 
-            this.txtUpdatePreis.Location = new System.Drawing.Point(299, 62);
+            this.txtUpdatePreis.Location = new System.Drawing.Point(297, 62);
             this.txtUpdatePreis.Name = "txtUpdatePreis";
             this.txtUpdatePreis.Size = new System.Drawing.Size(99, 20);
             this.txtUpdatePreis.TabIndex = 4;
@@ -80,7 +80,7 @@
             // Barcode
             // 
             this.Barcode.AutoSize = true;
-            this.Barcode.Location = new System.Drawing.Point(141, 0);
+            this.Barcode.Location = new System.Drawing.Point(140, 0);
             this.Barcode.Name = "Barcode";
             this.Barcode.Size = new System.Drawing.Size(47, 13);
             this.Barcode.TabIndex = 12;
@@ -89,7 +89,7 @@
             // Preis
             // 
             this.Preis.AutoSize = true;
-            this.Preis.Location = new System.Drawing.Point(299, 0);
+            this.Preis.Location = new System.Drawing.Point(297, 0);
             this.Preis.Name = "Preis";
             this.Preis.Size = new System.Drawing.Size(30, 13);
             this.Preis.TabIndex = 13;
@@ -97,7 +97,7 @@
             // 
             // txtUpdateVorrat
             // 
-            this.txtUpdateVorrat.Location = new System.Drawing.Point(404, 62);
+            this.txtUpdateVorrat.Location = new System.Drawing.Point(402, 62);
             this.txtUpdateVorrat.Name = "txtUpdateVorrat";
             this.txtUpdateVorrat.Size = new System.Drawing.Size(93, 20);
             this.txtUpdateVorrat.TabIndex = 14;
@@ -105,7 +105,7 @@
             // Vorrat
             // 
             this.Vorrat.AutoSize = true;
-            this.Vorrat.Location = new System.Drawing.Point(404, 0);
+            this.Vorrat.Location = new System.Drawing.Point(402, 0);
             this.Vorrat.Name = "Vorrat";
             this.Vorrat.Size = new System.Drawing.Size(35, 13);
             this.Vorrat.TabIndex = 15;
@@ -113,7 +113,7 @@
             // 
             // txtNewVorrat
             // 
-            this.txtNewVorrat.Location = new System.Drawing.Point(404, 143);
+            this.txtNewVorrat.Location = new System.Drawing.Point(402, 143);
             this.txtNewVorrat.Name = "txtNewVorrat";
             this.txtNewVorrat.Size = new System.Drawing.Size(93, 20);
             this.txtNewVorrat.TabIndex = 16;
@@ -129,21 +129,23 @@
             // 
             // btnUpdateSell
             // 
-            this.btnUpdateSell.Location = new System.Drawing.Point(503, 62);
+            this.btnUpdateSell.Location = new System.Drawing.Point(501, 62);
             this.btnUpdateSell.Name = "btnUpdateSell";
             this.btnUpdateSell.Size = new System.Drawing.Size(178, 23);
             this.btnUpdateSell.TabIndex = 0;
             this.btnUpdateSell.Text = "Artikel anpassen";
             this.btnUpdateSell.UseVisualStyleBackColor = true;
+            this.btnUpdateSell.Click += new System.EventHandler(this.btnUpdateSell_Click);
             // 
             // btnNewSell
             // 
-            this.btnNewSell.Location = new System.Drawing.Point(503, 143);
+            this.btnNewSell.Location = new System.Drawing.Point(501, 143);
             this.btnNewSell.Name = "btnNewSell";
             this.btnNewSell.Size = new System.Drawing.Size(179, 20);
             this.btnNewSell.TabIndex = 2;
             this.btnNewSell.Text = "Neuer Artikel erfassen";
             this.btnNewSell.UseVisualStyleBackColor = true;
+            this.btnNewSell.Click += new System.EventHandler(this.btnNewSell_Click);
             // 
             // dataGridView1
             // 
@@ -166,14 +168,14 @@
             // 
             // txtUpdateBarcode
             // 
-            this.txtUpdateBarcode.Location = new System.Drawing.Point(141, 62);
+            this.txtUpdateBarcode.Location = new System.Drawing.Point(140, 62);
             this.txtUpdateBarcode.Name = "txtUpdateBarcode";
             this.txtUpdateBarcode.Size = new System.Drawing.Size(99, 20);
             this.txtUpdateBarcode.TabIndex = 19;
             // 
             // txtNewBarcode
             // 
-            this.txtNewBarcode.Location = new System.Drawing.Point(141, 143);
+            this.txtNewBarcode.Location = new System.Drawing.Point(140, 143);
             this.txtNewBarcode.Name = "txtNewBarcode";
             this.txtNewBarcode.Size = new System.Drawing.Size(99, 20);
             this.txtNewBarcode.TabIndex = 20;
@@ -185,7 +187,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.23383F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.txtNewProdukt, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewPreis, 2, 2);
@@ -211,13 +213,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(695, 227);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
-            // CamAdminView
+            // SellAdminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "CamAdminView";
+            this.Name = "SellAdminView";
             this.Size = new System.Drawing.Size(695, 530);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
