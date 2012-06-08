@@ -9,7 +9,7 @@ namespace Shoppy.Database
 	static class Abfragen
     {
         public static string verbindung = "Data Source=172.16.2.63; User=shoppy;Password=bbc; Database=shoppy;";
-        private static MySqlConnection conn = new MySqlConnection(verbindung);
+        public static MySqlConnection conn = new MySqlConnection(verbindung);
         private static MySqlCommand command = conn.CreateCommand();
         private static MySqlDataReader reader;
         
@@ -66,7 +66,9 @@ namespace Shoppy.Database
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
+                conn.Close();
                 MessageBox.Show(ex.Message);
+                
                 return;
             }
 
