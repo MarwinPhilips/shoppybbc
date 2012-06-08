@@ -70,5 +70,17 @@ namespace Shoppy.Views
             FillData();
         }
 
+        private void btnUpdateCam_Click(object sender, EventArgs e)
+        {
+            database.UpdateCam(btnUpdateCam.Tag.ToString(), txtUpdateIP.Text, txtUpdateAnzeigename.Text, txtUpdateLoginname.Text, txtUpdatePasswort.Text);
+            FillData();
+        }
+
+        private void btnNewCam_Click(object sender, EventArgs e)
+        {
+            database.NewCam(txtNewIP.Text, txtNewAnzeigename.Text, txtNewLoginname.Text, txtNewPasswort.Text);
+            FillData();
+        }
+
 	}
 }
