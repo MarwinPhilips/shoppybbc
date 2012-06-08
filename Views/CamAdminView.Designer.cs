@@ -57,6 +57,7 @@
             this.btnUpdateCam.TabIndex = 0;
             this.btnUpdateCam.Text = "Kameraeinstellung anpassen";
             this.btnUpdateCam.UseVisualStyleBackColor = true;
+            this.btnUpdateCam.Click += new System.EventHandler(this.btnUpdateCam_Click);
             // 
             // dataGridView1
             // 
@@ -86,6 +87,7 @@
             this.btnNewCam.TabIndex = 2;
             this.btnNewCam.Text = "Neue Kamera erfassen";
             this.btnNewCam.UseVisualStyleBackColor = true;
+            this.btnNewCam.Click += new System.EventHandler(this.btnNewCam_Click);
             // 
             // txtUpdateAnzeigename
             // 
