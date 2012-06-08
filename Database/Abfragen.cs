@@ -8,14 +8,11 @@ namespace Shoppy.Database
 {
 	static class Abfragen
     {
-        private static string verbindung = "Data Source=127.0.0.1; User=root;Password=pw; Database=tierheim;";
+        public static string verbindung = "Data Source=172.16.2.63; User=shoppy;Password=bbc; Database=shoppy;";
         private static MySqlConnection conn = new MySqlConnection(verbindung);
         private static MySqlCommand command = conn.CreateCommand();
         private static MySqlDataReader reader;
         
-        public Abfragen()
-        {
-        }
 
         public static string[,] Select(String query)
         {
