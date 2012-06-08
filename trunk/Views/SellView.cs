@@ -17,7 +17,10 @@ namespace Shoppy.Views
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            if (txtInputBarcode.Text.Length == 12) {
+                /*...*/
 
+            }
         }
 	}
 }

@@ -8,7 +8,8 @@ using System.Windows.Forms;
 
 namespace Shoppy.Database
 {
-    class SellAdmin
+    class SellAdmin042000062008
+
     {
         public DataTable GetSell()
         {
