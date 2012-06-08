@@ -44,7 +44,7 @@ namespace Shoppy.Views
             txtUpdateVorname.Text = row.Cells[4].Value.ToString();
             txtUpdateRFID.Text = row.Cells[2].Value.ToString();
             txtUpdatePasswort.Text = row.Cells[5].Value.ToString();
-            btnUpdateCam.Tag = row.Cells[1].Value.ToString();
+            btnUpdateClient.Tag = row.Cells[1].Value.ToString();
         }
 
         private bool BinEineZeile(DataGridViewCellEventArgs e)
@@ -68,6 +68,18 @@ namespace Shoppy.Views
         private void DeleteRow(DataGridViewCellEventArgs e)
         {
             database.DeleteClient(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+            FillData();
+        }
+
+        private void btnUpdateClient_Click(object sender, EventArgs e)
+        {
+            database.UpdateClient(txtUpdateRFID.Text, txtUpdateName.Text, txtUpdateVorname.Text, txtUpdateGeld.Text, txtUpdatePasswort.Text);
+            FillData();
+        }
+
+        private void btnNewClient_Click(object sender, EventArgs e)
+        {
+            database.NewClient(txtUpdateRFID.Text, txtUpdateName.Text, txtUpdateVorname.Text, txtUpdateGeld.Text, txtUpdatePasswort.Text);
             FillData();
         }
 
