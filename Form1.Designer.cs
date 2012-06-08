@@ -30,20 +30,19 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.sellView1 = new Shoppy.Views.SellView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.payment_View1 = new Shoppy.Views.Payment_View();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.surveyView1 = new Shoppy.Views.SurveyView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.clientAdminView1 = new Shoppy.Views.ClientAdminView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.sellAdminView1 = new Shoppy.Views.SellAdminView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.clientAdminView1 = new Shoppy.Views.ClientAdminView();
-            this.sellAdminView1 = new Shoppy.Views.SellAdminView();
-            this.camAdminView1 = new Shoppy.Views.CamAdminView();
             this.sellerAdminView1 = new Shoppy.Views.SellerAdminView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -53,7 +52,6 @@
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +79,14 @@
             this.tabPage1.Text = "Sell";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // sellView1
+            // 
+            this.sellView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sellView1.Location = new System.Drawing.Point(3, 3);
+            this.sellView1.Name = "sellView1";
+            this.sellView1.Size = new System.Drawing.Size(800, 601);
+            this.sellView1.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.payment_View1);
@@ -92,6 +98,14 @@
             this.tabPage2.Text = "Payment";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // payment_View1
+            // 
+            this.payment_View1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.payment_View1.Location = new System.Drawing.Point(3, 3);
+            this.payment_View1.Name = "payment_View1";
+            this.payment_View1.Size = new System.Drawing.Size(186, 68);
+            this.payment_View1.TabIndex = 0;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.surveyView1);
@@ -102,6 +116,14 @@
             this.tabPage3.Text = "Survey";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // surveyView1
+            // 
+            this.surveyView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.surveyView1.Location = new System.Drawing.Point(0, 0);
+            this.surveyView1.Name = "surveyView1";
+            this.surveyView1.Size = new System.Drawing.Size(192, 74);
+            this.surveyView1.TabIndex = 0;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.tabControl2);
@@ -111,30 +133,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Settings";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // sellView1
-            // 
-            this.sellView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sellView1.Location = new System.Drawing.Point(3, 3);
-            this.sellView1.Name = "sellView1";
-            this.sellView1.Size = new System.Drawing.Size(800, 601);
-            this.sellView1.TabIndex = 0;
-            // 
-            // payment_View1
-            // 
-            this.payment_View1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.payment_View1.Location = new System.Drawing.Point(3, 3);
-            this.payment_View1.Name = "payment_View1";
-            this.payment_View1.Size = new System.Drawing.Size(800, 601);
-            this.payment_View1.TabIndex = 0;
-            // 
-            // surveyView1
-            // 
-            this.surveyView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.surveyView1.Location = new System.Drawing.Point(0, 0);
-            this.surveyView1.Name = "surveyView1";
-            this.surveyView1.Size = new System.Drawing.Size(806, 607);
-            this.surveyView1.TabIndex = 0;
             // 
             // tabControl2
             // 
@@ -160,37 +158,6 @@
             this.tabPage5.Text = "Client";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.sellAdminView1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(798, 581);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Sell";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.camAdminView1);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(798, 581);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "Survey";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.sellerAdminView1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(798, 581);
-            this.tabPage8.TabIndex = 3;
-            this.tabPage8.Text = "Seller";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
             // clientAdminView1
             // 
             this.clientAdminView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -198,6 +165,17 @@
             this.clientAdminView1.Name = "clientAdminView1";
             this.clientAdminView1.Size = new System.Drawing.Size(792, 575);
             this.clientAdminView1.TabIndex = 0;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.sellAdminView1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(184, 48);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Sell";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // sellAdminView1
             // 
@@ -207,13 +185,24 @@
             this.sellAdminView1.Size = new System.Drawing.Size(792, 575);
             this.sellAdminView1.TabIndex = 0;
             // 
-            // camAdminView1
+            // tabPage7
             // 
-            this.camAdminView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.camAdminView1.Location = new System.Drawing.Point(0, 0);
-            this.camAdminView1.Name = "camAdminView1";
-            this.camAdminView1.Size = new System.Drawing.Size(798, 581);
-            this.camAdminView1.TabIndex = 0;
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(184, 48);
+            this.tabPage7.TabIndex = 2;
+            this.tabPage7.Text = "Survey";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.sellerAdminView1);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(184, 48);
+            this.tabPage8.TabIndex = 3;
+            this.tabPage8.Text = "Seller";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // sellerAdminView1
             // 
@@ -239,7 +228,6 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
 

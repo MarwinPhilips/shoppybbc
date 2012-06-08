@@ -146,6 +146,12 @@
     <Compile Include="Views\SurveyView.Designer.cs">
       <DependentUpon>SurveyView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SurveyViewCamSwitcher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SurveyViewCamSwitcher.Designer.cs">
+      <DependentUpon>SurveyViewCamSwitcher.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Form1.cs</DependentUpon>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SurveyView.resx">
       <DependentUpon>SurveyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SurveyViewCamSwitcher.resx">
+      <DependentUpon>SurveyViewCamSwitcher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -13,6 +13,16 @@ namespace Shoppy.Views
 		public SurveyView()
 		{
 			InitializeComponent();
+
+            
 		}
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+        
+
+        
 	}
 }
