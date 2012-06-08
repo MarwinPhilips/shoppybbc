@@ -79,9 +79,73 @@ namespace Shoppy.Views
 
         private void btnNewClient_Click(object sender, EventArgs e)
         {
-            database.NewClient(txtNewRFID.Text, txtNewName.Text, txtNewVorname.Text, txtNewGeld.Text, txtNewPasswort.Text);
-            FillData();
+            if (Check(txtNewRFID.Text) == false)
+            {
+                MessageBox.Show("Die RFID "+ txtNewRFID.Text +" ist bereits gebucht");
+            }
+            else
+            {
+                database.NewClient(txtNewRFID.Text, txtNewName.Text, txtNewVorname.Text, txtNewGeld.Text, txtNewPasswort.Text);
+                FillData();
+            }
         }
+        
+        private bool Check(string id)
+        {
+            for (int i = 0; i < dataGridView1.RowCount-1; i++)
+            {
+                  
+                if(dataGridView1.Rows[i].Cells[1].Value.ToString().Equals(id)){
+                    return false;
+                }
+            }
+            return true;
+
+        }
+
+        private bool isnumber(string id)
+        {
+            if (txtNewGeld.Text.Length != 0 || txtUpdateGeld.Text.Length != 0)
+            {
+                try
+                {
+                    double.Parse(id);
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void txtNewGeld_TextChanged(object sender, EventArgs e)
+        {
+            if (isnumber(txtNewGeld.Text) == false)
+            {
+                MessageBox.Show("Es können nur Zahlen eingegeben werden");
+                
+                if (txtNewGeld.Text.Length != 0)
+                {
+                    txtNewGeld.Text = txtNewGeld.Text.Remove(txtNewGeld.Text.Length - 1);
+                }
+            }
+        }
+
+        private void txtUpdateGeld_TextChanged(object sender, EventArgs e)
+        {
+
+            if (isnumber(txtUpdateGeld.Text) == false)
+            {
+                MessageBox.Show("Es können nur Zahlen eingegeben werden");
+                if (txtUpdateGeld.Text.Length != 0)
+                {
+                    txtUpdateGeld.Text = txtUpdateGeld.Text.Remove(txtUpdateGeld.Text.Length - 1);
+                }
+            }
+        }
+
+
 
     }
 }
