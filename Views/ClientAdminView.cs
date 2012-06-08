@@ -105,7 +105,7 @@ namespace Shoppy.Views
 
         private bool isnumber(string id)
         {
-            if (txtNewGeld.Text.Length != 0 || txtUpdateGeld.Text.Length != 0)
+            if (txtNewGeld.Text.Length != 0 || txtUpdateGeld.Text.Length != 0 || txtNewRFID.Text.Length != 0)
             {
                 try
                 {
@@ -141,6 +141,19 @@ namespace Shoppy.Views
                 if (txtUpdateGeld.Text.Length != 0)
                 {
                     txtUpdateGeld.Text = txtUpdateGeld.Text.Remove(txtUpdateGeld.Text.Length - 1);
+                }
+            }
+        }
+
+        private void txtNewRFID_TextChanged(object sender, EventArgs e)
+        {
+            if (isnumber(txtNewRFID.Text) == false)
+            {
+                MessageBox.Show("Es können nur Zahlen eingegeben werden");
+
+                if (txtNewRFID.Text.Length != 0)
+                {
+                    txtNewRFID.Text = txtNewRFID.Text.Remove(txtNewRFID.Text.Length - 1);
                 }
             }
         }
