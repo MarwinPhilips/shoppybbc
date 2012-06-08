@@ -72,7 +72,7 @@ namespace Shoppy.Views
 
         private void btnUpdateSell_Click(object sender, EventArgs e) 
         {
-            database.UpdateSell(btnUpdateSell.Tag.ToString(), txtNewProdukt.Text, txtUpdateBarcode.Text, txtUpdatePreis.Text, txtUpdateVorrat.Text);
+            database.UpdateSell(btnUpdateSell.Tag.ToString(), txtUpdateProdukt.Text, txtUpdateBarcode.Text, txtUpdatePreis.Text, txtUpdateVorrat.Text);
             FillData();
         }
 
