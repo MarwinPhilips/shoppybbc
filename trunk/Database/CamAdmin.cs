@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace Shoppy.Database
 {
 	class CamAdmin
 	{
-        string selectquery = "select id_kamera as Kamera-ID, IP,Anzeigename,Loginname,Passwort from kamera";
         public DataTable GetCams()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter(selectquery, Abfragen.verbindung);
+            MySqlDataAdapter da = new MySqlDataAdapter("select id_kamera as KameraID, IP,Anzeigename,Loginname,Passwort from kamera", Abfragen.verbindung);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -28,9 +28,25 @@ namespace Shoppy.Database
                "' where id_kamera='"+id+"';");
         }
 
-        internal void NewCam(string ip, string anzeigename, string loginname, string passwort)
+        public void NewCam(string ip, string anzeigename, string loginname, string passwort)
         {
             Abfragen.Insert("insert into kamera(ip,anzeigename,loginname,passwort) values('" + ip + "','" + anzeigename + "','" + loginname + "','" + passwort + "');");
         }
+
+        public DataTable getSuveyViewCams()
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("select id_Kamera as ID,Anzeigename from kamera", Abfragen.verbindung);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public DataRow GetSingleCamInfo(string id)
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("select Anzeigename, id_Kamera as ID from kamera", Abfragen.verbindung);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt.Rows[0];
+        }
+
     }
 }
