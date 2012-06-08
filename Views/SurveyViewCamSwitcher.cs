@@ -16,12 +16,8 @@ namespace Shoppy.Views
 		public SurveyViewCamSwitcher()
 		{
 			InitializeComponent();
-		}
-
-        private void SurveyViewCamSwitcher_Load(object sender, EventArgs e)
-        {
             FillCams();
-        }
+		}
 
         private void SetCam(string id)
         {
@@ -29,16 +25,19 @@ namespace Shoppy.Views
             cam.Url = row.ItemArray[0].ToString();
             cam.User = row.ItemArray[1].ToString();
             cam.Password = row.ItemArray[2].ToString();
+            cam.BeginInit();
+            cam.EndInit();
+            MessageBox.Show(row.ItemArray[0].ToString());
         }
 
         private void FillCams()
         {
-            dataGridView1.DataSource =  database.getSuveyViewCams();
+            dataGridView1.DataSource =  database.getSurveyViewCams();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            SetCam(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+            SetCam(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
 	}
 }

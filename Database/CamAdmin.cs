@@ -33,16 +33,16 @@ namespace Shoppy.Database
             Abfragen.Insert("insert into kamera(ip,anzeigename,loginname,passwort) values('" + ip + "','" + anzeigename + "','" + loginname + "','" + passwort + "');");
         }
 
-        public DataTable getSuveyViewCams()
+        public DataTable getSurveyViewCams()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("select id_Kamera as ID,Anzeigename from kamera", Abfragen.verbindung);
+            MySqlDataAdapter da = new MySqlDataAdapter("select id_Kamera as ID,Anzeigename as Kameraname from kamera", Abfragen.verbindung);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
         }
         public DataRow GetSingleCamInfo(string id)
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("select Anzeigename, id_Kamera as ID from kamera", Abfragen.verbindung);
+            MySqlDataAdapter da = new MySqlDataAdapter("select ip,Loginname,passwort from kamera where id_Kamera ='"+id+"';", Abfragen.verbindung);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt.Rows[0];
