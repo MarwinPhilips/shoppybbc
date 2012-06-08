@@ -269,6 +269,13 @@ namespace CamView
             }
         }
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            this.ResumeLayout(false);
+
+        }
+
     }
 
 

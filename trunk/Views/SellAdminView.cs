@@ -82,5 +82,10 @@ namespace Shoppy.Views
             FillData();
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }
