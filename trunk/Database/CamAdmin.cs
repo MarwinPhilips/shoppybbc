@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace Shoppy.Database
 {
 	class CamAdmin
 	{
-        public string[,] getCams()
+        public DataTable getCams()
         {
-            string[,] returner = Abfragen.Select("");
-            return returner;
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from kamera", Abfragen.verbindung);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
 	}
 }
