@@ -78,14 +78,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="shoppy.exe" size="25088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Phidget21.NET.dll" size="141312">
+      <assemblyIdentity name="Phidget21.NET" version="2.1.8.105" publicKeyToken="C2B1F2A3594BCE52" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>zZxu9seGllZgYIHsr/g0GwXCUdc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="shoppy.exe" size="35840">
       <assemblyIdentity name="shoppy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>x+JrAv2pAPOVdVW7ab2BF6vW638=</dsig:DigestValue>
+        <dsig:DigestValue>NNJEEsZ6b+UT8a1BoM+0bUgNVB4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

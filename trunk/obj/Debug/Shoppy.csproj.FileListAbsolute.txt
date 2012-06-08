@@ -37,3 +37,23 @@ C:\Users\eprudd\Desktop\Shoppy\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\eprudd\Desktop\Shoppy\obj\Debug\ResGen.write.1.tlog
 C:\Users\eprudd\Desktop\Shoppy\obj\Debug\shoppy.exe.manifest
 C:\Users\eprudd\Desktop\Shoppy\obj\Debug\shoppy.application
+C:\Users\eprudd\Desktop\Neuer Ordner\bin\Debug\shoppy.exe.config
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\shoppy.exe
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\shoppy.pdb
+C:\Users\eprudd\Desktop\Neuer Ordner\bin\Debug\shoppy.exe.manifest
+C:\Users\eprudd\Desktop\Neuer Ordner\bin\Debug\shoppy.application
+C:\Users\eprudd\Desktop\Neuer Ordner\bin\Debug\shoppy.exe
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\CamView.Form1.resources
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\$safeprojectname$.Properties.Resources.resources
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\Shoppy.Views.CamAdminView.resources
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\Shoppy.Views.ClientAdminView.resources
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\Shoppy.Views.SellView.resources
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\Shoppy.Views.SurveyView.resources
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\ResGen.read.1.tlog
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\ResGen.write.1.tlog
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\shoppy.exe.manifest
+C:\Users\eprudd\Desktop\Neuer Ordner\obj\Debug\shoppy.application
+C:\Users\eprudd\Desktop\Neuer Ordner\bin\Debug\shoppy.pdb
