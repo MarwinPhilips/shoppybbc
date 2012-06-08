@@ -27,9 +27,9 @@ namespace Shoppy.Database
                "' where RFID='" + RFID + "';");
         }
 
-        internal void NewClient(string Name, string Vorname, string Geld, string Passwort)
+        internal void NewClient(string RFID,string Name, string Vorname, string Geld, string Passwort)
         {
-            Abfragen.Insert("INSERT INTO kunde(name,vorname,geld,passwort) VALUES('" + Name + "','" + Vorname + "','" + Geld + "','" + Passwort + "');");
+            Abfragen.Insert("INSERT INTO kunde(RFID,name,vorname,geld,passwort) VALUES('" + RFID + "','" + Name + "','" + Vorname + "','" + Geld + "','" + Passwort + "');");
         }
 	}
 }

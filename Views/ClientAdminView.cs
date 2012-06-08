@@ -79,7 +79,7 @@ namespace Shoppy.Views
 
         private void btnNewClient_Click(object sender, EventArgs e)
         {
-            database.NewClient(txtNewName.Text, txtNewVorname.Text, txtNewGeld.Text, txtNewPasswort.Text);
+            database.NewClient(txtNewRFID.Text, txtNewName.Text, txtNewVorname.Text, txtNewGeld.Text, txtNewPasswort.Text);
             FillData();
         }
 
