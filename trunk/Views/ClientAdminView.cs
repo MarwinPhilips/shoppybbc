@@ -40,11 +40,11 @@ namespace Shoppy.Views
         private void FillUpdateBoxes(DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-            txtUpdateName.Text = row.Cells[3].Value.ToString();
-            txtUpdateVorname.Text = row.Cells[4].Value.ToString();
-            txtUpdateRFID.Text = row.Cells[2].Value.ToString();
+            txtUpdateRFID.Text = row.Cells[1].Value.ToString();
+            txtUpdateName.Text = row.Cells[2].Value.ToString();
+            txtUpdateVorname.Text = row.Cells[3].Value.ToString();
+            txtUpdateGeld.Text = row.Cells[4].Value.ToString();            
             txtUpdatePasswort.Text = row.Cells[5].Value.ToString();
-            btnUpdateClient.Tag = row.Cells[1].Value.ToString();
         }
 
         private bool BinEineZeile(DataGridViewCellEventArgs e)
@@ -79,7 +79,7 @@ namespace Shoppy.Views
 
         private void btnNewClient_Click(object sender, EventArgs e)
         {
-            database.NewClient(txtUpdateRFID.Text, txtUpdateName.Text, txtUpdateVorname.Text, txtUpdateGeld.Text, txtUpdatePasswort.Text);
+            database.NewClient(txtNewName.Text, txtNewVorname.Text, txtNewGeld.Text, txtNewPasswort.Text);
             FillData();
         }
 

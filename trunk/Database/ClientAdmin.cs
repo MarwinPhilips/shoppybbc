@@ -23,13 +23,13 @@ namespace Shoppy.Database
         }
         public void UpdateClient(string RFID, string Name, string Vorname, string Geld, string Passwort)
         {
-            Abfragen.Update("update kamera set Name='" + Name + "', Vorname='" + Vorname + "', Geld='" + Geld + "', Passwort='" + Passwort+
+            Abfragen.Update("update kunde set Name='" + Name + "', Vorname='" + Vorname + "', Geld='" + Geld + "', Passwort='" + Passwort+
                "' where RFID='" + RFID + "';");
         }
 
-        internal void NewClient(string RFID, string Name, string Vorname, string Geld, string Passwort)
+        internal void NewClient(string Name, string Vorname, string Geld, string Passwort)
         {
-            Abfragen.Insert("INSERT INTO kamera(ip,anzeigename,loginname,passwort) VALUES('" + RFID + "','" + Name + "','" + Vorname + "','" + Geld + "','" + Passwort + "');");
+            Abfragen.Insert("INSERT INTO kunde(name,vorname,geld,passwort) VALUES('" + Name + "','" + Vorname + "','" + Geld + "','" + Passwort + "');");
         }
 	}
 }
