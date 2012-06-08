@@ -12,7 +12,7 @@ namespace Shoppy.Database
     {
         public DataTable GetSell()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("select id_artikel as artikelID, Name,Vorrat,Preis,BarCode from artikel", Abfragen.verbindung);
+            MySqlDataAdapter da = new MySqlDataAdapter("select id_artikel as artikelID, Name,BarCode,Preis,Vorrat from artikel", Abfragen.verbindung);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -24,7 +24,7 @@ namespace Shoppy.Database
         }
         public void UpdateSell(string id, string Produkt, string BarCode, string Preis, string Vorrat)
         {
-            Abfragen.Update("update artikel set Name='" + Produkt + "', anzeigename='" + BarCode + "', loginname='" + Preis + "', Vorrat='" + Vorrat +
+            Abfragen.Update("update artikel set Name='" + Produkt + "', BarCode='" + BarCode + "', Preis='" + Preis + "', Vorrat='" + Vorrat +
                "' where id_artikel='" + id + "';");
         }
 
