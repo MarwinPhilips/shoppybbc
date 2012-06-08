@@ -132,11 +132,13 @@ namespace CamView
             }
             catch (ArgumentException ae)
             {
+                ArgumentException a = ae;
                 //Console.WriteLine(ae.Message);
                 return false;
             }
             catch (ExternalException ee)
             {
+                ExternalException e = ee;
                 //Console.WriteLine(ee.Message);
                 return false;
             }

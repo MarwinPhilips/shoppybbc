@@ -105,7 +105,7 @@
             this.payment_View1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.payment_View1.Location = new System.Drawing.Point(3, 3);
             this.payment_View1.Name = "payment_View1";
-            this.payment_View1.Size = new System.Drawing.Size(186, 68);
+            this.payment_View1.Size = new System.Drawing.Size(800, 601);
             this.payment_View1.TabIndex = 0;
             // 
             // tabPage3
@@ -123,7 +123,7 @@
             this.surveyView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.surveyView1.Location = new System.Drawing.Point(0, 0);
             this.surveyView1.Name = "surveyView1";
-            this.surveyView1.Size = new System.Drawing.Size(192, 74);
+            this.surveyView1.Size = new System.Drawing.Size(806, 607);
             this.surveyView1.TabIndex = 0;
             // 
             // tabPage4
