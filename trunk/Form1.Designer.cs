@@ -44,6 +44,7 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.sellerAdminView1 = new Shoppy.Views.SellerAdminView();
+            this.camAdminView2 = new Shoppy.Views.CamAdminView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -52,6 +53,7 @@
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,9 +189,10 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.camAdminView2);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(184, 48);
+            this.tabPage7.Size = new System.Drawing.Size(798, 581);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Survey";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -212,6 +215,14 @@
             this.sellerAdminView1.Size = new System.Drawing.Size(798, 581);
             this.sellerAdminView1.TabIndex = 0;
             // 
+            // camAdminView2
+            // 
+            this.camAdminView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.camAdminView2.Location = new System.Drawing.Point(0, 0);
+            this.camAdminView2.Name = "camAdminView2";
+            this.camAdminView2.Size = new System.Drawing.Size(798, 581);
+            this.camAdminView2.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +239,7 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -252,6 +264,7 @@
         private Shoppy.Views.CamAdminView camAdminView1;
         private System.Windows.Forms.TabPage tabPage8;
         private Shoppy.Views.SellerAdminView sellerAdminView1;
+        private Shoppy.Views.CamAdminView camAdminView2;
 
 
 
