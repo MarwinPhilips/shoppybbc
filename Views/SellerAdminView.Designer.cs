@@ -41,10 +41,10 @@
             this.Vorrat = new System.Windows.Forms.Label();
             this.txtNewLoginname = new System.Windows.Forms.TextBox();
             this.Produkt = new System.Windows.Forms.Label();
-            this.btnUpdateSeller = new System.Windows.Forms.Button();
-            this.btnNewSeller = new System.Windows.Forms.Button();
             this.txtUpdateName = new System.Windows.Forms.TextBox();
             this.txtNewName = new System.Windows.Forms.TextBox();
+            this.btnUpdateSeller = new System.Windows.Forms.Button();
+            this.btnNewSeller = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUpdatePasswort = new System.Windows.Forms.TextBox();
             this.txtNewPasswort = new System.Windows.Forms.TextBox();
@@ -71,6 +71,7 @@
             // 
             this.Löschen.HeaderText = "Löschen";
             this.Löschen.Name = "Löschen";
+            this.Löschen.ReadOnly = true;
             this.Löschen.Width = 54;
             // 
             // tableLayoutPanel1
@@ -81,7 +82,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.txtNewRFID, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewVorname, 2, 2);
@@ -119,7 +120,7 @@
             // 
             // txtNewVorname
             // 
-            this.txtNewVorname.Location = new System.Drawing.Point(223, 86);
+            this.txtNewVorname.Location = new System.Drawing.Point(214, 86);
             this.txtNewVorname.Name = "txtNewVorname";
             this.txtNewVorname.Size = new System.Drawing.Size(99, 20);
             this.txtNewVorname.TabIndex = 8;
@@ -134,7 +135,7 @@
             // 
             // txtUpdateVorname
             // 
-            this.txtUpdateVorname.Location = new System.Drawing.Point(223, 38);
+            this.txtUpdateVorname.Location = new System.Drawing.Point(214, 38);
             this.txtUpdateVorname.Name = "txtUpdateVorname";
             this.txtUpdateVorname.Size = new System.Drawing.Size(99, 20);
             this.txtUpdateVorname.TabIndex = 4;
@@ -142,7 +143,7 @@
             // Barcode
             // 
             this.Barcode.AutoSize = true;
-            this.Barcode.Location = new System.Drawing.Point(106, 0);
+            this.Barcode.Location = new System.Drawing.Point(102, 0);
             this.Barcode.Name = "Barcode";
             this.Barcode.Size = new System.Drawing.Size(35, 13);
             this.Barcode.TabIndex = 12;
@@ -151,7 +152,7 @@
             // Preis
             // 
             this.Preis.AutoSize = true;
-            this.Preis.Location = new System.Drawing.Point(223, 0);
+            this.Preis.Location = new System.Drawing.Point(214, 0);
             this.Preis.Name = "Preis";
             this.Preis.Size = new System.Drawing.Size(49, 13);
             this.Preis.TabIndex = 13;
@@ -159,7 +160,7 @@
             // 
             // txtUpdateLoginname
             // 
-            this.txtUpdateLoginname.Location = new System.Drawing.Point(328, 38);
+            this.txtUpdateLoginname.Location = new System.Drawing.Point(319, 38);
             this.txtUpdateLoginname.Name = "txtUpdateLoginname";
             this.txtUpdateLoginname.Size = new System.Drawing.Size(93, 20);
             this.txtUpdateLoginname.TabIndex = 14;
@@ -167,7 +168,7 @@
             // Vorrat
             // 
             this.Vorrat.AutoSize = true;
-            this.Vorrat.Location = new System.Drawing.Point(328, 0);
+            this.Vorrat.Location = new System.Drawing.Point(319, 0);
             this.Vorrat.Name = "Vorrat";
             this.Vorrat.Size = new System.Drawing.Size(59, 13);
             this.Vorrat.TabIndex = 15;
@@ -175,7 +176,7 @@
             // 
             // txtNewLoginname
             // 
-            this.txtNewLoginname.Location = new System.Drawing.Point(328, 86);
+            this.txtNewLoginname.Location = new System.Drawing.Point(319, 86);
             this.txtNewLoginname.Name = "txtNewLoginname";
             this.txtNewLoginname.Size = new System.Drawing.Size(93, 20);
             this.txtNewLoginname.TabIndex = 16;
@@ -189,9 +190,23 @@
             this.Produkt.TabIndex = 11;
             this.Produkt.Text = "RFID";
             // 
+            // txtUpdateName
+            // 
+            this.txtUpdateName.Location = new System.Drawing.Point(102, 38);
+            this.txtUpdateName.Name = "txtUpdateName";
+            this.txtUpdateName.Size = new System.Drawing.Size(99, 20);
+            this.txtUpdateName.TabIndex = 19;
+            // 
+            // txtNewName
+            // 
+            this.txtNewName.Location = new System.Drawing.Point(102, 86);
+            this.txtNewName.Name = "txtNewName";
+            this.txtNewName.Size = new System.Drawing.Size(99, 20);
+            this.txtNewName.TabIndex = 20;
+            // 
             // btnUpdateSeller
             // 
-            this.btnUpdateSeller.Location = new System.Drawing.Point(529, 38);
+            this.btnUpdateSeller.Location = new System.Drawing.Point(520, 38);
             this.btnUpdateSeller.Name = "btnUpdateSeller";
             this.btnUpdateSeller.Size = new System.Drawing.Size(111, 23);
             this.btnUpdateSeller.TabIndex = 0;
@@ -201,7 +216,7 @@
             // 
             // btnNewSeller
             // 
-            this.btnNewSeller.Location = new System.Drawing.Point(529, 86);
+            this.btnNewSeller.Location = new System.Drawing.Point(520, 86);
             this.btnNewSeller.Name = "btnNewSeller";
             this.btnNewSeller.Size = new System.Drawing.Size(111, 20);
             this.btnNewSeller.TabIndex = 2;
@@ -209,24 +224,10 @@
             this.btnNewSeller.UseVisualStyleBackColor = true;
             this.btnNewSeller.Click += new System.EventHandler(this.btnNewSeller_Click);
             // 
-            // txtUpdateName
-            // 
-            this.txtUpdateName.Location = new System.Drawing.Point(106, 38);
-            this.txtUpdateName.Name = "txtUpdateName";
-            this.txtUpdateName.Size = new System.Drawing.Size(99, 20);
-            this.txtUpdateName.TabIndex = 19;
-            // 
-            // txtNewName
-            // 
-            this.txtNewName.Location = new System.Drawing.Point(106, 86);
-            this.txtNewName.Name = "txtNewName";
-            this.txtNewName.Size = new System.Drawing.Size(99, 20);
-            this.txtNewName.TabIndex = 20;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(427, 0);
+            this.label1.Location = new System.Drawing.Point(418, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 21;
@@ -234,14 +235,14 @@
             // 
             // txtUpdatePasswort
             // 
-            this.txtUpdatePasswort.Location = new System.Drawing.Point(427, 38);
+            this.txtUpdatePasswort.Location = new System.Drawing.Point(418, 38);
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
             this.txtUpdatePasswort.Size = new System.Drawing.Size(96, 20);
             this.txtUpdatePasswort.TabIndex = 22;
             // 
             // txtNewPasswort
             // 
-            this.txtNewPasswort.Location = new System.Drawing.Point(427, 86);
+            this.txtNewPasswort.Location = new System.Drawing.Point(418, 86);
             this.txtNewPasswort.Name = "txtNewPasswort";
             this.txtNewPasswort.Size = new System.Drawing.Size(96, 20);
             this.txtNewPasswort.TabIndex = 23;

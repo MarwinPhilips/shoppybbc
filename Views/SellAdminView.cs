@@ -16,7 +16,6 @@ namespace Shoppy.Views
         {
             InitializeComponent();
             FillData();
-
         }
 
         private void FillData()

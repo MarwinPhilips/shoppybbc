@@ -31,8 +31,5 @@ namespace Shoppy.Database
         {
             Abfragen.Insert("insert into seller(rfid,username,passwort,name,vorname) values('" + rfid + "','" + username + "','" + passwort + "','" + name + "','"+vorname+"');");
         }
-
-        
-
 	}
 }

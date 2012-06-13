@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Shoppy.Database
 {
-    class SellAdmin042000062008
+    class SellAdmin
 
     {
         public DataTable GetSell()
@@ -19,10 +19,22 @@ namespace Shoppy.Database
             return dt;
         }
 
+        public string[,] GetProdukt(string BarCode) 
+        {
+            string[,] resultat = Abfragen.Select("select Name as ProduktName,BarCode,Preis from artikel Where BarCode='" + BarCode + "'");
+            return resultat;
+        }
+
         public void DeleteSell(string id)
         {
             Abfragen.Delete("delete from artikel where id_artikel='" + id + "';");
         }
+
+        public void DeleteProdukt(string BarCode)
+        {
+            Abfragen.Delete("delete from artikel where BarCode='" + BarCode + "';");
+        }
+
         public void UpdateSell(string id, string Produkt, string BarCode, string Preis, string Vorrat)
         {
             Abfragen.Update("update artikel set Name='" + Produkt + "', BarCode='" + BarCode + "', Preis='" + Preis + "', Vorrat='" + Vorrat +
