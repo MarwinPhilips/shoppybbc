@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,14 +28,13 @@ namespace Shoppy.Database
         {
             Abfragen.Update("update kunde set Name='" + Name + "', Vorname='" + Vorname + "', Geld='" + Geld + "', Passwort='" + Passwort+
                "' where RFID='" + RFID + "';");
-            
-            
         }
 
         internal void NewClient(string RFID,string Name, string Vorname, string Geld, string Passwort)
         {
             Abfragen.Insert("INSERT INTO kunde(RFID,name,vorname,geld,passwort) VALUES('" + RFID + "','" + Name + "','" + Vorname + "','" + Geld + "','" + Passwort + "');");
         }
+
 
         
 	}

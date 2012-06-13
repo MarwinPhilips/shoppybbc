@@ -19,6 +19,9 @@ namespace Shoppy.Views
 			InitializeComponent();
 		}
 
+        /* Der Barcode leser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
+         das der Code nun fertig ist. Danach wird der Barcode in einer anderen Funktion mit der Datanbank-Einträgen
+         verglichen und das barcode Textfeld wieder leer gesetzt*/
         private void txtInputBarcode_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -28,30 +31,25 @@ namespace Shoppy.Views
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (BinEinButton(e))
-            {
-                DeleteRow(e);
-            }
-        }
-
+        /* Beim aufruf dieser Funtkion wird der Artikel aus der Datanbank herausgelesen und in die Tabelle gelesen*/
         private void addprodukt(string BarCode)
         {
             string[,] produkt = sa.GetProdukt(BarCode);
+            int AnzahlZeilen = dataGridView1.Rows.Count - 1;
             try
             {
-                dataGridView1.Rows.Add("", produkt[0, 0], produkt[0, 1], produkt[0, 2]);
+                dataGridView1.Rows.Add("", produkt[0, 0], produkt[0, 1], produkt[0, 2], 1);
             }
-            catch 
+            catch   /*Wenn der Barcode (Artikel) nicht in der Datenbank vorhanden ist, wird eine fehlermeldung ausgegeben*/
             {
-                MessageBox.Show("Fehler Artikel nicht vorhanden");
+                MessageBox.Show("Fehler:Dieser Artikel ist nicht vorhanden");
             }
         }
 
+        /* Hier wird der GesamtPreis aller Aller Artikel zusammen gezählt und angezeigt*/
         private void newPreis() 
         {
-            int AnzahlZeilen = dataGridView1.Rows.Count - 1;
+            int AnzahlZeilen = dataGridView1.Rows.Count;
             double TotalPreis = 0;
             for (int i = 0; i < AnzahlZeilen; i++)
             {
@@ -62,13 +60,13 @@ namespace Shoppy.Views
             txtTotalPay.Text = TotalPreis.ToString();
         }
 
-
+        /*löscht den Inhalt und die Zeile von der Zeile bei der der "lösch"-Button betätigt wurde*/
         private void DeleteRow(DataGridViewCellEventArgs e)
         {
-            sa.DeleteProdukt(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+            dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
         }
 
-        /* Funktion zum überprüfen ob auf eine Zeile oder einen Button gedrückt wurde*/
+        /* Funktion zum überprüfen ob auf eine Zeile oder einen Button gedrückt wurde */
         private bool BinEineZeile(DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewTextBoxColumn && e.RowIndex != -1)
@@ -77,7 +75,7 @@ namespace Shoppy.Views
             }
             return false;
         }
-
+        
         private bool BinEinButton(DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex != -1)
@@ -86,7 +84,7 @@ namespace Shoppy.Views
             }
             return false;
         }
-
+        /* Aufruf beim hinzufügen oder löschen einer Tabellenzeile*/
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             newPreis();
@@ -94,8 +92,31 @@ namespace Shoppy.Views
 
         private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
+            newPreis();
+        }
+
+        /* Löscht den Eintrag bei dem der "löschbutton" betätigt wurde*/
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (BinEinButton(e))
+            {
+                DeleteRow(e);
+            } 
+        }
+        /* löscht den GANZEN Ihnalt der Verkaufstabelle*/
+        private void btnSellDeleteAll_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+        }
+
+        private void btnSellPay_Click(object sender, EventArgs e)
+        {
+            int TotalKosten = Int32.Parse(txtTotalPay.Text);
+            int Gehalt = sa.getPayClient(RFID);
 
         }
+
+
 
 
 	}
