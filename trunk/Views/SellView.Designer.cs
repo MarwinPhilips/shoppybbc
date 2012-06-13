@@ -31,18 +31,18 @@
             this.btnSellPay = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Löschen = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Produkt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTotalPay = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSellDeleteAll = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.text = new System.Windows.Forms.Label();
             this.txtInputBarcode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSellDeleteAll = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,9 +63,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Löschen,
-            this.Column1,
             this.Produkt,
-            this.Column2});
+            this.BarCode,
+            this.Preis});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -73,28 +73,34 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(727, 262);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
+            this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             // 
             // Löschen
             // 
             this.Löschen.HeaderText = "Löschen";
             this.Löschen.Name = "Löschen";
+            this.Löschen.ReadOnly = true;
             this.Löschen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Löschen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Produkt";
-            this.Column1.Name = "Column1";
-            // 
             // Produkt
             // 
-            this.Produkt.HeaderText = "Anzahl";
+            this.Produkt.HeaderText = "ProduktName";
             this.Produkt.Name = "Produkt";
+            this.Produkt.ReadOnly = true;
             // 
-            // Column2
+            // BarCode
             // 
-            this.Column2.HeaderText = "Kosten";
-            this.Column2.Name = "Column2";
+            this.BarCode.HeaderText = "BarCode";
+            this.BarCode.Name = "BarCode";
+            this.BarCode.ReadOnly = true;
+            // 
+            // Preis
+            // 
+            this.Preis.HeaderText = "Preis";
+            this.Preis.Name = "Preis";
+            this.Preis.ReadOnly = true;
             // 
             // txtTotalPay
             // 
@@ -123,6 +129,38 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(727, 220);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button1.Location = new System.Drawing.Point(184, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 214);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Mehrere Produkte";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnSellDeleteAll
+            // 
+            this.btnSellDeleteAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSellDeleteAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnSellDeleteAll.Location = new System.Drawing.Point(546, 3);
+            this.btnSellDeleteAll.Name = "btnSellDeleteAll";
+            this.btnSellDeleteAll.Size = new System.Drawing.Size(178, 214);
+            this.btnSellDeleteAll.TabIndex = 1;
+            this.btnSellDeleteAll.Text = "Alle Produkte löschen";
+            this.btnSellDeleteAll.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button2.Location = new System.Drawing.Point(365, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(175, 214);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // text
             // 
             this.text.AutoSize = true;
@@ -140,7 +178,7 @@
             this.txtInputBarcode.Name = "txtInputBarcode";
             this.txtInputBarcode.Size = new System.Drawing.Size(242, 32);
             this.txtInputBarcode.TabIndex = 2;
-            this.txtInputBarcode.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtInputBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInputBarcode_KeyPress);
             // 
             // label1
             // 
@@ -161,38 +199,6 @@
             this.label2.Size = new System.Drawing.Size(57, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "CHF";
-            // 
-            // btnSellDeleteAll
-            // 
-            this.btnSellDeleteAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSellDeleteAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnSellDeleteAll.Location = new System.Drawing.Point(546, 3);
-            this.btnSellDeleteAll.Name = "btnSellDeleteAll";
-            this.btnSellDeleteAll.Size = new System.Drawing.Size(178, 214);
-            this.btnSellDeleteAll.TabIndex = 1;
-            this.btnSellDeleteAll.Text = "Alle Produkte löschen";
-            this.btnSellDeleteAll.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Location = new System.Drawing.Point(184, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 214);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Mehrere Produkte";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button2.Location = new System.Drawing.Point(365, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 214);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // SellView
             // 
@@ -218,10 +224,6 @@
 
         private System.Windows.Forms.Button btnSellPay;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewButtonColumn Löschen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Produkt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.TextBox txtTotalPay;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label text;
@@ -231,5 +233,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSellDeleteAll;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewButtonColumn Löschen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Produkt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BarCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
 	}
 }
