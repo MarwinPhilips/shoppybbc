@@ -9,13 +9,12 @@ using Shoppy.Database;
 
 namespace Shoppy.Database
 {
-	class ClientAdmin
-	{
-        string selectquery = "SELECT * FROM kunde";
+    class ClientAdmin
+    {
         public DataTable GetClient()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter(selectquery, Abfragen.verbindung);
-            DataTable dt = new DataTable();            
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM kunde", Abfragen.verbindung);
+            DataTable dt = new DataTable();
             da.Fill(dt);
             da.Dispose();
             return dt;
@@ -26,17 +25,34 @@ namespace Shoppy.Database
         }
         public void UpdateClient(string RFID, string Name, string Vorname, string Geld, string Passwort)
         {
-            Abfragen.Update("update kunde set Name='" + Name + "', Vorname='" + Vorname + "', Geld='" + Geld + "', Passwort='" + Passwort+
+            Abfragen.Update("update kunde set Name='" + Name + "', Vorname='" + Vorname + "', Geld='" + Geld + "', Passwort='" + Passwort +
                "' where RFID='" + RFID + "';");
         }
 
-        internal void NewClient(string RFID,string Name, string Vorname, string Geld, string Passwort)
+        internal void NewClient(string RFID, string Name, string Vorname, string Geld, string Passwort)
         {
             Abfragen.Insert("INSERT INTO kunde(RFID,name,vorname,geld,passwort) VALUES('" + RFID + "','" + Name + "','" + Vorname + "','" + Geld + "','" + Passwort + "');");
         }
 
 
+        public DataTable GetClientOnRFID(string RFID)
+        {
+            string selectquery = "SELECT RFID, name, vorname, geld FROM Kunde WHERE RFID = '" + RFID + "';";
+            MySqlDataAdapter ad = new MySqlDataAdapter(selectquery, Abfragen.verbindung);
+            DataTable td = new DataTable();
+            ad.Fill(td);
+            ad.Dispose();
+            return td;
+        }
+
+        public void InsertBetrag(string RFID, string Betrag)
+        {
+            Abfragen.Update("UPDATE kunde SET Geld ='" + Betrag + "' WHERE RFID = '" + RFID + "';");
+        }
         
 	}
 }
 
+
+
+       
