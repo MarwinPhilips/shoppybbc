@@ -112,7 +112,7 @@ namespace Shoppy.Views
         private void btnSellPay_Click(object sender, EventArgs e)
         {
             int TotalKosten = Int32.Parse(txtTotalPay.Text);
-            int Gehalt = sa.getPayClient(RFID);
+            //string Gehalt = sa.getPayClient("sdf");
 
         }
 
