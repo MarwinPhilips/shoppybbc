@@ -39,7 +39,14 @@ namespace Shoppy.Views
         private void addprodukt(string BarCode)
         {
             string[,] produkt = sa.GetProdukt(BarCode);
-            dataGridView1.Rows.Add("", produkt[0,0], produkt[0,1], produkt[0,2]);
+            try
+            {
+                dataGridView1.Rows.Add("", produkt[0, 0], produkt[0, 1], produkt[0, 2]);
+            }
+            catch 
+            {
+                MessageBox.Show("Fehler Artikel nicht vorhanden");
+            }
         }
 
         private void newPreis() 
@@ -49,10 +56,8 @@ namespace Shoppy.Views
             for (int i = 0; i < AnzahlZeilen; i++)
             {
                 string preis = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                MessageBox.Show(preis);
                 double intPreis = double.Parse(preis);
                 TotalPreis = TotalPreis + intPreis;
-                MessageBox.Show(TotalPreis.ToString());
             }
             txtTotalPay.Text = TotalPreis.ToString();
         }
