@@ -30,11 +30,6 @@ namespace Shoppy.Database
             Abfragen.Delete("delete from artikel where id_artikel='" + id + "';");
         }
 
-        public void DeleteProdukt(string BarCode)
-        {
-            Abfragen.Delete("delete from artikel where BarCode='" + BarCode + "';");
-        }
-
         public void UpdateSell(string id, string Produkt, string BarCode, string Preis, string Vorrat)
         {
             Abfragen.Update("update artikel set Name='" + Produkt + "', BarCode='" + BarCode + "', Preis='" + Preis + "', Vorrat='" + Vorrat +
@@ -46,5 +41,10 @@ namespace Shoppy.Database
             Abfragen.Insert("insert into artikel(Name,BarCode,Preis,Vorrat) values('" + Produkt + "','" + BarCode + "','" + Preis + "','" + Vorrat + "');");
         }
 
+        /* zahlenden Kunden aussuchen*/
+        public void getPayClient(string RFID)
+        {
+            Abfragen.Select("SELECT Geld FROM kunde WHERE RFID = '" + RFID + "';");
+        }
     }
 }

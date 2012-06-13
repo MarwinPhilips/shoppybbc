@@ -34,6 +34,7 @@
             this.Produkt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Anzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTotalPay = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,22 +51,27 @@
             // btnSellPay
             // 
             this.btnSellPay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSellPay.Enabled = false;
             this.btnSellPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnSellPay.Location = new System.Drawing.Point(3, 3);
             this.btnSellPay.Name = "btnSellPay";
-            this.btnSellPay.Size = new System.Drawing.Size(175, 214);
+            this.btnSellPay.Size = new System.Drawing.Size(175, 219);
             this.btnSellPay.TabIndex = 0;
             this.btnSellPay.Text = "Bezahlen";
             this.btnSellPay.UseVisualStyleBackColor = true;
+            this.btnSellPay.Click += new System.EventHandler(this.btnSellPay_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Löschen,
             this.Produkt,
             this.BarCode,
-            this.Preis});
+            this.Preis,
+            this.Anzahl});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -73,6 +79,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(727, 262);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             // 
@@ -102,6 +109,12 @@
             this.Preis.Name = "Preis";
             this.Preis.ReadOnly = true;
             // 
+            // Anzahl
+            // 
+            this.Anzahl.HeaderText = "Anzahl";
+            this.Anzahl.Name = "Anzahl";
+            this.Anzahl.ReadOnly = true;
+            // 
             // txtTotalPay
             // 
             this.txtTotalPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -122,11 +135,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnSellDeleteAll, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 353);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 348);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(727, 220);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(727, 225);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // button1
@@ -135,7 +148,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button1.Location = new System.Drawing.Point(184, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 214);
+            this.button1.Size = new System.Drawing.Size(175, 219);
             this.button1.TabIndex = 2;
             this.button1.Text = "Mehrere Produkte";
             this.button1.UseVisualStyleBackColor = true;
@@ -146,10 +159,11 @@
             this.btnSellDeleteAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnSellDeleteAll.Location = new System.Drawing.Point(546, 3);
             this.btnSellDeleteAll.Name = "btnSellDeleteAll";
-            this.btnSellDeleteAll.Size = new System.Drawing.Size(178, 214);
+            this.btnSellDeleteAll.Size = new System.Drawing.Size(178, 219);
             this.btnSellDeleteAll.TabIndex = 1;
             this.btnSellDeleteAll.Text = "Alle Produkte löschen";
             this.btnSellDeleteAll.UseVisualStyleBackColor = true;
+            this.btnSellDeleteAll.Click += new System.EventHandler(this.btnSellDeleteAll_Click);
             // 
             // button2
             // 
@@ -157,7 +171,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button2.Location = new System.Drawing.Point(365, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 214);
+            this.button2.Size = new System.Drawing.Size(175, 219);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -237,5 +251,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Produkt;
         private System.Windows.Forms.DataGridViewTextBoxColumn BarCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Anzahl;
 	}
 }
