@@ -84,4 +84,3 @@ C:\Users\eprudd\Desktop\Shoopy\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\ResGen.write.1.tlog
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\shoppy.exe.manifest
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\shoppy.application
-C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.Views.Payment_View.resources
