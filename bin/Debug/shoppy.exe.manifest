@@ -42,6 +42,11 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Phidget21.NET" version="2.1.8.105" publicKeyToken="C2B1F2A3594BCE52" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="370176">
       <assemblyIdentity name="MySql.Data" version="6.4.4.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -78,26 +83,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Phidget21.NET.dll" size="141312">
-      <assemblyIdentity name="Phidget21.NET" version="2.1.8.105" publicKeyToken="C2B1F2A3594BCE52" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>zZxu9seGllZgYIHsr/g0GwXCUdc=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="shoppy.exe" size="55296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="shoppy.exe" size="62464">
       <assemblyIdentity name="shoppy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3g29h4SWhAip+nbD1Ijpfd9QROE=</dsig:DigestValue>
+        <dsig:DigestValue>ZSnwxXyE5h5IocSOmJPAuzGqR7s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
