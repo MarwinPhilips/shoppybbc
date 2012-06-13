@@ -21,7 +21,7 @@ namespace Shoppy.Database
 
         public string[,] GetProdukt(string BarCode) 
         {
-            string[,] resultat = Abfragen.Select("select Name as ProduktName,BarCode,Preis from artikel Where BarCode='" + BarCode + "'");
+            string[,] resultat = Abfragen.Select("select Name as ProduktName,BarCode,Preis from artikel Where BarCode='" + BarCode + "';");
             return resultat;
         }
 
