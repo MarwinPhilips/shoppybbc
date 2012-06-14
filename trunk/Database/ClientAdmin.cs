@@ -11,6 +11,9 @@ namespace Shoppy.Database
 {
     class ClientAdmin
     {
+
+        
+
         public DataTable GetClient()
         {
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM kunde", Abfragen.verbindung);
@@ -38,16 +41,20 @@ namespace Shoppy.Database
         public DataTable GetClientOnRFID(string RFID)
         {
             string selectquery = "SELECT RFID, name, vorname, geld FROM Kunde WHERE RFID = '" + RFID + "';";
-            MySqlDataAdapter ad = new MySqlDataAdapter(selectquery, Abfragen.verbindung);
-            DataTable td = new DataTable();
-            ad.Fill(td);
-            ad.Dispose();
-            return td;
+            MySqlDataAdapter da = new MySqlDataAdapter(selectquery, Abfragen.verbindung);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            da.Dispose();
+            return dt;
         }
 
-        public void InsertBetrag(string RFID, string Betrag)
+        public void InsertBetrag(string RFID, double Betrag)
         {
-            Abfragen.Update("UPDATE kunde SET Geld ='" + Betrag + "' WHERE RFID = '" + RFID + "';");
+            
+            string[,] ins = Abfragen.Select("SELECT Geld FROM Kunde WHERE RFID ='" + RFID + "';");
+            double.Parse(ins[0, 0]);
+            Betrag += double.Parse(ins[0, 0]);
+            Abfragen.Update("UPDATE kunde SET Geld ='" + Betrag +"' WHERE RFID = '" + RFID + "';");
         }
         
 	}
