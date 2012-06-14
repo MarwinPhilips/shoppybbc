@@ -15,83 +15,44 @@ namespace Shoppy.Views
     {
         private RFID rfid; //Declare an RFID object
         ClientAdmin database = new ClientAdmin();
-        string rfid_num;
 
         public Payment_View()
         {
             InitializeComponent();      
+            FillData();
         }
 
         private void FillData()
         {
-            dataGridView1.DataSource = database.GetClientOnRFID(rfid_num);
+            dataGridView1.DataSource = database.GetClientOnRFID("13");
         }
 
         void rfid_Tag(object sender, TagEventArgs e)
         {
-            btnEnter.Enabled = true;
-            rfid_num = e.Tag;
-            SendKeys.Send(e.Tag);
-            SendKeys.Send("{ENTER}");
-
-            MessageBox.Show(rfid_num);
-            FillData();
+            //txtRFID.Text = e.Tag;
         }
 
         void rfid_TagLost(object sender, TagEventArgs e)
         {
-           rfid_num = "";
-           btnEnter.Enabled = false;
-           dataGridView1.DataSource = "";
+           //txtRFID.Text = "";
         }
 
         private void Payment_View_Load(object sender, EventArgs e)
         {
             //EventHandler RFID
             rfid = new RFID();
-
-            rfid.Attach += new AttachEventHandler(rfid_Attach);
-            rfid.Detach += new DetachEventHandler(rfid_Detach);
-            rfid.Error += new ErrorEventHandler(rfid_Error);
-
             rfid.Tag += new TagEventHandler(rfid_Tag);
             rfid.TagLost += new TagEventHandler(rfid_TagLost);
 
-
-        
-
             openCmdLine(rfid);
-            
         }
 
-        void rfid_Attach(object sender, AttachEventArgs e)
-        {
-            RFID attached = (RFID)sender;
-            
-            if (rfid.outputs.Count > 0)
-            {
-                
-                rfid.Antenna = true;
-                
-            }
-        }
 
-        void rfid_Detach(object sender, DetachEventArgs e)
-        {
-            RFID detached = (RFID)sender;
-            
-        }
-
-        void rfid_Error(object sender, ErrorEventArgs e)
-        {
-            Phidget phid = (Phidget)sender;
-        }
 
         #region Command line open functions
         private void openCmdLine(Phidget p)
         {
             openCmdLine(p, null);
-            
         }
         private void openCmdLine(Phidget p, String pass)
         {
@@ -103,7 +64,7 @@ namespace Shoppy.Views
             String appName = args[0];
 
             try
-            {
+            { //Parse the flags
                 for (int i = 1; i < args.Length; i++)
                 {
                     if (args[i].StartsWith("-"))
@@ -144,7 +105,7 @@ namespace Shoppy.Views
                     p.open(serial, host, pass);
                 else
                     p.open(serial);
-                return;
+                return; //success
             }
             catch { }
         usage:
@@ -189,8 +150,10 @@ namespace Shoppy.Views
 
         private void btnInsert(object sender, EventArgs e)
         {
+            string kunde = dataGridView1.Rows[0].Cells[0].Value.ToString();
+            MessageBox.Show(kunde);
             double betrag = double.Parse(txtBetrag.Text);
-            database.InsertBetrag(rfid_num,betrag);
+            database.InsertBetrag(kunde,betrag);
             FillData();
         }
 

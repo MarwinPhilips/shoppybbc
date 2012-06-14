@@ -52,9 +52,14 @@ namespace Shoppy.Views
             int AnzahlZeilen = dataGridView1.Rows.Count;
             double TotalPreis = 0;
             for (int i = 0; i < AnzahlZeilen; i++)
-            {
+            { 
                 string preis = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                int Anzahl = Int32.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
                 double intPreis = double.Parse(preis);
+                if (Anzahl > 1)
+                {
+                    intPreis = Anzahl * intPreis;
+                }
                 TotalPreis = TotalPreis + intPreis;
             }
             txtTotalPay.Text = TotalPreis.ToString();
@@ -84,6 +89,26 @@ namespace Shoppy.Views
             }
             return false;
         }
+
+        /* Anzahl Artikel ändern*/
+        private void SellMultipleProdukt_Click(object sender, EventArgs e)
+        {
+            if (txtMultipleProdukt.Text.Equals("") || BinEineZahl(txtMultipleProdukt.Text))
+            {
+                MessageBox.Show("Achtung! Ungültige Eingabe Im Eingabefeld. Bitte eine Zahl eingeben.");
+                txtMultipleProdukt.Text = "";
+                TabIndex.Equals(4);
+            }
+            else
+            {
+                int anzProdukts = Int32.Parse(txtMultipleProdukt.Text);
+                int AnzahlRows = dataGridView1.Rows.Count - 1;
+                dataGridView1.Rows[AnzahlRows].Cells[4].Value = anzProdukts.ToString();
+                txtMultipleProdukt.Text = "";
+                newPreis();
+            }
+        }
+
         /* Aufruf beim hinzufügen oder löschen einer Tabellenzeile*/
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
@@ -113,11 +138,19 @@ namespace Shoppy.Views
         {
             int TotalKosten = Int32.Parse(txtTotalPay.Text);
             //string Gehalt = sa.getPayClient("sdf");
-
         }
 
 
-
+        private bool BinEineZahl(string eingabe)
+        {
+            try
+            {
+                Int32.Parse(eingabe);
+                return false;
+            }catch{
+                return true;
+            }
+        }
 
 	}
 }
