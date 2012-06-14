@@ -23,24 +23,24 @@ namespace Shoppy.Views
         {
             
             DataRow row = database.GetSingleCamInfo(id);
-            tableLayoutPanel1.Controls.Remove(cam);
-            this.Controls.Remove(cam);
-            this.cam = new CamView.CamViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.cam)).BeginInit();
+            tableLayoutPanel1.Controls.Remove(camViewer1);
+            this.Controls.Remove(camViewer1);
+            this.camViewer1 = new CamViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.camViewer1)).BeginInit();
             this.SuspendLayout();
-            this.cam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cam.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cam.Location = new System.Drawing.Point(3, 3);
-            this.cam.Name = "cam";
-            this.cam.Size = new System.Drawing.Size(320, 280);
-            this.cam.TabIndex = 4;
-            cam.Name = "cam";
-            cam.Password = row.ItemArray[2].ToString();
-            cam.User = row.ItemArray[1].ToString();
-            cam.Url = row.ItemArray[0].ToString();
-            this.Controls.Add(this.cam); 
-            ((System.ComponentModel.ISupportInitialize)(this.cam)).EndInit();
-            this.tableLayoutPanel1.Controls.Add(this.cam, 0, 0);
+            this.camViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.camViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.camViewer1.Location = new System.Drawing.Point(3, 3);
+            this.camViewer1.Name = "camViewer1";
+            this.camViewer1.Size = new System.Drawing.Size(320, 280);
+            this.camViewer1.TabIndex = 4;
+            camViewer1.Name = "camViewer1";
+            camViewer1.Password = row.ItemArray[2].ToString();
+            camViewer1.User = row.ItemArray[1].ToString();
+            camViewer1.Url = row.ItemArray[0].ToString();
+            this.Controls.Add(this.camViewer1); 
+            ((System.ComponentModel.ISupportInitialize)(this.camViewer1)).EndInit();
+            this.tableLayoutPanel1.Controls.Add(this.camViewer1, 0, 0);
             this.ResumeLayout(false);
         }
 

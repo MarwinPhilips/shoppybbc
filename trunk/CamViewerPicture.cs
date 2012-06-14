@@ -7,7 +7,7 @@ using System.Threading;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace CamView
+namespace Shoppy
 {
     class CamViewerPicture : PictureBox, System.ComponentModel.ISupportInitialize
     {

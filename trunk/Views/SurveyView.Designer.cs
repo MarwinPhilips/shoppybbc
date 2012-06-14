@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.surveyViewCamSwitcher1 = new Shoppy.Views.SurveyViewCamSwitcher();
-            this.surveyViewCamSwitcher2 = new Shoppy.Views.SurveyViewCamSwitcher();
+            this.surveyViewCamSwitcher1 = new Views.SurveyViewCamSwitcher();
+            this.surveyViewCamSwitcher2 = new Views.SurveyViewCamSwitcher();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();

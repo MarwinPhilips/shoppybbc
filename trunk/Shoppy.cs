@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace CamView
+namespace Shoppy
 {
-    static class CamViewerTest
+    static class Shoppy
     {
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
