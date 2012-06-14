@@ -81,7 +81,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(242, 100);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // tableLayoutPanel2
@@ -96,19 +96,19 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(94, 94);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(115, 94);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // btnEnter
             // 
             this.btnEnter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEnter.Enabled = false;
-            this.btnEnter.Location = new System.Drawing.Point(106, 6);
+            this.btnEnter.Location = new System.Drawing.Point(127, 6);
             this.btnEnter.Margin = new System.Windows.Forms.Padding(6);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(88, 88);
+            this.btnEnter.Size = new System.Drawing.Size(109, 88);
             this.btnEnter.TabIndex = 3;
-            this.btnEnter.Text = "button1";
+            this.btnEnter.Text = "Aufladen";
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnInsert);
             // 
@@ -137,6 +137,9 @@
             this.Name = "Payment_View";
             this.Size = new System.Drawing.Size(1000, 674);
             this.Load += new System.EventHandler(this.Payment_View_Load);
+            this.Enter += new System.EventHandler(this.delActionListenerOnEnter);
+            this.Leave += new System.EventHandler(this.delActionListnerOnLeave);
+            this.MouseLeave += new System.EventHandler(this.delActionListnerOnLeave);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

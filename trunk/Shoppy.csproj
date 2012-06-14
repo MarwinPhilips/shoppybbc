@@ -10,7 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Shoppy</RootNamespace>
     <AssemblyName>Shoppy</AssemblyName>
-    <StartupObject>Shoppy.Shoppy</StartupObject>
+    <StartupObject>
+    </StartupObject>
     <ManifestCertificateThumbprint>C98216BCCE0CB2D47C4861EBC2A5D781DDB65825</ManifestCertificateThumbprint>
     <ManifestKeyFile>AccessManagement_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
