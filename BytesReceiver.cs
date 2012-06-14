@@ -7,7 +7,7 @@ using System.Threading;
 using System.Net.Sockets;
 using System.Windows.Forms;
 
-namespace CamView
+namespace Shoppy
 {
     class BytesReceiver
     {

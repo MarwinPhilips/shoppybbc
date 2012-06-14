@@ -7,7 +7,7 @@ using System.IO;
 using System.Threading;
 using System.Net.Sockets;
 
-namespace CamView
+namespace Shoppy
 {
     /// <summary>
     /// Diese Klasse (sie ist ein ganz normales Panel) zeigt das Bild einer Webcam. 

@@ -29,11 +29,11 @@
 		private void InitializeComponent()
 		{
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cam = new CamView.CamViewer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.camViewer1 = new CamViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cam)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.camViewer1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -48,25 +48,13 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // cam
-            // 
-            this.cam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cam.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cam.Location = new System.Drawing.Point(3, 3);
-            this.cam.Name = "cam";
-            this.cam.Password = "weitblick";
-            this.cam.Size = new System.Drawing.Size(320, 280);
-            this.cam.TabIndex = 4;
-            this.cam.Url = "172.16.1.251";
-            this.cam.User = "camera";
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.47668F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.52332F));
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cam, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.camViewer1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -74,6 +62,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(579, 286);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // camViewer1
+            // 
+            this.camViewer1.Location = new System.Drawing.Point(3, 3);
+            this.camViewer1.Name = "camViewer1";
+            this.camViewer1.Password = "weitblick";
+            this.camViewer1.Size = new System.Drawing.Size(320, 280);
+            this.camViewer1.TabIndex = 6;
+            this.camViewer1.Url = "172.16.1.251";
+            this.camViewer1.User = "camera";
             // 
             // SurveyViewCamSwitcher
             // 
@@ -83,8 +81,8 @@
             this.Name = "SurveyViewCamSwitcher";
             this.Size = new System.Drawing.Size(579, 286);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cam)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.camViewer1)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -92,7 +90,7 @@
 		#endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private CamView.CamViewer cam;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private CamViewer camViewer1;
 	}
 }

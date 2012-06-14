@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CamView
+namespace Shoppy
 {
     public partial class Form1 : Form
     {
@@ -14,10 +14,9 @@ namespace CamView
         {
             InitializeComponent();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            this.Dispose(true);
         }
 
     }

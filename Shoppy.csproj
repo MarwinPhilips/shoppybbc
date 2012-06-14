@@ -8,9 +8,9 @@
     <ProjectGuid>{1707E623-505C-4649-9270-5FC911FA2EF5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>$safeprojectname$</RootNamespace>
-    <AssemblyName>shoppy</AssemblyName>
-    <StartupObject>CamView.CamViewerTest</StartupObject>
+    <RootNamespace>Shoppy</RootNamespace>
+    <AssemblyName>Shoppy</AssemblyName>
+    <StartupObject>Shoppy.Shoppy</StartupObject>
     <ManifestCertificateThumbprint>C98216BCCE0CB2D47C4861EBC2A5D781DDB65825</ManifestCertificateThumbprint>
     <ManifestKeyFile>AccessManagement_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
@@ -22,6 +22,8 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <PublishUrl>C:\Dokumente und Einstellungen\Sebastian\Desktop\AM\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -36,8 +38,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,7 +46,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>3</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -90,7 +90,7 @@
     <Compile Include="CamViewerPicture.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CamViewerTest.cs" />
+    <Compile Include="Shoppy.cs" />
     <Compile Include="Database\Abfragen.cs" />
     <Compile Include="Database\CamAdmin.cs" />
     <Compile Include="Database\ClientAdmin.cs" />
@@ -168,27 +168,35 @@
     </Compile>
     <EmbeddedResource Include="Views\CamAdminView.resx">
       <DependentUpon>CamAdminView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ClientAdminView.resx">
       <DependentUpon>ClientAdminView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PaymentView.resx">
       <DependentUpon>PaymentView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SellAdminView.resx">
       <DependentUpon>SellAdminView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SellerAdminView.resx">
       <DependentUpon>SellerAdminView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SellView.resx">
       <DependentUpon>SellView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SurveyView.resx">
       <DependentUpon>SurveyView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SurveyViewCamSwitcher.resx">
       <DependentUpon>SurveyViewCamSwitcher.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
