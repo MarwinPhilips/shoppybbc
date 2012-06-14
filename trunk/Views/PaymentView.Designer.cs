@@ -137,9 +137,6 @@
             this.Name = "Payment_View";
             this.Size = new System.Drawing.Size(1000, 674);
             this.Load += new System.EventHandler(this.Payment_View_Load);
-            this.Enter += new System.EventHandler(this.delActionListenerOnEnter);
-            this.Leave += new System.EventHandler(this.delActionListnerOnLeave);
-            this.MouseLeave += new System.EventHandler(this.delActionListnerOnLeave);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
