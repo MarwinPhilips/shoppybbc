@@ -44,8 +44,16 @@
             this.txtInputBarcode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSellPay
@@ -53,9 +61,10 @@
             this.btnSellPay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSellPay.Enabled = false;
             this.btnSellPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnSellPay.Location = new System.Drawing.Point(3, 3);
+            this.btnSellPay.Location = new System.Drawing.Point(6, 6);
+            this.btnSellPay.Margin = new System.Windows.Forms.Padding(6);
             this.btnSellPay.Name = "btnSellPay";
-            this.btnSellPay.Size = new System.Drawing.Size(175, 219);
+            this.btnSellPay.Size = new System.Drawing.Size(232, 140);
             this.btnSellPay.TabIndex = 0;
             this.btnSellPay.Text = "Bezahlen";
             this.btnSellPay.UseVisualStyleBackColor = true;
@@ -72,12 +81,13 @@
             this.BarCode,
             this.Preis,
             this.Anzahl});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 262);
+            this.dataGridView1.Size = new System.Drawing.Size(988, 323);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
@@ -118,9 +128,10 @@
             // txtTotalPay
             // 
             this.txtTotalPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtTotalPay.Location = new System.Drawing.Point(197, 272);
+            this.txtTotalPay.Location = new System.Drawing.Point(6, 6);
+            this.txtTotalPay.Margin = new System.Windows.Forms.Padding(6);
             this.txtTotalPay.Name = "txtTotalPay";
-            this.txtTotalPay.Size = new System.Drawing.Size(147, 32);
+            this.txtTotalPay.Size = new System.Drawing.Size(290, 32);
             this.txtTotalPay.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -134,21 +145,22 @@
             this.tableLayoutPanel1.Controls.Add(this.button1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnSellDeleteAll, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 348);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 169);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(727, 225);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(976, 152);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Location = new System.Drawing.Point(184, 3);
+            this.button1.Location = new System.Drawing.Point(250, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 219);
+            this.button1.Size = new System.Drawing.Size(232, 140);
             this.button1.TabIndex = 2;
             this.button1.Text = "Mehrere Produkte";
             this.button1.UseVisualStyleBackColor = true;
@@ -157,9 +169,10 @@
             // 
             this.btnSellDeleteAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSellDeleteAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnSellDeleteAll.Location = new System.Drawing.Point(546, 3);
+            this.btnSellDeleteAll.Location = new System.Drawing.Point(738, 6);
+            this.btnSellDeleteAll.Margin = new System.Windows.Forms.Padding(6);
             this.btnSellDeleteAll.Name = "btnSellDeleteAll";
-            this.btnSellDeleteAll.Size = new System.Drawing.Size(178, 219);
+            this.btnSellDeleteAll.Size = new System.Drawing.Size(232, 140);
             this.btnSellDeleteAll.TabIndex = 1;
             this.btnSellDeleteAll.Text = "Alle Produkte löschen";
             this.btnSellDeleteAll.UseVisualStyleBackColor = true;
@@ -169,9 +182,10 @@
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button2.Location = new System.Drawing.Point(365, 3);
+            this.button2.Location = new System.Drawing.Point(494, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 219);
+            this.button2.Size = new System.Drawing.Size(232, 140);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -179,18 +193,20 @@
             // 
             this.text.AutoSize = true;
             this.text.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.text.Location = new System.Drawing.Point(11, 272);
+            this.text.Location = new System.Drawing.Point(6, 0);
+            this.text.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(156, 26);
+            this.text.Size = new System.Drawing.Size(126, 52);
             this.text.TabIndex = 4;
             this.text.Text = "Gesamtbetrag:";
             // 
             // txtInputBarcode
             // 
             this.txtInputBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtInputBarcode.Location = new System.Drawing.Point(197, 310);
+            this.txtInputBarcode.Location = new System.Drawing.Point(149, 95);
+            this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(6);
             this.txtInputBarcode.Name = "txtInputBarcode";
-            this.txtInputBarcode.Size = new System.Drawing.Size(242, 32);
+            this.txtInputBarcode.Size = new System.Drawing.Size(480, 32);
             this.txtInputBarcode.TabIndex = 2;
             this.txtInputBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInputBarcode_KeyPress);
             // 
@@ -198,9 +214,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(11, 310);
+            this.label1.Location = new System.Drawing.Point(6, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 26);
+            this.label1.Size = new System.Drawing.Size(128, 52);
             this.label1.TabIndex = 4;
             this.label1.Text = "Produkt-BarCode:";
             // 
@@ -208,29 +225,97 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(350, 272);
+            this.label2.Location = new System.Drawing.Point(416, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "CHF";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 341);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(988, 327);
+            this.tableLayoutPanel2.TabIndex = 5;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.7018F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.29819F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.text, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtInputBarcode, 1, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(976, 151);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.txtTotalPay, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(149, 6);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(821, 77);
+            this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.85163F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.14837F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1000, 674);
+            this.tableLayoutPanel5.TabIndex = 6;
+            // 
             // SellView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.text);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.txtInputBarcode);
-            this.Controls.Add(this.txtTotalPay);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tableLayoutPanel5);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SellView";
-            this.Size = new System.Drawing.Size(727, 573);
+            this.Size = new System.Drawing.Size(1000, 674);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
 		}
 
@@ -252,5 +337,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BarCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
         private System.Windows.Forms.DataGridViewTextBoxColumn Anzahl;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
 	}
 }

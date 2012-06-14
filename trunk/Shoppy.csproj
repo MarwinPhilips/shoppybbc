@@ -172,6 +172,9 @@
     <EmbeddedResource Include="Views\ClientAdminView.resx">
       <DependentUpon>ClientAdminView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\PaymentView.resx">
+      <DependentUpon>PaymentView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\SellAdminView.resx">
       <DependentUpon>SellAdminView.cs</DependentUpon>
     </EmbeddedResource>
