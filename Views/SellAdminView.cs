@@ -6,6 +6,8 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using Shoppy.Database;
+using Phidgets;
+
 
 namespace Shoppy.Views
 {

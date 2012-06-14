@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Löschen = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtNewRFID = new System.Windows.Forms.TextBox();
@@ -48,24 +47,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUpdatePasswort = new System.Windows.Forms.TextBox();
             this.txtNewPasswort = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Löschen});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(643, 276);
-            this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Löschen
             // 
@@ -77,13 +65,14 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.76617F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.23383F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.51142F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.48858F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Controls.Add(this.txtNewRFID, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewVorname, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtUpdateRFID, 0, 1);
@@ -101,114 +90,129 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtUpdatePasswort, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNewPasswort, 4, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 321);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 338);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.22222F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.77778F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(643, 170);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(980, 286);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // txtNewRFID
             // 
-            this.txtNewRFID.Location = new System.Drawing.Point(3, 86);
+            this.txtNewRFID.Location = new System.Drawing.Point(6, 164);
+            this.txtNewRFID.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewRFID.Name = "txtNewRFID";
-            this.txtNewRFID.Size = new System.Drawing.Size(87, 20);
+            this.txtNewRFID.Size = new System.Drawing.Size(96, 31);
             this.txtNewRFID.TabIndex = 9;
             // 
             // txtNewVorname
             // 
-            this.txtNewVorname.Location = new System.Drawing.Point(213, 86);
+            this.txtNewVorname.Location = new System.Drawing.Point(212, 164);
+            this.txtNewVorname.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewVorname.Name = "txtNewVorname";
-            this.txtNewVorname.Size = new System.Drawing.Size(99, 20);
+            this.txtNewVorname.Size = new System.Drawing.Size(112, 31);
             this.txtNewVorname.TabIndex = 8;
             // 
             // txtUpdateRFID
             // 
             this.txtUpdateRFID.Enabled = false;
-            this.txtUpdateRFID.Location = new System.Drawing.Point(3, 38);
+            this.txtUpdateRFID.Location = new System.Drawing.Point(6, 73);
+            this.txtUpdateRFID.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateRFID.Name = "txtUpdateRFID";
-            this.txtUpdateRFID.Size = new System.Drawing.Size(87, 20);
+            this.txtUpdateRFID.Size = new System.Drawing.Size(96, 31);
             this.txtUpdateRFID.TabIndex = 5;
             // 
             // txtUpdateVorname
             // 
-            this.txtUpdateVorname.Location = new System.Drawing.Point(213, 38);
+            this.txtUpdateVorname.Location = new System.Drawing.Point(212, 73);
+            this.txtUpdateVorname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateVorname.Name = "txtUpdateVorname";
-            this.txtUpdateVorname.Size = new System.Drawing.Size(99, 20);
+            this.txtUpdateVorname.Size = new System.Drawing.Size(112, 31);
             this.txtUpdateVorname.TabIndex = 4;
             // 
             // Barcode
             // 
             this.Barcode.AutoSize = true;
-            this.Barcode.Location = new System.Drawing.Point(101, 0);
+            this.Barcode.Location = new System.Drawing.Point(114, 0);
+            this.Barcode.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Barcode.Name = "Barcode";
-            this.Barcode.Size = new System.Drawing.Size(35, 13);
+            this.Barcode.Size = new System.Drawing.Size(68, 25);
             this.Barcode.TabIndex = 12;
             this.Barcode.Text = "Name";
             // 
             // Preis
             // 
             this.Preis.AutoSize = true;
-            this.Preis.Location = new System.Drawing.Point(213, 0);
+            this.Preis.Location = new System.Drawing.Point(212, 0);
+            this.Preis.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Preis.Name = "Preis";
-            this.Preis.Size = new System.Drawing.Size(49, 13);
+            this.Preis.Size = new System.Drawing.Size(98, 25);
             this.Preis.TabIndex = 13;
             this.Preis.Text = "Vorname";
             // 
             // txtUpdateLoginname
             // 
-            this.txtUpdateLoginname.Location = new System.Drawing.Point(318, 38);
+            this.txtUpdateLoginname.Location = new System.Drawing.Point(336, 73);
+            this.txtUpdateLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateLoginname.Name = "txtUpdateLoginname";
-            this.txtUpdateLoginname.Size = new System.Drawing.Size(93, 20);
+            this.txtUpdateLoginname.Size = new System.Drawing.Size(182, 31);
             this.txtUpdateLoginname.TabIndex = 14;
             // 
             // Vorrat
             // 
             this.Vorrat.AutoSize = true;
-            this.Vorrat.Location = new System.Drawing.Point(318, 0);
+            this.Vorrat.Location = new System.Drawing.Point(336, 0);
+            this.Vorrat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Vorrat.Name = "Vorrat";
-            this.Vorrat.Size = new System.Drawing.Size(59, 13);
+            this.Vorrat.Size = new System.Drawing.Size(118, 25);
             this.Vorrat.TabIndex = 15;
             this.Vorrat.Text = "Loginname";
             // 
             // txtNewLoginname
             // 
-            this.txtNewLoginname.Location = new System.Drawing.Point(318, 86);
+            this.txtNewLoginname.Location = new System.Drawing.Point(336, 164);
+            this.txtNewLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewLoginname.Name = "txtNewLoginname";
-            this.txtNewLoginname.Size = new System.Drawing.Size(93, 20);
+            this.txtNewLoginname.Size = new System.Drawing.Size(182, 31);
             this.txtNewLoginname.TabIndex = 16;
             // 
             // Produkt
             // 
             this.Produkt.AutoSize = true;
-            this.Produkt.Location = new System.Drawing.Point(3, 0);
+            this.Produkt.Location = new System.Drawing.Point(6, 0);
+            this.Produkt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Produkt.Name = "Produkt";
-            this.Produkt.Size = new System.Drawing.Size(32, 13);
+            this.Produkt.Size = new System.Drawing.Size(60, 25);
             this.Produkt.TabIndex = 11;
             this.Produkt.Text = "RFID";
             // 
             // txtUpdateName
             // 
-            this.txtUpdateName.Location = new System.Drawing.Point(101, 38);
+            this.txtUpdateName.Location = new System.Drawing.Point(114, 73);
+            this.txtUpdateName.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateName.Name = "txtUpdateName";
-            this.txtUpdateName.Size = new System.Drawing.Size(99, 20);
+            this.txtUpdateName.Size = new System.Drawing.Size(86, 31);
             this.txtUpdateName.TabIndex = 19;
             // 
             // txtNewName
             // 
-            this.txtNewName.Location = new System.Drawing.Point(101, 86);
+            this.txtNewName.Location = new System.Drawing.Point(114, 164);
+            this.txtNewName.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewName.Name = "txtNewName";
-            this.txtNewName.Size = new System.Drawing.Size(99, 20);
+            this.txtNewName.Size = new System.Drawing.Size(86, 31);
             this.txtNewName.TabIndex = 20;
             // 
             // btnUpdateSeller
             // 
-            this.btnUpdateSeller.Location = new System.Drawing.Point(519, 38);
+            this.btnUpdateSeller.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdateSeller.Location = new System.Drawing.Point(738, 73);
+            this.btnUpdateSeller.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateSeller.Name = "btnUpdateSeller";
-            this.btnUpdateSeller.Size = new System.Drawing.Size(111, 23);
+            this.btnUpdateSeller.Size = new System.Drawing.Size(236, 79);
             this.btnUpdateSeller.TabIndex = 0;
             this.btnUpdateSeller.Text = "Verkäufer anpassen";
             this.btnUpdateSeller.UseVisualStyleBackColor = true;
@@ -216,9 +220,11 @@
             // 
             // btnNewSeller
             // 
-            this.btnNewSeller.Location = new System.Drawing.Point(519, 86);
+            this.btnNewSeller.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewSeller.Location = new System.Drawing.Point(738, 164);
+            this.btnNewSeller.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewSeller.Name = "btnNewSeller";
-            this.btnNewSeller.Size = new System.Drawing.Size(111, 20);
+            this.btnNewSeller.Size = new System.Drawing.Size(236, 116);
             this.btnNewSeller.TabIndex = 2;
             this.btnNewSeller.Text = "Neuen Verkäufer erfassen";
             this.btnNewSeller.UseVisualStyleBackColor = true;
@@ -227,44 +233,81 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(417, 0);
+            this.label1.Location = new System.Drawing.Point(534, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 21;
             this.label1.Text = "Passwort";
             // 
             // txtUpdatePasswort
             // 
-            this.txtUpdatePasswort.Location = new System.Drawing.Point(417, 38);
+            this.txtUpdatePasswort.Location = new System.Drawing.Point(534, 73);
+            this.txtUpdatePasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
-            this.txtUpdatePasswort.Size = new System.Drawing.Size(96, 20);
+            this.txtUpdatePasswort.Size = new System.Drawing.Size(188, 31);
             this.txtUpdatePasswort.TabIndex = 22;
             // 
             // txtNewPasswort
             // 
-            this.txtNewPasswort.Location = new System.Drawing.Point(417, 86);
+            this.txtNewPasswort.Location = new System.Drawing.Point(534, 164);
+            this.txtNewPasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewPasswort.Name = "txtNewPasswort";
-            this.txtNewPasswort.Size = new System.Drawing.Size(96, 20);
+            this.txtNewPasswort.Size = new System.Drawing.Size(188, 31);
             this.txtNewPasswort.TabIndex = 23;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewButtonColumn1});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(968, 308);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "Löschen";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.81899F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.18101F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(992, 630);
+            this.tableLayoutPanel2.TabIndex = 17;
             // 
             // SellerAdminView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SellerAdminView";
-            this.Size = new System.Drawing.Size(643, 491);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(992, 630);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn Löschen;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtNewRFID;
@@ -284,5 +327,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUpdatePasswort;
         private System.Windows.Forms.TextBox txtNewPasswort;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 	}
 }
