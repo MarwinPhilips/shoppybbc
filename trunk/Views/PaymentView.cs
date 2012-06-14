@@ -15,26 +15,29 @@ namespace Shoppy.Views
     {
         private RFID rfid; //Declare an RFID object
         ClientAdmin database = new ClientAdmin();
+        string rfid_num;
 
         public Payment_View()
         {
             InitializeComponent();      
-            FillData();
+            //FillData();
         }
 
         private void FillData()
         {
-            dataGridView1.DataSource = database.GetClientOnRFID("13");
+            dataGridView1.DataSource = database.GetClientOnRFID(rfid_num);
         }
 
         void rfid_Tag(object sender, TagEventArgs e)
-        {
-            //txtRFID.Text = e.Tag;
+        {   
+            rfid_num = e.Tag;
+            MessageBox.Show(rfid_num);
+            FillData();
         }
 
         void rfid_TagLost(object sender, TagEventArgs e)
         {
-           //txtRFID.Text = "";
+           rfid_num = "";
         }
 
         private void Payment_View_Load(object sender, EventArgs e)
@@ -43,7 +46,6 @@ namespace Shoppy.Views
             rfid = new RFID();
             rfid.Tag += new TagEventHandler(rfid_Tag);
             rfid.TagLost += new TagEventHandler(rfid_TagLost);
-
             openCmdLine(rfid);
         }
 
