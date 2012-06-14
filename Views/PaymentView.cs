@@ -41,6 +41,8 @@ namespace Shoppy.Views
         void rfid_TagLost(object sender, TagEventArgs e)
         {
            rfid_num = "";
+           btnEnter.Enabled = false;
+           dataGridView1.DataSource = "";
         }
 
         private void Payment_View_Load(object sender, EventArgs e)
@@ -187,11 +189,8 @@ namespace Shoppy.Views
 
         private void btnInsert(object sender, EventArgs e)
         {
-            
-            string kunde = dataGridView1.Rows[0].Cells[0].Value.ToString();
-            MessageBox.Show(kunde);
             double betrag = double.Parse(txtBetrag.Text);
-            database.InsertBetrag(kunde,betrag);
+            database.InsertBetrag(rfid_num,betrag);
             FillData();
         }
 
