@@ -162,8 +162,5 @@ namespace Shoppy.Views
         {
 
         }
-
-
-
     }
 }
