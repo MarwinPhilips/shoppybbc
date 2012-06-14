@@ -50,7 +50,6 @@ namespace Shoppy.Database
 
         public void InsertBetrag(string RFID, double Betrag)
         {
-            
             string[,] ins = Abfragen.Select("SELECT Geld FROM Kunde WHERE RFID ='" + RFID + "';");
             double.Parse(ins[0, 0]);
             Betrag += double.Parse(ins[0, 0]);
