@@ -20,7 +20,6 @@ namespace Shoppy.Views
         public Payment_View()
         {
             InitializeComponent();      
-            //FillData();
         }
 
         private void FillData()
@@ -29,8 +28,12 @@ namespace Shoppy.Views
         }
 
         void rfid_Tag(object sender, TagEventArgs e)
-        {   
+        {
+            btnEnter.Enabled = true;
             rfid_num = e.Tag;
+            SendKeys.Send(e.Tag);
+            SendKeys.Send("{ENTER}");
+
             MessageBox.Show(rfid_num);
             FillData();
         }
@@ -44,17 +47,49 @@ namespace Shoppy.Views
         {
             //EventHandler RFID
             rfid = new RFID();
+
+            rfid.Attach += new AttachEventHandler(rfid_Attach);
+            rfid.Detach += new DetachEventHandler(rfid_Detach);
+            rfid.Error += new ErrorEventHandler(rfid_Error);
+
             rfid.Tag += new TagEventHandler(rfid_Tag);
             rfid.TagLost += new TagEventHandler(rfid_TagLost);
+
+
+        
+
             openCmdLine(rfid);
+            
         }
 
+        void rfid_Attach(object sender, AttachEventArgs e)
+        {
+            RFID attached = (RFID)sender;
+            
+            if (rfid.outputs.Count > 0)
+            {
+                
+                rfid.Antenna = true;
+                
+            }
+        }
 
+        void rfid_Detach(object sender, DetachEventArgs e)
+        {
+            RFID detached = (RFID)sender;
+            
+        }
+
+        void rfid_Error(object sender, ErrorEventArgs e)
+        {
+            Phidget phid = (Phidget)sender;
+        }
 
         #region Command line open functions
         private void openCmdLine(Phidget p)
         {
             openCmdLine(p, null);
+            
         }
         private void openCmdLine(Phidget p, String pass)
         {
@@ -66,7 +101,7 @@ namespace Shoppy.Views
             String appName = args[0];
 
             try
-            { //Parse the flags
+            {
                 for (int i = 1; i < args.Length; i++)
                 {
                     if (args[i].StartsWith("-"))
@@ -107,7 +142,7 @@ namespace Shoppy.Views
                     p.open(serial, host, pass);
                 else
                     p.open(serial);
-                return; //success
+                return;
             }
             catch { }
         usage:
@@ -152,6 +187,7 @@ namespace Shoppy.Views
 
         private void btnInsert(object sender, EventArgs e)
         {
+            
             string kunde = dataGridView1.Rows[0].Cells[0].Value.ToString();
             MessageBox.Show(kunde);
             double betrag = double.Parse(txtBetrag.Text);
