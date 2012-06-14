@@ -37,19 +37,21 @@
             this.Anzahl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTotalPay = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnSellDeleteAll = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.SellMultipleProdukt = new System.Windows.Forms.Button();
+            this.txtMultipleProdukt = new System.Windows.Forms.TextBox();
             this.text = new System.Windows.Forms.Label();
             this.txtInputBarcode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -64,7 +66,7 @@
             this.btnSellPay.Location = new System.Drawing.Point(6, 6);
             this.btnSellPay.Margin = new System.Windows.Forms.Padding(6);
             this.btnSellPay.Name = "btnSellPay";
-            this.btnSellPay.Size = new System.Drawing.Size(232, 140);
+            this.btnSellPay.Size = new System.Drawing.Size(313, 140);
             this.btnSellPay.TabIndex = 0;
             this.btnSellPay.Text = "Bezahlen";
             this.btnSellPay.UseVisualStyleBackColor = true;
@@ -127,24 +129,24 @@
             // 
             // txtTotalPay
             // 
+            this.txtTotalPay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTotalPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtTotalPay.Location = new System.Drawing.Point(6, 6);
-            this.txtTotalPay.Margin = new System.Windows.Forms.Padding(6);
+            this.txtTotalPay.Location = new System.Drawing.Point(6, 0);
+            this.txtTotalPay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
             this.txtTotalPay.Name = "txtTotalPay";
-            this.txtTotalPay.Size = new System.Drawing.Size(290, 32);
+            this.txtTotalPay.Size = new System.Drawing.Size(280, 32);
             this.txtTotalPay.TabIndex = 2;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.btnSellPay, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSellDeleteAll, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnSellDeleteAll, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 169);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -153,41 +155,56 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(976, 152);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Location = new System.Drawing.Point(250, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 140);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Mehrere Produkte";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnSellDeleteAll
             // 
             this.btnSellDeleteAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSellDeleteAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnSellDeleteAll.Location = new System.Drawing.Point(738, 6);
+            this.btnSellDeleteAll.Location = new System.Drawing.Point(656, 6);
             this.btnSellDeleteAll.Margin = new System.Windows.Forms.Padding(6);
             this.btnSellDeleteAll.Name = "btnSellDeleteAll";
-            this.btnSellDeleteAll.Size = new System.Drawing.Size(232, 140);
+            this.btnSellDeleteAll.Size = new System.Drawing.Size(314, 140);
             this.btnSellDeleteAll.TabIndex = 1;
             this.btnSellDeleteAll.Text = "Alle Produkte löschen";
             this.btnSellDeleteAll.UseVisualStyleBackColor = true;
             this.btnSellDeleteAll.Click += new System.EventHandler(this.btnSellDeleteAll_Click);
             // 
-            // button2
+            // tableLayoutPanel6
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button2.Location = new System.Drawing.Point(494, 6);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 140);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.SellMultipleProdukt, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txtMultipleProdukt, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(328, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.54794F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.45205F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(319, 146);
+            this.tableLayoutPanel6.TabIndex = 2;
+            // 
+            // SellMultipleProdukt
+            // 
+            this.SellMultipleProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SellMultipleProdukt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.SellMultipleProdukt.Location = new System.Drawing.Point(6, 6);
+            this.SellMultipleProdukt.Margin = new System.Windows.Forms.Padding(6);
+            this.SellMultipleProdukt.Name = "SellMultipleProdukt";
+            this.SellMultipleProdukt.Size = new System.Drawing.Size(307, 91);
+            this.SellMultipleProdukt.TabIndex = 3;
+            this.SellMultipleProdukt.Text = "Mehrere Produkte";
+            this.SellMultipleProdukt.UseVisualStyleBackColor = true;
+            this.SellMultipleProdukt.Click += new System.EventHandler(this.SellMultipleProdukt_Click);
+            // 
+            // txtMultipleProdukt
+            // 
+            this.txtMultipleProdukt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMultipleProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMultipleProdukt.Location = new System.Drawing.Point(3, 106);
+            this.txtMultipleProdukt.Name = "txtMultipleProdukt";
+            this.txtMultipleProdukt.Size = new System.Drawing.Size(313, 31);
+            this.txtMultipleProdukt.TabIndex = 4;
             // 
             // text
             // 
@@ -196,15 +213,15 @@
             this.text.Location = new System.Drawing.Point(6, 0);
             this.text.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(126, 52);
+            this.text.Size = new System.Drawing.Size(156, 26);
             this.text.TabIndex = 4;
             this.text.Text = "Gesamtbetrag:";
             // 
             // txtInputBarcode
             // 
             this.txtInputBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtInputBarcode.Location = new System.Drawing.Point(149, 95);
-            this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(6);
+            this.txtInputBarcode.Location = new System.Drawing.Point(215, 89);
+            this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
             this.txtInputBarcode.Name = "txtInputBarcode";
             this.txtInputBarcode.Size = new System.Drawing.Size(480, 32);
             this.txtInputBarcode.TabIndex = 2;
@@ -217,20 +234,9 @@
             this.label1.Location = new System.Drawing.Point(6, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 52);
+            this.label1.Size = new System.Drawing.Size(186, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Produkt-BarCode:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(416, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 26);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CHF";
             // 
             // tableLayoutPanel2
             // 
@@ -251,12 +257,12 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.7018F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.29819F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.51639F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.4836F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.text, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtInputBarcode, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.text, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 6);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6);
@@ -270,17 +276,17 @@
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.txtTotalPay, 0, 0);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.72679F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.27321F));
             this.tableLayoutPanel4.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtTotalPay, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(149, 6);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(215, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(821, 77);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(755, 83);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // tableLayoutPanel5
@@ -298,6 +304,17 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1000, 674);
             this.tableLayoutPanel5.TabIndex = 6;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label2.Location = new System.Drawing.Point(298, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 26);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "CHF";
+            // 
             // SellView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -309,6 +326,8 @@
             this.Size = new System.Drawing.Size(1000, 674);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -328,10 +347,7 @@
         private System.Windows.Forms.Label text;
         private System.Windows.Forms.TextBox txtInputBarcode;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSellDeleteAll;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewButtonColumn Löschen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Produkt;
         private System.Windows.Forms.DataGridViewTextBoxColumn BarCode;
@@ -341,5 +357,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button SellMultipleProdukt;
+        private System.Windows.Forms.TextBox txtMultipleProdukt;
+        private System.Windows.Forms.Label label2;
 	}
 }
