@@ -19,5 +19,33 @@ namespace Shoppy
             this.Dispose(true);
         }
 
+        /* private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             tabControl1.SelectedTab.Focus();
+         }
+
+         private void tabPage2_Enter(object sender, EventArgs e)
+         {
+             payment_View1.Focus();
+         }*/
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            MessageBox.Show(e.TabPage.ToString());
+
+            if (e.TabPage.ToString().Equals("TabPage:{Payment}"))
+            {
+                payment_View1.Focus();
+            }
+            else if (e.TabPage.ToString().Equals("TabPage:{Survey}"))
+            {
+                surveyView1.Focus();
+            }
+            else if (e.TabPage.ToString().Equals("TabPage:{Sell}"))
+            {
+                sellView1.Focus();
+            }
+        }
     }
 }
+
