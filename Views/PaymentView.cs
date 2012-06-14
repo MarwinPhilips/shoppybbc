@@ -24,7 +24,7 @@ namespace Shoppy.Views
 
         private void FillData()
         {
-            //dataGridView1.DataSource = database.GetClientOnRFID("13");
+            dataGridView1.DataSource = database.GetClientOnRFID("13");
         }
 
         void rfid_Tag(object sender, TagEventArgs e)
@@ -34,7 +34,7 @@ namespace Shoppy.Views
 
         void rfid_TagLost(object sender, TagEventArgs e)
         {
-           // txtRFID.Text = "";
+           //txtRFID.Text = "";
         }
 
         private void Payment_View_Load(object sender, EventArgs e)
@@ -45,8 +45,6 @@ namespace Shoppy.Views
             rfid.TagLost += new TagEventHandler(rfid_TagLost);
 
             openCmdLine(rfid);
-            //rfid.Tag -= new TagEventHandler(rfid_Tag);
-            //rfid.TagLost -= new TagEventHandler(rfid_TagLost);
         }
 
 
@@ -154,9 +152,8 @@ namespace Shoppy.Views
         {
             string kunde = dataGridView1.Rows[0].Cells[0].Value.ToString();
             MessageBox.Show(kunde);
-            string betrag = txtBetrag.Text;
-
-            //database.InsertBetrag(kunde,betrag);
+            double betrag = double.Parse(txtBetrag.Text);
+            database.InsertBetrag(kunde,betrag);
             FillData();
         }
 
