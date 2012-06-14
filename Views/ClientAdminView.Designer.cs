@@ -33,7 +33,6 @@
             this.Löschen = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnNewClient = new System.Windows.Forms.Button();
             this.txtUpdateVorname = new System.Windows.Forms.TextBox();
-            this.txtUpdateRFID = new System.Windows.Forms.TextBox();
             this.txtNewVorname = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,9 +44,10 @@
             this.Anzeigename = new System.Windows.Forms.Label();
             this.txtUpdatePasswort = new System.Windows.Forms.TextBox();
             this.txtNewPasswort = new System.Windows.Forms.TextBox();
+            this.txtUpdateRFID = new System.Windows.Forms.TextBox();
             this.txtUpdateName = new System.Windows.Forms.TextBox();
-            this.txtNewName = new System.Windows.Forms.TextBox();
             this.txtNewRFID = new System.Windows.Forms.TextBox();
+            this.txtNewName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -107,15 +107,6 @@
             this.txtUpdateVorname.Size = new System.Drawing.Size(151, 31);
             this.txtUpdateVorname.TabIndex = 4;
             // 
-            // txtUpdateRFID
-            // 
-            this.txtUpdateRFID.Location = new System.Drawing.Point(6, 64);
-            this.txtUpdateRFID.Margin = new System.Windows.Forms.Padding(6);
-            this.txtUpdateRFID.Name = "txtUpdateRFID";
-            this.txtUpdateRFID.ReadOnly = true;
-            this.txtUpdateRFID.Size = new System.Drawing.Size(1, 31);
-            this.txtUpdateRFID.TabIndex = 5;
-            // 
             // txtNewVorname
             // 
             this.txtNewVorname.Location = new System.Drawing.Point(331, 143);
@@ -135,7 +126,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtNewVorname, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtUpdateRFID, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtUpdateVorname, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
@@ -147,9 +137,10 @@
             this.tableLayoutPanel1.Controls.Add(this.btnNewClient, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtUpdatePasswort, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNewPasswort, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtUpdateRFID, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtUpdateName, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtNewName, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewRFID, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtNewName, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 321);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
@@ -245,31 +236,33 @@
             this.txtNewPasswort.Size = new System.Drawing.Size(151, 31);
             this.txtNewPasswort.TabIndex = 18;
             // 
+            // txtUpdateRFID
+            // 
+            this.txtUpdateRFID.Location = new System.Drawing.Point(3, 61);
+            this.txtUpdateRFID.Name = "txtUpdateRFID";
+            this.txtUpdateRFID.Size = new System.Drawing.Size(100, 31);
+            this.txtUpdateRFID.TabIndex = 23;
+            // 
             // txtUpdateName
             // 
-            this.txtUpdateName.Location = new System.Drawing.Point(158, 64);
-            this.txtUpdateName.Margin = new System.Windows.Forms.Padding(6);
+            this.txtUpdateName.Location = new System.Drawing.Point(155, 61);
             this.txtUpdateName.Name = "txtUpdateName";
-            this.txtUpdateName.Size = new System.Drawing.Size(1, 31);
-            this.txtUpdateName.TabIndex = 19;
-            // 
-            // txtNewName
-            // 
-            this.txtNewName.Location = new System.Drawing.Point(158, 143);
-            this.txtNewName.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNewName.Name = "txtNewName";
-            this.txtNewName.Size = new System.Drawing.Size(1, 31);
-            this.txtNewName.TabIndex = 20;
+            this.txtUpdateName.Size = new System.Drawing.Size(100, 31);
+            this.txtUpdateName.TabIndex = 24;
             // 
             // txtNewRFID
             // 
-            this.txtNewRFID.HideSelection = false;
-            this.txtNewRFID.Location = new System.Drawing.Point(6, 143);
-            this.txtNewRFID.Margin = new System.Windows.Forms.Padding(6);
+            this.txtNewRFID.Location = new System.Drawing.Point(3, 140);
             this.txtNewRFID.Name = "txtNewRFID";
-            this.txtNewRFID.Size = new System.Drawing.Size(1, 31);
-            this.txtNewRFID.TabIndex = 22;
-            this.txtNewRFID.TextChanged += new System.EventHandler(this.txtNewRFID_TextChanged);
+            this.txtNewRFID.Size = new System.Drawing.Size(100, 31);
+            this.txtNewRFID.TabIndex = 25;
+            // 
+            // txtNewName
+            // 
+            this.txtNewName.Location = new System.Drawing.Point(155, 140);
+            this.txtNewName.Name = "txtNewName";
+            this.txtNewName.Size = new System.Drawing.Size(100, 31);
+            this.txtNewName.TabIndex = 26;
             // 
             // tableLayoutPanel2
             // 
@@ -310,7 +303,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Löschen;
         private System.Windows.Forms.Button btnNewClient;
         private System.Windows.Forms.TextBox txtUpdateVorname;
-        private System.Windows.Forms.TextBox txtUpdateRFID;
         private System.Windows.Forms.TextBox txtNewVorname;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label Anzeigename;
@@ -321,10 +313,11 @@
         private System.Windows.Forms.TextBox txtNewGeld;
         private System.Windows.Forms.TextBox txtUpdatePasswort;
         private System.Windows.Forms.TextBox txtNewPasswort;
-        private System.Windows.Forms.TextBox txtUpdateName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNewName;
-        private System.Windows.Forms.TextBox txtNewRFID;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox txtUpdateRFID;
+        private System.Windows.Forms.TextBox txtUpdateName;
+        private System.Windows.Forms.TextBox txtNewRFID;
+        private System.Windows.Forms.TextBox txtNewName;
     }
 }
