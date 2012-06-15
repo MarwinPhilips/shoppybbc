@@ -42,9 +42,16 @@ namespace Shoppy.Database
         }
 
         /* zahlenden Kunden aussuchen*/
-        public void getPayClient(string RFID)
+        public void UpdatePayClient(string RFID, double Betrag)
         {
-            Abfragen.Select("SELECT Geld FROM kunde WHERE RFID = '" + RFID + "';");
+            Abfragen.Update("UPDATE kunde SET Geld='" + Betrag + "' WHERE RFID = '" + RFID + "';");
+        }
+
+        public string GetPayClient(string RFID)
+        {
+            string[,] resuliste = Abfragen.Select("SELECT Geld FROM kunde WHERE RFID = '" + RFID + "';");
+            string resultat = resuliste[0, 0];
+            return resultat;
         }
     }
 }

@@ -47,8 +47,10 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtGehalt = new System.Windows.Forms.TextBox();
+            this.labelGehalt = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -84,10 +86,12 @@
             this.Preis,
             this.Anzahl});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 55;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(988, 323);
             this.dataGridView1.TabIndex = 1;
@@ -98,6 +102,7 @@
             // Löschen
             // 
             this.Löschen.HeaderText = "Löschen";
+            this.Löschen.MinimumWidth = 50;
             this.Löschen.Name = "Löschen";
             this.Löschen.ReadOnly = true;
             this.Löschen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -106,35 +111,43 @@
             // Produkt
             // 
             this.Produkt.HeaderText = "ProduktName";
+            this.Produkt.MinimumWidth = 50;
             this.Produkt.Name = "Produkt";
             this.Produkt.ReadOnly = true;
+            this.Produkt.Width = 300;
             // 
             // BarCode
             // 
             this.BarCode.HeaderText = "BarCode";
+            this.BarCode.MinimumWidth = 50;
             this.BarCode.Name = "BarCode";
             this.BarCode.ReadOnly = true;
+            this.BarCode.Width = 200;
             // 
             // Preis
             // 
             this.Preis.HeaderText = "Preis";
+            this.Preis.MinimumWidth = 50;
             this.Preis.Name = "Preis";
             this.Preis.ReadOnly = true;
             // 
             // Anzahl
             // 
             this.Anzahl.HeaderText = "Anzahl";
+            this.Anzahl.MinimumWidth = 50;
             this.Anzahl.Name = "Anzahl";
             this.Anzahl.ReadOnly = true;
+            this.Anzahl.Width = 95;
             // 
             // txtTotalPay
             // 
             this.txtTotalPay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTotalPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtTotalPay.Location = new System.Drawing.Point(6, 0);
-            this.txtTotalPay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
+            this.txtTotalPay.Location = new System.Drawing.Point(0, 0);
+            this.txtTotalPay.Margin = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.txtTotalPay.Name = "txtTotalPay";
-            this.txtTotalPay.Size = new System.Drawing.Size(280, 32);
+            this.txtTotalPay.ReadOnly = true;
+            this.txtTotalPay.Size = new System.Drawing.Size(109, 32);
             this.txtTotalPay.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -188,10 +201,10 @@
             // 
             this.SellMultipleProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SellMultipleProdukt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.SellMultipleProdukt.Location = new System.Drawing.Point(6, 6);
-            this.SellMultipleProdukt.Margin = new System.Windows.Forms.Padding(6);
+            this.SellMultipleProdukt.Location = new System.Drawing.Point(6, 3);
+            this.SellMultipleProdukt.Margin = new System.Windows.Forms.Padding(6, 3, 6, 6);
             this.SellMultipleProdukt.Name = "SellMultipleProdukt";
-            this.SellMultipleProdukt.Size = new System.Drawing.Size(307, 91);
+            this.SellMultipleProdukt.Size = new System.Drawing.Size(307, 94);
             this.SellMultipleProdukt.TabIndex = 3;
             this.SellMultipleProdukt.Text = "Mehrere Produkte";
             this.SellMultipleProdukt.UseVisualStyleBackColor = true;
@@ -201,9 +214,10 @@
             // 
             this.txtMultipleProdukt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMultipleProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMultipleProdukt.Location = new System.Drawing.Point(3, 106);
+            this.txtMultipleProdukt.Location = new System.Drawing.Point(6, 110);
+            this.txtMultipleProdukt.Margin = new System.Windows.Forms.Padding(6, 7, 6, 3);
             this.txtMultipleProdukt.Name = "txtMultipleProdukt";
-            this.txtMultipleProdukt.Size = new System.Drawing.Size(313, 31);
+            this.txtMultipleProdukt.Size = new System.Drawing.Size(307, 31);
             this.txtMultipleProdukt.TabIndex = 4;
             // 
             // text
@@ -219,11 +233,12 @@
             // 
             // txtInputBarcode
             // 
+            this.txtInputBarcode.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtInputBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtInputBarcode.Location = new System.Drawing.Point(215, 89);
-            this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
+            this.txtInputBarcode.Location = new System.Drawing.Point(212, 89);
+            this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(7, 0, 6, 6);
             this.txtInputBarcode.Name = "txtInputBarcode";
-            this.txtInputBarcode.Size = new System.Drawing.Size(480, 32);
+            this.txtInputBarcode.Size = new System.Drawing.Size(382, 32);
             this.txtInputBarcode.TabIndex = 2;
             this.txtInputBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInputBarcode_KeyPress);
             // 
@@ -257,8 +272,8 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.51639F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.4836F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.0041F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.9959F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtInputBarcode, 1, 1);
@@ -275,19 +290,53 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.72679F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.27321F));
-            this.tableLayoutPanel4.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
             this.tableLayoutPanel4.Controls.Add(this.txtTotalPay, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtGehalt, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.labelGehalt, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(215, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(211, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(755, 83);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(759, 83);
             this.tableLayoutPanel4.TabIndex = 6;
+            // 
+            // txtGehalt
+            // 
+            this.txtGehalt.Location = new System.Drawing.Point(559, 3);
+            this.txtGehalt.Name = "txtGehalt";
+            this.txtGehalt.ReadOnly = true;
+            this.txtGehalt.Size = new System.Drawing.Size(120, 31);
+            this.txtGehalt.TabIndex = 6;
+            // 
+            // labelGehalt
+            // 
+            this.labelGehalt.AutoSize = true;
+            this.labelGehalt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelGehalt.Location = new System.Drawing.Point(391, 6);
+            this.labelGehalt.Margin = new System.Windows.Forms.Padding(10, 6, 0, 0);
+            this.labelGehalt.Name = "labelGehalt";
+            this.labelGehalt.Size = new System.Drawing.Size(164, 26);
+            this.labelGehalt.TabIndex = 5;
+            this.labelGehalt.Text = "Kunden-Gehalt:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label3.Location = new System.Drawing.Point(109, 2);
+            this.label3.Margin = new System.Windows.Forms.Padding(0, 2, 6, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 26);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "CHF";
             // 
             // tableLayoutPanel5
             // 
@@ -304,17 +353,6 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1000, 674);
             this.tableLayoutPanel5.TabIndex = 6;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(298, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 26);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "CHF";
-            // 
             // SellView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -324,6 +362,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SellView";
             this.Size = new System.Drawing.Size(1000, 674);
+            this.Load += new System.EventHandler(this.SellView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -348,11 +387,6 @@
         private System.Windows.Forms.TextBox txtInputBarcode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSellDeleteAll;
-        private System.Windows.Forms.DataGridViewButtonColumn Löschen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Produkt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BarCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Anzahl;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -360,6 +394,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button SellMultipleProdukt;
         private System.Windows.Forms.TextBox txtMultipleProdukt;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelGehalt;
+        private System.Windows.Forms.TextBox txtGehalt;
+        private System.Windows.Forms.DataGridViewButtonColumn Löschen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Produkt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BarCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Preis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Anzahl;
+        private System.Windows.Forms.Label label3;
 	}
 }
