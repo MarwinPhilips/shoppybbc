@@ -83,24 +83,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Shoppy.exe" size="70656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Shoppy.exe" size="77312">
       <assemblyIdentity name="Shoppy" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ltN6Q8lOfGGE1HPslo3QfyiC8Fk=</dsig:DigestValue>
+        <dsig:DigestValue>zLGhPqxQLkAUeaaJFii2wORhqj0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Shoppy.exe.config" size="256">
+  <file name="Shoppy.exe.config" size="891">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>bfHe0IAFc7jU1DFSJ6ILlUsBfvw=</dsig:DigestValue>
+      <dsig:DigestValue>Cb5VRwUteryDgoQbZwrIHo7xRac=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
