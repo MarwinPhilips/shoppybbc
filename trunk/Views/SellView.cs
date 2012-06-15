@@ -170,15 +170,24 @@ namespace Shoppy.Views
             }
         }
 
-        /*Events für RFID*/
+        /*Event wenn RFID gefunden und eigebatcht ist*/
         void rfid_Tag(object sender, TagEventArgs e)
         {
             rfid_num = e.Tag;
-            string Gehalt = sa.GetPayClient(rfid_num).ToString();
-            txtGehalt.Text = Gehalt;
-            btnSellPay.Enabled = true;
+            try
+            {
+                string Gehalt = sa.GetPayClient(rfid_num).ToString();
+                txtGehalt.Text = Gehalt;
+                btnSellPay.Enabled = true;
+            }
+            catch   /*Wenn der Kunde (RFID) nicht in der Datenbank vorhanden ist, wird eine Fehlermeldung ausgegeben*/
+            {
+                MessageBox.Show("Fehler: Der RFID konnte nicht gefunden werden. Bitte neuer "+
+                    "Kunde hinzufügen.");
+            }        
         }
 
+        /*Event wenn RFID wieder weggenommen wird*/
         void rfid_TagLost(object sender, TagEventArgs e)
         {
             rfid_num = "";
@@ -189,11 +198,13 @@ namespace Shoppy.Views
 
         private void SellView_Load(object sender, EventArgs e)
         {
-        //EventHandler RFID
+        //EventHandler RFID3.
+            txtInputBarcode.Select();
             rfid = new RFID();
             rfid.Tag += new TagEventHandler(rfid_Tag);
             rfid.TagLost += new TagEventHandler(rfid_TagLost);
                 rfid.open();
+                
         }
 	}
 }
