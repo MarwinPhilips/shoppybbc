@@ -6,13 +6,16 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using Shoppy.Database;
+using Phidgets.Events;
+using Phidgets;
 
 namespace Shoppy.Views
 {
 	public partial class SellView: UserControl
 	{
-
+        private RFID rfid;
         SellAdmin sa = new SellAdmin();
+        string rfid_num;
 
 		public SellView()
 		{
@@ -109,6 +112,20 @@ namespace Shoppy.Views
             }
         }
 
+        /* überprüft ob eingabe eine Zahl ist*/
+        private bool BinEineZahl(string eingabe)
+        {
+            try
+            {
+                Int32.Parse(eingabe);
+                return false;
+            }
+            catch
+            {
+                return true;
+            }
+        }
+
         /* Aufruf beim hinzufügen oder löschen einer Tabellenzeile*/
         private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
@@ -134,23 +151,49 @@ namespace Shoppy.Views
             dataGridView1.Rows.Clear();
         }
 
+
         private void btnSellPay_Click(object sender, EventArgs e)
         {
-            int TotalKosten = Int32.Parse(txtTotalPay.Text);
-            //string Gehalt = sa.getPayClient("sdf");
-        }
-
-
-        private bool BinEineZahl(string eingabe)
-        {
-            try
+            double zuBezahlenBetrag = double.Parse(txtTotalPay.Text);
+            double kundenGehalt = double.Parse(sa.GetPayClient(rfid_num));
+            if (kundenGehalt < zuBezahlenBetrag)
             {
-                Int32.Parse(eingabe);
-                return false;
-            }catch{
-                return true;
+                MessageBox.Show("Zu Wenig Geld auf dem Konto !");
+            }
+            else if (kundenGehalt >= zuBezahlenBetrag)
+            {
+                double newKundenGehalt = kundenGehalt - zuBezahlenBetrag;
+                sa.UpdatePayClient(rfid_num, newKundenGehalt);
+                txtGehalt.Text = newKundenGehalt.ToString();
+                dataGridView1.Rows.Clear();
+                newPreis();
             }
         }
 
+        /*Events für RFID*/
+        void rfid_Tag(object sender, TagEventArgs e)
+        {
+            rfid_num = e.Tag;
+            string Gehalt = sa.GetPayClient(rfid_num).ToString();
+            txtGehalt.Text = Gehalt;
+            btnSellPay.Enabled = true;
+        }
+
+        void rfid_TagLost(object sender, TagEventArgs e)
+        {
+            rfid_num = "";
+            btnSellPay.Enabled = false;
+            txtGehalt.Text = "";
+        }
+
+
+        private void SellView_Load(object sender, EventArgs e)
+        {
+        //EventHandler RFID
+            rfid = new RFID();
+            rfid.Tag += new TagEventHandler(rfid_Tag);
+            rfid.TagLost += new TagEventHandler(rfid_TagLost);
+                rfid.open();
+        }
 	}
 }
