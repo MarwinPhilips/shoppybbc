@@ -30,7 +30,7 @@
 		{
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.camViewer1 = new Shoppy.Cam.CamViewer();
+            this.camViewer1 = new Cam.CamViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.camViewer1)).BeginInit();
