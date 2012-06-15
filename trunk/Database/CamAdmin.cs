@@ -35,7 +35,7 @@ namespace Shoppy.Database
 
         public DataTable getSurveyViewCams()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("select id_Kamera as ID,Anzeigename as Kameraname from kamera", Abfragen.verbindung);
+            MySqlDataAdapter da = new MySqlDataAdapter("select id_Kamera as ID,Anzeigename as Name from kamera", Abfragen.verbindung);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
