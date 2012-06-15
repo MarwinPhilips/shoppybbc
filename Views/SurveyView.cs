@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
-using Shoppy.Views;
 
 namespace Shoppy.Views
 {
@@ -17,6 +16,11 @@ namespace Shoppy.Views
 
             
 		}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InitializeComponent();
+        }
         
 
         

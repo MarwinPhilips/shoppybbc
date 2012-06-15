@@ -38,7 +38,7 @@ namespace Shoppy.Cam
             this.butHorizontal = new System.Windows.Forms.Button();
             this.butBottom = new System.Windows.Forms.Button();
             this.butCenter = new System.Windows.Forms.Button();
-            this.m_picture = new Cam.CamViewerPicture();
+            this.m_picture = new Shoppy.Cam.CamViewerPicture();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_picture)).BeginInit();
@@ -52,12 +52,13 @@ namespace Shoppy.Cam
             this.tableLayoutPanel1.Controls.Add(this.m_picture, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(320, 280);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.57143F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.42857F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(326, 294);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(320, 280);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -78,11 +79,12 @@ namespace Shoppy.Cam
             this.tableLayoutPanel2.Controls.Add(this.butBottom, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.butCenter, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 248);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 233);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(320, 43);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(320, 47);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // butLeft
@@ -90,7 +92,7 @@ namespace Shoppy.Cam
             this.butLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butLeft.Location = new System.Drawing.Point(3, 3);
             this.butLeft.Name = "butLeft";
-            this.butLeft.Size = new System.Drawing.Size(39, 37);
+            this.butLeft.Size = new System.Drawing.Size(39, 41);
             this.butLeft.TabIndex = 0;
             this.butLeft.Text = " < ";
             this.butLeft.UseVisualStyleBackColor = true;
@@ -101,7 +103,7 @@ namespace Shoppy.Cam
             this.butRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butRight.Location = new System.Drawing.Point(48, 3);
             this.butRight.Name = "butRight";
-            this.butRight.Size = new System.Drawing.Size(39, 37);
+            this.butRight.Size = new System.Drawing.Size(39, 41);
             this.butRight.TabIndex = 1;
             this.butRight.Text = " > ";
             this.butRight.UseVisualStyleBackColor = true;
@@ -112,7 +114,7 @@ namespace Shoppy.Cam
             this.butVertical.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butVertical.Location = new System.Drawing.Point(273, 3);
             this.butVertical.Name = "butVertical";
-            this.butVertical.Size = new System.Drawing.Size(44, 37);
+            this.butVertical.Size = new System.Drawing.Size(44, 41);
             this.butVertical.TabIndex = 6;
             this.butVertical.Text = "^v";
             this.butVertical.UseVisualStyleBackColor = true;
@@ -123,7 +125,7 @@ namespace Shoppy.Cam
             this.butTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butTop.Location = new System.Drawing.Point(93, 3);
             this.butTop.Name = "butTop";
-            this.butTop.Size = new System.Drawing.Size(39, 37);
+            this.butTop.Size = new System.Drawing.Size(39, 41);
             this.butTop.TabIndex = 2;
             this.butTop.Text = " ^ ";
             this.butTop.UseVisualStyleBackColor = true;
@@ -134,7 +136,7 @@ namespace Shoppy.Cam
             this.butHorizontal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butHorizontal.Location = new System.Drawing.Point(228, 3);
             this.butHorizontal.Name = "butHorizontal";
-            this.butHorizontal.Size = new System.Drawing.Size(39, 37);
+            this.butHorizontal.Size = new System.Drawing.Size(39, 41);
             this.butHorizontal.TabIndex = 5;
             this.butHorizontal.Text = "<>";
             this.butHorizontal.UseVisualStyleBackColor = true;
@@ -145,7 +147,7 @@ namespace Shoppy.Cam
             this.butBottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butBottom.Location = new System.Drawing.Point(138, 3);
             this.butBottom.Name = "butBottom";
-            this.butBottom.Size = new System.Drawing.Size(39, 37);
+            this.butBottom.Size = new System.Drawing.Size(39, 41);
             this.butBottom.TabIndex = 3;
             this.butBottom.Text = " v ";
             this.butBottom.UseVisualStyleBackColor = true;
@@ -156,7 +158,7 @@ namespace Shoppy.Cam
             this.butCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butCenter.Location = new System.Drawing.Point(183, 3);
             this.butCenter.Name = "butCenter";
-            this.butCenter.Size = new System.Drawing.Size(39, 37);
+            this.butCenter.Size = new System.Drawing.Size(39, 41);
             this.butCenter.TabIndex = 4;
             this.butCenter.Text = "|";
             this.butCenter.UseVisualStyleBackColor = true;
@@ -165,7 +167,8 @@ namespace Shoppy.Cam
             // m_picture
             // 
             this.m_picture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_picture.Location = new System.Drawing.Point(3, 3);
+            this.m_picture.Location = new System.Drawing.Point(0, 0);
+            this.m_picture.Margin = new System.Windows.Forms.Padding(0);
             this.m_picture.MinimumSize = new System.Drawing.Size(320, 240);
             this.m_picture.Name = "m_picture";
             this.m_picture.Password = null;
@@ -180,7 +183,7 @@ namespace Shoppy.Cam
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CamViewer";
-            this.Size = new System.Drawing.Size(326, 294);
+            this.Size = new System.Drawing.Size(320, 280);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_picture)).EndInit();

@@ -41,49 +41,50 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.surveyViewCamSwitcher1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.surveyViewCamSwitcher2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.surveyViewCamSwitcher3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.surveyViewCamSwitcher1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.surveyViewCamSwitcher2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.surveyViewCamSwitcher4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.surveyViewCamSwitcher4, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.28487F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.71513F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 674);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // surveyViewCamSwitcher1
             // 
             this.surveyViewCamSwitcher1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.surveyViewCamSwitcher1.Location = new System.Drawing.Point(6, 6);
-            this.surveyViewCamSwitcher1.Margin = new System.Windows.Forms.Padding(6);
+            this.surveyViewCamSwitcher1.Location = new System.Drawing.Point(500, 0);
+            this.surveyViewCamSwitcher1.Margin = new System.Windows.Forms.Padding(0);
             this.surveyViewCamSwitcher1.Name = "surveyViewCamSwitcher1";
-            this.surveyViewCamSwitcher1.Size = new System.Drawing.Size(488, 325);
+            this.surveyViewCamSwitcher1.Size = new System.Drawing.Size(500, 285);
             this.surveyViewCamSwitcher1.TabIndex = 0;
             // 
             // surveyViewCamSwitcher2
             // 
             this.surveyViewCamSwitcher2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.surveyViewCamSwitcher2.Location = new System.Drawing.Point(506, 343);
-            this.surveyViewCamSwitcher2.Margin = new System.Windows.Forms.Padding(6);
+            this.surveyViewCamSwitcher2.Location = new System.Drawing.Point(0, 0);
+            this.surveyViewCamSwitcher2.Margin = new System.Windows.Forms.Padding(0);
             this.surveyViewCamSwitcher2.Name = "surveyViewCamSwitcher2";
-            this.surveyViewCamSwitcher2.Size = new System.Drawing.Size(488, 325);
+            this.surveyViewCamSwitcher2.Size = new System.Drawing.Size(500, 285);
             this.surveyViewCamSwitcher2.TabIndex = 1;
             // 
             // surveyViewCamSwitcher3
             // 
-            this.surveyViewCamSwitcher3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.surveyViewCamSwitcher3.Location = new System.Drawing.Point(6, 343);
-            this.surveyViewCamSwitcher3.Margin = new System.Windows.Forms.Padding(6);
+            this.surveyViewCamSwitcher3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.surveyViewCamSwitcher3.Location = new System.Drawing.Point(0, 285);
+            this.surveyViewCamSwitcher3.Margin = new System.Windows.Forms.Padding(0);
             this.surveyViewCamSwitcher3.Name = "surveyViewCamSwitcher3";
-            this.surveyViewCamSwitcher3.Size = new System.Drawing.Size(488, 325);
+            this.surveyViewCamSwitcher3.Size = new System.Drawing.Size(500, 285);
             this.surveyViewCamSwitcher3.TabIndex = 2;
             // 
             // surveyViewCamSwitcher4
             // 
-            this.surveyViewCamSwitcher4.Location = new System.Drawing.Point(503, 3);
+            this.surveyViewCamSwitcher4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.surveyViewCamSwitcher4.Location = new System.Drawing.Point(503, 288);
             this.surveyViewCamSwitcher4.Name = "surveyViewCamSwitcher4";
             this.surveyViewCamSwitcher4.Size = new System.Drawing.Size(494, 285);
             this.surveyViewCamSwitcher4.TabIndex = 3;
