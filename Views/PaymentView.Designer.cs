@@ -136,7 +136,6 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Payment_View";
             this.Size = new System.Drawing.Size(1000, 674);
-            this.Load += new System.EventHandler(this.Payment_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

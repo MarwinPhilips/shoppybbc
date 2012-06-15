@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -16,8 +17,8 @@ namespace Shoppy
             Application.SetCompatibleTextRenderingDefault(false);
             Form1 f = new Form1();
             Application.Run(f);
-            //f.Close();
-            //f.Dispose();          
+            f.Close();
+            f.Dispose();          
         }
     }
 }

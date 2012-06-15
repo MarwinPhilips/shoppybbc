@@ -71,7 +71,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1008, 718);
             this.tabControl1.TabIndex = 0;
-
             this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
             // tabPage1
@@ -107,7 +106,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Payment";
             this.tabPage2.UseVisualStyleBackColor = true;
-
             // 
             // payment_View1
             // 
@@ -137,7 +135,7 @@
             this.surveyView1.Location = new System.Drawing.Point(0, 0);
             this.surveyView1.Margin = new System.Windows.Forms.Padding(6);
             this.surveyView1.Name = "surveyView1";
-            this.surveyView1.Size = new System.Drawing.Size(1000, 674);
+            this.surveyView1.Size = new System.Drawing.Size(192, 56);
             this.surveyView1.TabIndex = 0;
             // 
             // tabPage4
@@ -194,7 +192,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage6.Size = new System.Drawing.Size(992, 630);
+            this.tabPage6.Size = new System.Drawing.Size(184, 12);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sell";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -215,7 +213,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 40);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(992, 630);
+            this.tabPage7.Size = new System.Drawing.Size(184, 12);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Survey";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -236,7 +234,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 40);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(992, 630);
+            this.tabPage8.Size = new System.Drawing.Size(184, 12);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Seller";
             this.tabPage8.UseVisualStyleBackColor = true;
