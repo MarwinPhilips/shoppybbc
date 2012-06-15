@@ -84,12 +84,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BytesReceiver.cs" />
+    <Compile Include="Cam\BytesReceiver.cs" />
     <Compile Include="CamViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cam\CamViewerPicture.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CamViewerPicture.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Cam\CamViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cam\CamViewer.Designer.cs">
+      <DependentUpon>CamViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Shoppy.cs" />
     <Compile Include="Database\Abfragen.cs" />
@@ -103,7 +109,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PictureBytesHolder.cs" />
+    <Compile Include="Cam\PictureBytesHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\CamAdminView.cs">
       <SubType>UserControl</SubType>
@@ -153,6 +159,12 @@
     <Compile Include="Views\SurveyViewCamSwitcher.Designer.cs">
       <DependentUpon>SurveyViewCamSwitcher.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CamViewer.resx">
+      <DependentUpon>CamViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cam\CamViewer.resx">
+      <DependentUpon>CamViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Form1.cs</DependentUpon>

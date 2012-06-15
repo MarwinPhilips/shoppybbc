@@ -138,7 +138,7 @@ namespace Shoppy
             }
             catch (WebException wE)
             {
-              /* MessageBox.Show("Fehler beim Verbinden zur Webcam '" + m_url + "': " +
+              /*MessageBox.Show("Fehler beim Verbinden zur Webcam '" + m_url + "': " +
                     wE.Message, Application.ProductName, MessageBoxButtons.OK,
                     MessageBoxIcon.Error);*/
                 Console.WriteLine(wE.Message);
