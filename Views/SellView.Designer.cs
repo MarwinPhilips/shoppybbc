@@ -239,7 +239,7 @@
             this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(7, 0, 6, 6);
             this.txtInputBarcode.Name = "txtInputBarcode";
             this.txtInputBarcode.Size = new System.Drawing.Size(382, 32);
-            this.txtInputBarcode.TabIndex = 2;
+            this.txtInputBarcode.TabIndex = 1;
             this.txtInputBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInputBarcode_KeyPress);
             // 
             // label1
@@ -294,7 +294,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
             this.tableLayoutPanel4.Controls.Add(this.txtTotalPay, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtGehalt, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.labelGehalt, 2, 0);
