@@ -38,7 +38,7 @@ namespace Shoppy.Cam
             this.butHorizontal = new System.Windows.Forms.Button();
             this.butBottom = new System.Windows.Forms.Button();
             this.butCenter = new System.Windows.Forms.Button();
-            this.m_picture = new Shoppy.Cam.CamViewerPicture();
+            this.m_picture = new Cam.CamViewerPicture();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_picture)).BeginInit();

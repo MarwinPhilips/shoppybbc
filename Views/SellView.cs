@@ -199,23 +199,6 @@ namespace Shoppy.Views
         }
 
 
-        void rfid_Tag(object sender, TagEventArgs e)
-        {
-        //EventHandler RFID3.
-            txtInputBarcode.Select();
-            rfid = new RFID();
-            rfid.Tag += new TagEventHandler(rfid_Tag);
-            rfid.TagLost += new TagEventHandler(rfid_TagLost);
-                rfid.open();
-                
-        }
-
-        void rfid_TagLost(object sender, TagEventArgs e)
-        {
-            rfid_num = "";
-
-        }
-
         void rfid_Attach(object sender, AttachEventArgs e)
         {
             RFID attached = (RFID)sender;
