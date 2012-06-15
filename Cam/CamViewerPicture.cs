@@ -7,7 +7,7 @@ using System.Threading;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace Shoppy
+namespace Shoppy.Cam
 {
     class CamViewerPicture : PictureBox, System.ComponentModel.ISupportInitialize
     {
@@ -149,14 +149,13 @@ namespace Shoppy
 
         protected override void OnPaint(PaintEventArgs pe) {
 
-
-            if (m_image != null)
+            try
+            //if (m_image != null)
             {
                 Graphics g = pe.Graphics;
                 g.DrawImage(m_image, 0, 0, this.Width, this.Height);
-
-
             }
+            catch { }
             
         }
     }
