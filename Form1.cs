@@ -18,6 +18,7 @@ namespace Shoppy
         {
             InitializeComponent();
             //pageIndex = 0;
+            login1.tabcontrol = tabControl1;
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -111,6 +112,17 @@ namespace Shoppy
             }
 
             pageIndex2 = e.TabPageIndex;
+       }
+
+       private void tabControl1_KeyPress(object sender, KeyPressEventArgs e)
+       {
+           if (e.KeyChar == (char)Keys.Home)
+           {
+               tabControl1.Enabled = false;
+               tabControl1.Visible = false;
+               login1.Enabled = true;
+               login1.Enabled = false;
+           }
        }
     }
 }
