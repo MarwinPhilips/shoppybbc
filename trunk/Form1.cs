@@ -116,7 +116,7 @@ namespace Shoppy
 
        private void tabControl1_KeyPress(object sender, KeyPressEventArgs e)
        {
-           if (e.KeyChar == 'n')
+           if (e.KeyChar == '&')
            {
                tabControl1.Enabled = false;
                tabControl1.Visible = false;
