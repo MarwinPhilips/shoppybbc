@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Shoppy.Database;
 using Phidgets.Events;
 using Phidgets;
+using System.Drawing.Printing;
 
 namespace Shoppy.Views
 {
@@ -60,7 +61,7 @@ namespace Shoppy.Views
             for (int i = 0; i < AnzahlZeilen; i++)
             { 
                 string preis = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                int Anzahl = Int32.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+                double Anzahl = double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
                 double intPreis = double.Parse(preis);
                 if (Anzahl > 1)
                 {
@@ -68,7 +69,7 @@ namespace Shoppy.Views
                 }
                 TotalPreis = TotalPreis + intPreis;
             }
-            txtTotalPay.Text = TotalPreis.ToString();
+            txtTotalPay.Text = String.Format("{0:0.00}", TotalPreis);   
         }
 
         /*löscht den Inhalt und die Zeile von der Zeile bei der der "lösch"-Button betätigt wurde*/
@@ -182,11 +183,11 @@ namespace Shoppy.Views
                 string Gehalt = sa.GetPayClient(rfid_num).ToString();
                 txtGehalt.Text = Gehalt;
                 btnSellPay.Enabled = true;
+                btnPrintSell.Enabled = true;
             }
             catch   /*Wenn der Kunde (RFID) nicht in der Datenbank vorhanden ist, wird eine Fehlermeldung ausgegeben*/
             {
-                MessageBox.Show("Fehler: Der RFID konnte nicht gefunden werden. Bitte neuer "+
-                    "Kunde hinzufügen.");
+                MessageBox.Show("Fehler: Der RFID konnte nicht gefunden werden. Bitte RFID als neuer Kunde hinzufügen.");
             }        
         }
 
@@ -205,7 +206,9 @@ namespace Shoppy.Views
 
             if (rfid.outputs.Count > 0)
             {
+
                 rfid.Antenna = true;
+
             }
         }
 
@@ -238,7 +241,8 @@ namespace Shoppy.Views
 
         public void View_MyLoad()
         {
-           if (rfid == null)
+            
+            if (rfid == null)
             {
                 rfid = new RFID();
             }
@@ -251,25 +255,16 @@ namespace Shoppy.Views
                 rfid.open(-1);
         }
 
-        private void SellView_Load(object sender, EventArgs e)
+        private void btnPrintSell_Click(object sender, EventArgs e)
         {
-            if (rfid == null)
-            {
-                rfid = new RFID();
-            }
-
-            rfid.Attach += new AttachEventHandler(rfid_Attach);
-            rfid.Detach += new DetachEventHandler(rfid_Detach);
-
-            rfid.Tag += new TagEventHandler(rfid_Tag);
-            rfid.TagLost += new TagEventHandler(rfid_TagLost);
-            rfid.open(-1);
-            txtInputBarcode.Select();
+            PrintSell sellPrint = new PrintSell(double.Parse(txtTotalPay.Text.ToString()),dataGridView1);
+            sellPrint.Kontrollblatt();
         }
 
-
-
-
+        private void SellView_Load(object sender, EventArgs e)
+        {
+            txtInputBarcode.Select();
+        }
 
 	}
 }

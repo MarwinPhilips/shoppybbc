@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppy", "Shoppy.csproj", "{1707E623-505C-4649-9270-5FC911FA2EF5}"
 EndProject
 Global
