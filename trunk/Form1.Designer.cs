@@ -45,6 +45,7 @@
             this.camAdminView2 = new Views.CamAdminView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.sellerAdminView1 = new Views.SellerAdminView();
+            this.login1 = new Views.Login();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -64,6 +65,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Enabled = false;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(6);
@@ -71,6 +73,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1008, 718);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Visible = false;
             this.tabControl1.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Selecting);
             // 
             // tabPage1
@@ -205,7 +208,7 @@
             this.sellAdminView1.Location = new System.Drawing.Point(6, 6);
             this.sellAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellAdminView1.Name = "sellAdminView1";
-            this.sellAdminView1.Size = new System.Drawing.Size(180, 62);
+            this.sellAdminView1.Size = new System.Drawing.Size(172, 36);
             this.sellAdminView1.TabIndex = 0;
             // 
             // tabPage7
@@ -226,7 +229,7 @@
             this.camAdminView2.Location = new System.Drawing.Point(0, 0);
             this.camAdminView2.Margin = new System.Windows.Forms.Padding(6);
             this.camAdminView2.Name = "camAdminView2";
-            this.camAdminView2.Size = new System.Drawing.Size(192, 74);
+            this.camAdminView2.Size = new System.Drawing.Size(184, 48);
             this.camAdminView2.TabIndex = 0;
             // 
             // tabPage8
@@ -247,8 +250,17 @@
             this.sellerAdminView1.Location = new System.Drawing.Point(0, 0);
             this.sellerAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellerAdminView1.Name = "sellerAdminView1";
-            this.sellerAdminView1.Size = new System.Drawing.Size(192, 74);
+            this.sellerAdminView1.Size = new System.Drawing.Size(184, 48);
             this.sellerAdminView1.TabIndex = 0;
+            // 
+            // login1
+            // 
+            this.login1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.login1.Location = new System.Drawing.Point(0, 0);
+            this.login1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(1008, 718);
+            this.login1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -256,6 +268,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 718);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.login1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
@@ -278,11 +291,9 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private Views.SellView sellView1;
         private Views.SurveyView surveyView1;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage5;
@@ -294,6 +305,9 @@
         private Views.CamAdminView camAdminView2;
         private Views.Payment_View payment_View1;
         private Views.ClientAdminView clientAdminView1;
+        private Views.Login login1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Views.SellView sellView1;
 
 
 

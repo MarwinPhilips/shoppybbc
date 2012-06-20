@@ -31,5 +31,15 @@ namespace Shoppy.Database
         {
             Abfragen.Insert("insert into seller(rfid,username,passwort,name,vorname) values('" + rfid + "','" + username + "','" + passwort + "','" + name + "','"+vorname+"');");
         }
+
+        public bool SellerLogin(string RFID)
+        {
+            string[,] login = Abfragen.Select("SELECT Username FROM seller WHERE RFID = '" + RFID + "';");
+            if (login.Length == 1)
+            {
+                return true;
+            }
+            return false;
+        }
 	}
 }
