@@ -116,13 +116,14 @@ namespace Shoppy
 
        private void tabControl1_KeyPress(object sender, KeyPressEventArgs e)
        {
-           if (e.KeyChar == (char)Keys.Home)
+           if (e.KeyChar == 'n')
            {
                tabControl1.Enabled = false;
                tabControl1.Visible = false;
                login1.Enabled = true;
-               login1.Enabled = false;
+               login1.Visible = true;
            }
+           e.Handled = true;
        }
     }
 }
