@@ -21,8 +21,16 @@ namespace Shoppy.Views
         {
             InitializeComponent();
         }
-        
 
-        
-	}
+
+
+
+        internal void Survey_View_Load()
+        {
+            surveyViewCamSwitcher1.Survey_View_Cam_Switcher_Reload();
+            surveyViewCamSwitcher2.Survey_View_Cam_Switcher_Reload();
+            surveyViewCamSwitcher3.Survey_View_Cam_Switcher_Reload();
+            surveyViewCamSwitcher4.Survey_View_Cam_Switcher_Reload();
+        }
+    }
 }
