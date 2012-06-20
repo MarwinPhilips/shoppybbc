@@ -65,5 +65,10 @@ namespace Shoppy.Views
             }
             return false;
         }
-	}
+
+        internal void Survey_View_Cam_Switcher_Reload()
+        {
+            FillCams();
+        }
+    }
 }

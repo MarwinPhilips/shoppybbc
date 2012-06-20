@@ -72,7 +72,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MySql.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Phidget21.NET, Version=2.1.8.105, Culture=neutral, PublicKeyToken=c2b1f2a3594bce52, processorArchitecture=MSIL">
+    <Reference Include="Phidget21.NET, Version=2.1.8.112, Culture=neutral, PublicKeyToken=c2b1f2a3594bce52, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Phidget21.NET.dll</HintPath>
     </Reference>

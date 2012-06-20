@@ -42,6 +42,7 @@ namespace Shoppy
             {
                 sellView1.View_Unload();
                 payment_View1.Payment_View_Unload();
+                surveyView1.Survey_View_Load();
             }
             else if (e.TabPageIndex == 3)
             {
@@ -67,8 +68,10 @@ namespace Shoppy
             {
                 sellView1.View_MyLoad();
             }
-
-            
+            else if (e.TabPageIndex == 2)
+            {
+                surveyView1.Survey_View_Load();
+            }           
 
             pageIndex = e.TabPageIndex;
 
