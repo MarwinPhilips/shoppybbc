@@ -45,8 +45,8 @@ C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.Views.SellView.resources
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.Views.SurveyView.resources
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.Views.SurveyViewCamSwitcher.resources
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\GenerateResource.read.1.tlog
-C:\Users\eprudd\Desktop\Shoopy\obj\Debug\ResGen.read.1.tlog
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\GenerateResource.write.1.tlog
-C:\Users\eprudd\Desktop\Shoopy\obj\Debug\ResGen.write.1.tlog
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.exe.manifest
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.application
+C:\Users\eprudd\Desktop\Shoopy\obj\Debug\ResGen.read.1.tlog
+C:\Users\eprudd\Desktop\Shoopy\obj\Debug\ResGen.write.1.tlog

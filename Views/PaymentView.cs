@@ -27,34 +27,17 @@ namespace Shoppy.Views
             dataGridView1.DataSource = database.GetClientOnRFID(rfid_num);
         }
 
-
-        /*public void Payment_View_Load(object sender, EventArgs e)
-        {
-            //EventHandler RFID
-
-            if(rfid == null) rfid = new RFID();
-
-
-            rfid.Attach += new AttachEventHandler(rfid_Attach);
-            rfid.Detach += new DetachEventHandler(rfid_Detach);
-
-            rfid.Tag += new TagEventHandler(rfid_Tag);
-            rfid.TagLost += new TagEventHandler(rfid_TagLost);
-
-            rfid.open(-1);
-
-        }*/
-
         public void Payment_View_Unload()
         {
-            rfid.Attach -= new AttachEventHandler(rfid_Attach);
-            rfid.Detach -= new DetachEventHandler(rfid_Detach);
+            if (rfid != null)
+            {
+                rfid.Attach -= new AttachEventHandler(rfid_Attach);
+                rfid.Detach -= new DetachEventHandler(rfid_Detach);
 
-            rfid.Tag -= new TagEventHandler(rfid_Tag);
-            rfid.TagLost -= new TagEventHandler(rfid_TagLost);
-            rfid.close();
-            
-
+                rfid.Tag -= new TagEventHandler(rfid_Tag);
+                rfid.TagLost -= new TagEventHandler(rfid_TagLost);
+                rfid.close();
+            }
         }
 
         public void Payment_View_MyLoad()
@@ -75,17 +58,14 @@ namespace Shoppy.Views
         {
             btnEnter.Enabled = true;
             rfid_num = e.Tag;
-            SendKeys.Send(e.Tag);
-            SendKeys.Send("{ENTER}");
-            MessageBox.Show(rfid_num);
             FillData();
         }
 
         void rfid_TagLost(object sender, TagEventArgs e)
         {
+            btnEnter.Enabled = false;
             rfid_num = "";
-            // dataGridView1.DataSource = "";
-
+            dataGridView1.DataSource = "";
         }
 
         void rfid_Attach(object sender, AttachEventArgs e)
@@ -110,9 +90,8 @@ namespace Shoppy.Views
                 rfid.Antenna = false;
 
             }
-
         }
-
+        
         private void btnInsert(object sender, EventArgs e)
         {
 
@@ -122,6 +101,5 @@ namespace Shoppy.Views
             database.InsertBetrag(kunde, betrag);
             FillData();
         }
-
     }
 }

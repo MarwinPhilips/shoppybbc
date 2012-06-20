@@ -205,9 +205,7 @@ namespace Shoppy.Views
 
             if (rfid.outputs.Count > 0)
             {
-
                 rfid.Antenna = true;
-
             }
         }
 
@@ -240,8 +238,7 @@ namespace Shoppy.Views
 
         public void View_MyLoad()
         {
-            
-            if (rfid == null)
+           if (rfid == null)
             {
                 rfid = new RFID();
             }
@@ -252,8 +249,27 @@ namespace Shoppy.Views
                 rfid.Tag += new TagEventHandler(rfid_Tag);
                 rfid.TagLost += new TagEventHandler(rfid_TagLost);
                 rfid.open(-1);
-
-
         }
+
+        private void SellView_Load(object sender, EventArgs e)
+        {
+            if (rfid == null)
+            {
+                rfid = new RFID();
+            }
+
+            rfid.Attach += new AttachEventHandler(rfid_Attach);
+            rfid.Detach += new DetachEventHandler(rfid_Detach);
+
+            rfid.Tag += new TagEventHandler(rfid_Tag);
+            rfid.TagLost += new TagEventHandler(rfid_TagLost);
+            rfid.open(-1);
+            txtInputBarcode.Select();
+        }
+
+
+
+
+
 	}
 }
