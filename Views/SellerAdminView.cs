@@ -16,8 +16,6 @@ namespace Shoppy.Views
         RFID rfid;
         SellerAdmin database = new SellerAdmin();
 
-        string rfid_num;
-        string client;
 
 		public SellerAdminView()
 		{
@@ -87,18 +85,29 @@ namespace Shoppy.Views
 
         private void rfid_Tag(object sender, TagEventArgs e)
         {
-            rfid_num = e.Tag;
-            txtUpdateRFID.Text = rfid_num;
-            client = rfid_num;
-            FillRows();
+            
+            
+            DataTable table = database.GetSeller(e.Tag);
+            if (table.Rows.Count == 1)
+            {
+                txtUpdateLoginname.Text = table.Rows[0].ItemArray[1].ToString();
+                txtUpdateName.Text = table.Rows[0].ItemArray[3].ToString();
+                txtUpdatePasswort.Text = table.Rows[0].ItemArray[2].ToString();
+                txtUpdateVorname.Text = table.Rows[0].ItemArray[4].ToString();
+                dataGridView1.DataSource = table;
+                txtUpdateRFID.Text = e.Tag;
+            }
+            else
+            {
+                txtNewRFID.Text = e.Tag;
+            }
+
         }
 
         /*Event wenn RFID wieder weggenommen wird*/
         private void rfid_TagLost(object sender, TagEventArgs e)
         {
-            rfid_num = "";
-            txtUpdateRFID.Text = rfid_num;
-            client = "";
+            
             FillRows();
         }
 
@@ -108,7 +117,7 @@ namespace Shoppy.Views
 
             if (rfid.outputs.Count > 0)
             {
-
+                label2.Text = "RFID: Angeschlossen.";
                 rfid.Antenna = true;
 
             }
@@ -122,6 +131,7 @@ namespace Shoppy.Views
             {
                 rfid.Antenna = false;
             }
+            label2.Text = "RFID: Nicht angeschlossen.";
         }
 
 
@@ -135,6 +145,7 @@ namespace Shoppy.Views
                 rfid.Tag -= new TagEventHandler(rfid_Tag);
                 rfid.TagLost -= new TagEventHandler(rfid_TagLost);
                 rfid.close();
+                label2.Text = "RFID: Nicht angeschlossen.";
             }
 
         }
