@@ -16,7 +16,7 @@ namespace Shoppy.Database
 
         public DataTable GetClient()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * FROM kunde", Abfragen.verbindung);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT RFID, Name, Vorname,Geld FROM kunde", Abfragen.verbindung);
             DataTable dt = new DataTable();
             da.Fill(dt);
             da.Dispose();
@@ -26,17 +26,15 @@ namespace Shoppy.Database
         {
             Abfragen.Delete("DELETE FROM kunde WHERE RFID='" + RFID + "';");
         }
-        public void UpdateClient(string RFID, string Name, string Vorname, string Geld, string Passwort)
+        public void UpdateClient(string RFID, string Name, string Vorname, string Geld)
         {
-            Abfragen.Update("update kunde set Name='" + Name + "', Vorname='" + Vorname + "', Geld='" + Geld + "', Passwort='" + Passwort +
-               "' where RFID='" + RFID + "';");
+            Abfragen.Update("update kunde set Name='" + Name + "', Vorname='" + Vorname + "', Geld='" + Geld + "' WHERE RFID='" + RFID + "';");
         }
 
-        internal void NewClient(string RFID, string Name, string Vorname, string Geld, string Passwort)
+        internal void NewClient(string RFID, string Name, string Vorname, string Geld)
         {
-            Abfragen.Insert("INSERT INTO kunde(RFID,name,vorname,geld,passwort) VALUES('" + RFID + "','" + Name + "','" + Vorname + "','" + Geld + "','" + Passwort + "');");
+            Abfragen.Insert("INSERT INTO kunde(RFID,name,vorname,geld) VALUES('" + RFID + "','" + Name + "','" + Vorname + "','" + Geld +"');");
         }
-
 
         public DataTable GetClientOnRFID(string RFID)
         {

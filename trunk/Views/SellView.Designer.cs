@@ -362,6 +362,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SellView";
             this.Size = new System.Drawing.Size(1000, 674);
+            this.Load += new System.EventHandler(this.SellView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);

@@ -6,12 +6,19 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using Shoppy.Database;
+using Phidgets; //Needed for the RFID class and the PhidgetException class
+using Phidgets.Events; //Needed for the phidget event handling classes
 
 namespace Shoppy.Views
 {
 	public partial class SellerAdminView: UserControl
 	{
+        RFID rfid;
         SellerAdmin database = new SellerAdmin();
+
+        string rfid_num;
+        string client;
+
 		public SellerAdminView()
 		{
 			InitializeComponent();
@@ -77,5 +84,75 @@ namespace Shoppy.Views
             database.NewSeller(txtNewRFID.Text, txtNewLoginname.Text, txtNewPasswort.Text, txtNewName.Text, txtNewVorname.Text);
             FillRows();
         }
+
+        private void rfid_Tag(object sender, TagEventArgs e)
+        {
+            rfid_num = e.Tag;
+            txtUpdateRFID.Text = rfid_num;
+            client = rfid_num;
+            FillRows();
+        }
+
+        /*Event wenn RFID wieder weggenommen wird*/
+        private void rfid_TagLost(object sender, TagEventArgs e)
+        {
+            rfid_num = "";
+            txtUpdateRFID.Text = rfid_num;
+            client = "";
+            FillRows();
+        }
+
+        private void rfid_Attach(object sender, AttachEventArgs e)
+        {
+            RFID attached = (RFID)sender;
+
+            if (rfid.outputs.Count > 0)
+            {
+
+                rfid.Antenna = true;
+
+            }
+        }
+
+        private void rfid_Detach(object sender, DetachEventArgs e)
+        {
+            RFID detached = (RFID)sender;
+
+            if (rfid.outputs.Count < 0)
+            {
+                rfid.Antenna = false;
+            }
+        }
+
+
+        public void View_Unload()
+        {
+            if (rfid != null)
+            {
+                rfid.Attach -= new AttachEventHandler(rfid_Attach);
+                rfid.Detach -= new DetachEventHandler(rfid_Detach);
+
+                rfid.Tag -= new TagEventHandler(rfid_Tag);
+                rfid.TagLost -= new TagEventHandler(rfid_TagLost);
+                rfid.close();
+            }
+
+        }
+
+        public void View_MyLoad()
+        {
+            if (rfid == null)
+            {
+                rfid = new RFID();
+            }
+
+            rfid.Attach += new AttachEventHandler(rfid_Attach);
+            rfid.Detach += new DetachEventHandler(rfid_Detach);
+
+            rfid.Tag += new TagEventHandler(rfid_Tag);
+            rfid.TagLost += new TagEventHandler(rfid_TagLost);
+            rfid.open(-1);
+        }
+
 	}
 }
