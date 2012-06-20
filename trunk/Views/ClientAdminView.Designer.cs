@@ -45,6 +45,7 @@
             this.txtUpdateName = new System.Windows.Forms.TextBox();
             this.txtNewRFID = new System.Windows.Forms.TextBox();
             this.txtNewName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -135,6 +136,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtUpdateName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNewRFID, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewName, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 4, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 321);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
@@ -233,6 +235,16 @@
             this.txtNewName.Size = new System.Drawing.Size(100, 31);
             this.txtNewName.TabIndex = 26;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(786, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 58);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "RFID:nicht angeschlossen.";
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -286,5 +298,6 @@
         private System.Windows.Forms.TextBox txtUpdateName;
         private System.Windows.Forms.TextBox txtNewRFID;
         private System.Windows.Forms.TextBox txtNewName;
+        private System.Windows.Forms.Label label1;
     }
 }

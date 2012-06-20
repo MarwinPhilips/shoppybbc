@@ -31,6 +31,7 @@ namespace Shoppy.Views
             {
                 this.Visible = false;
                 this.Enabled = false;
+                View_Unload();
                 tabcontrol.Visible = true;
                 tabcontrol.Enabled = true;
             }

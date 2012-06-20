@@ -37,6 +37,8 @@ namespace Shoppy.Views
                 rfid.Tag -= new TagEventHandler(rfid_Tag);
                 rfid.TagLost -= new TagEventHandler(rfid_TagLost);
                 rfid.close();
+
+                label2.Text = "RFID: Nicht angeschlossen.";
             }
         }
 
@@ -74,7 +76,7 @@ namespace Shoppy.Views
 
             if (rfid.outputs.Count > 0)
             {
-
+                label2.Text = "RFID: Angeschlossen.";
                 rfid.Antenna = true;
 
             }
@@ -90,6 +92,7 @@ namespace Shoppy.Views
                 rfid.Antenna = false;
 
             }
+            label2.Text = "RFID: Nicht angeschlossen.";
         }
         
         private void btnInsert(object sender, EventArgs e)
