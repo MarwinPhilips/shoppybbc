@@ -30,22 +30,22 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.sellView1 = new Views.SellView();
+            this.sellView1 = new Shoppy.Views.SellView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.payment_View1 = new Views.Payment_View();
+            this.payment_View1 = new Shoppy.Views.Payment_View();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.surveyView1 = new Views.SurveyView();
+            this.surveyView1 = new Shoppy.Views.SurveyView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.clientAdminView1 = new Views.ClientAdminView();
+            this.clientAdminView1 = new Shoppy.Views.ClientAdminView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.sellAdminView1 = new Views.SellAdminView();
+            this.sellAdminView1 = new Shoppy.Views.SellAdminView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.camAdminView2 = new Views.CamAdminView();
+            this.camAdminView2 = new Shoppy.Views.CamAdminView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.sellerAdminView1 = new Views.SellerAdminView();
-            this.login1 = new Views.Login();
+            this.sellerAdminView1 = new Shoppy.Views.SellerAdminView();
+            this.login1 = new Shoppy.Views.Login();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -98,6 +98,7 @@
             this.sellView1.Name = "sellView1";
             this.sellView1.Size = new System.Drawing.Size(988, 662);
             this.sellView1.TabIndex = 0;
+            this.sellView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage2
             // 
@@ -120,6 +121,7 @@
             this.payment_View1.Name = "payment_View1";
             this.payment_View1.Size = new System.Drawing.Size(988, 662);
             this.payment_View1.TabIndex = 0;
+            this.payment_View1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage3
             // 
@@ -141,6 +143,7 @@
             this.surveyView1.Name = "surveyView1";
             this.surveyView1.Size = new System.Drawing.Size(1000, 674);
             this.surveyView1.TabIndex = 0;
+            this.surveyView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage4
             // 
@@ -167,6 +170,7 @@
             this.tabControl2.Size = new System.Drawing.Size(1000, 674);
             this.tabControl2.TabIndex = 0;
             this.tabControl2.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl2_Selecting);
+            this.tabControl2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage5
             // 
@@ -230,7 +234,7 @@
             this.camAdminView2.Location = new System.Drawing.Point(0, 0);
             this.camAdminView2.Margin = new System.Windows.Forms.Padding(6);
             this.camAdminView2.Name = "camAdminView2";
-            this.camAdminView2.Size = new System.Drawing.Size(992, 630);
+            this.camAdminView2.Size = new System.Drawing.Size(192, 74);
             this.camAdminView2.TabIndex = 0;
             // 
             // tabPage8
@@ -275,6 +279,7 @@
             this.Name = "Form1";
             this.Text = "SHOPPY";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
