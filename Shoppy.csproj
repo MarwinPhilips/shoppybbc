@@ -121,6 +121,7 @@
     <Compile Include="Cam\CamViewer.Designer.cs">
       <DependentUpon>CamViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintSell.cs" />
     <Compile Include="Shoppy.cs" />
     <Compile Include="Database\Abfragen.cs" />
     <Compile Include="Database\CamAdmin.cs" />
