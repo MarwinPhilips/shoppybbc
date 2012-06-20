@@ -25,3 +25,6 @@ C:\Desktop\shoppy\obj\Debug\Shoppy.exe.manifest
 C:\Desktop\shoppy\obj\Debug\Shoppy.application
 C:\Desktop\shoppy\obj\Debug\Shoppy.exe
 C:\Desktop\shoppy\obj\Debug\Shoppy.pdb
+C:\Desktop\shoppy\obj\Debug\Shoppy.Views.Login.resources
+C:\Desktop\shoppy\obj\Debug\ResGen.read.1.tlog
+C:\Desktop\shoppy\obj\Debug\ResGen.write.1.tlog

@@ -163,6 +163,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnSellPay, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 169);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -240,6 +241,7 @@
             // 
             // btnPrintSell
             // 
+            this.btnPrintSell.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPrintSell.Location = new System.Drawing.Point(3, 3);
             this.btnPrintSell.Name = "btnPrintSell";
             this.btnPrintSell.Size = new System.Drawing.Size(314, 67);
@@ -251,11 +253,12 @@
             // text
             // 
             this.text.AutoSize = true;
+            this.text.Dock = System.Windows.Forms.DockStyle.Fill;
             this.text.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.text.Location = new System.Drawing.Point(6, 0);
             this.text.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(156, 26);
+            this.text.Size = new System.Drawing.Size(193, 89);
             this.text.TabIndex = 4;
             this.text.Text = "Gesamtbetrag:";
             // 
@@ -321,8 +324,8 @@
             this.tableLayoutPanel4.ColumnCount = 4;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
             this.tableLayoutPanel4.Controls.Add(this.txtTotalPay, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtGehalt, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.labelGehalt, 2, 0);
@@ -338,31 +341,34 @@
             // 
             // txtGehalt
             // 
-            this.txtGehalt.Location = new System.Drawing.Point(559, 3);
+            this.txtGehalt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGehalt.Location = new System.Drawing.Point(580, 3);
             this.txtGehalt.Name = "txtGehalt";
             this.txtGehalt.ReadOnly = true;
-            this.txtGehalt.Size = new System.Drawing.Size(120, 31);
+            this.txtGehalt.Size = new System.Drawing.Size(176, 31);
             this.txtGehalt.TabIndex = 6;
             // 
             // labelGehalt
             // 
             this.labelGehalt.AutoSize = true;
+            this.labelGehalt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGehalt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.labelGehalt.Location = new System.Drawing.Point(391, 6);
             this.labelGehalt.Margin = new System.Windows.Forms.Padding(10, 6, 0, 0);
             this.labelGehalt.Name = "labelGehalt";
-            this.labelGehalt.Size = new System.Drawing.Size(164, 26);
+            this.labelGehalt.Size = new System.Drawing.Size(186, 77);
             this.labelGehalt.TabIndex = 5;
             this.labelGehalt.Text = "Kunden-Gehalt:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label3.Location = new System.Drawing.Point(109, 2);
             this.label3.Margin = new System.Windows.Forms.Padding(0, 2, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 26);
+            this.label3.Size = new System.Drawing.Size(266, 81);
             this.label3.TabIndex = 5;
             this.label3.Text = "CHF";
             // 
