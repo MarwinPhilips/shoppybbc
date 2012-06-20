@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUpdatePasswort = new System.Windows.Forms.TextBox();
             this.txtNewPasswort = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -72,6 +73,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Controls.Add(this.txtNewRFID, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewVorname, 2, 2);
@@ -90,6 +92,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtUpdatePasswort, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNewPasswort, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 5, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 338);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
@@ -103,6 +106,7 @@
             // 
             // txtNewRFID
             // 
+            this.txtNewRFID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNewRFID.Location = new System.Drawing.Point(6, 164);
             this.txtNewRFID.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewRFID.Name = "txtNewRFID";
@@ -111,6 +115,7 @@
             // 
             // txtNewVorname
             // 
+            this.txtNewVorname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNewVorname.Location = new System.Drawing.Point(207, 164);
             this.txtNewVorname.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewVorname.Name = "txtNewVorname";
@@ -119,6 +124,7 @@
             // 
             // txtUpdateRFID
             // 
+            this.txtUpdateRFID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUpdateRFID.Enabled = false;
             this.txtUpdateRFID.Location = new System.Drawing.Point(6, 73);
             this.txtUpdateRFID.Margin = new System.Windows.Forms.Padding(6);
@@ -128,6 +134,7 @@
             // 
             // txtUpdateVorname
             // 
+            this.txtUpdateVorname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUpdateVorname.Location = new System.Drawing.Point(207, 73);
             this.txtUpdateVorname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateVorname.Name = "txtUpdateVorname";
@@ -156,10 +163,11 @@
             // 
             // txtUpdateLoginname
             // 
+            this.txtUpdateLoginname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUpdateLoginname.Location = new System.Drawing.Point(331, 73);
             this.txtUpdateLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateLoginname.Name = "txtUpdateLoginname";
-            this.txtUpdateLoginname.Size = new System.Drawing.Size(182, 31);
+            this.txtUpdateLoginname.Size = new System.Drawing.Size(186, 31);
             this.txtUpdateLoginname.TabIndex = 14;
             // 
             // Vorrat
@@ -174,10 +182,11 @@
             // 
             // txtNewLoginname
             // 
+            this.txtNewLoginname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNewLoginname.Location = new System.Drawing.Point(331, 164);
             this.txtNewLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewLoginname.Name = "txtNewLoginname";
-            this.txtNewLoginname.Size = new System.Drawing.Size(182, 31);
+            this.txtNewLoginname.Size = new System.Drawing.Size(186, 31);
             this.txtNewLoginname.TabIndex = 16;
             // 
             // Produkt
@@ -192,6 +201,7 @@
             // 
             // txtUpdateName
             // 
+            this.txtUpdateName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUpdateName.Location = new System.Drawing.Point(112, 73);
             this.txtUpdateName.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateName.Name = "txtUpdateName";
@@ -200,6 +210,7 @@
             // 
             // txtNewName
             // 
+            this.txtNewName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNewName.Location = new System.Drawing.Point(112, 164);
             this.txtNewName.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewName.Name = "txtNewName";
@@ -242,19 +253,31 @@
             // 
             // txtUpdatePasswort
             // 
+            this.txtUpdatePasswort.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUpdatePasswort.Location = new System.Drawing.Point(529, 73);
             this.txtUpdatePasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
-            this.txtUpdatePasswort.Size = new System.Drawing.Size(188, 31);
+            this.txtUpdatePasswort.Size = new System.Drawing.Size(192, 31);
             this.txtUpdatePasswort.TabIndex = 22;
             // 
             // txtNewPasswort
             // 
+            this.txtNewPasswort.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNewPasswort.Location = new System.Drawing.Point(529, 164);
             this.txtNewPasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewPasswort.Name = "txtNewPasswort";
-            this.txtNewPasswort.Size = new System.Drawing.Size(188, 31);
+            this.txtNewPasswort.Size = new System.Drawing.Size(192, 31);
             this.txtNewPasswort.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(730, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(247, 67);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "RFID: Nicht angeschlossen.";
             // 
             // dataGridView1
             // 
@@ -330,5 +353,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label2;
 	}
 }
