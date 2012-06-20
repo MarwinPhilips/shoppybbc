@@ -16,7 +16,13 @@ namespace Shoppy.Database
             da.Fill(dt);
             return dt;
         }
-
+        public DataTable GetSeller(string RFID)
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("select RFID as ID, username as Loginname, Passwort,Name,Vorname from seller where RFID ='"+RFID+"'", Abfragen.verbindung);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         public void DeleteSeller(string id)
         {
             Abfragen.Delete("delete from seller where rfid='" + id + "';");
