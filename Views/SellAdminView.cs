@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Shoppy.Database;
 using Phidgets;
+using Shoppy.Helpers;
 
 
 namespace Shoppy.Views
@@ -27,11 +28,11 @@ namespace Shoppy.Views
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (BinEinButton(e))
+            if (Eingabeüberprüfung.BinEinButton(dataGridView1, e.RowIndex, e.ColumnIndex))
             {
                 DeleteRow(e);
             }
-            else if (BinEineZeile(e))
+            else if (Eingabeüberprüfung.BinEineZeile(dataGridView1, e.RowIndex, e.ColumnIndex))
             {
                 FillUpdateBoxes(e);
             }
@@ -46,25 +47,6 @@ namespace Shoppy.Views
             txtUpdateVorrat.Text = row.Cells[5].Value.ToString();
             btnUpdateSell.Tag = row.Cells[1].Value.ToString();
         }
-
-        private bool BinEineZeile(DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewTextBoxColumn && e.RowIndex != -1)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool BinEinButton(DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex != -1)
-            {
-                return true;
-            }
-            return false;
-        }
-
         private void DeleteRow(DataGridViewCellEventArgs e)
         {
             database.DeleteSell(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());

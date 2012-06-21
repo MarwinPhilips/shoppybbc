@@ -72,7 +72,7 @@
             this.btnSellPay.Margin = new System.Windows.Forms.Padding(6);
             this.btnSellPay.Name = "btnSellPay";
             this.btnSellPay.Size = new System.Drawing.Size(313, 140);
-            this.btnSellPay.TabIndex = 0;
+            this.btnSellPay.TabIndex = 4;
             this.btnSellPay.Text = "Bezahlen";
             this.btnSellPay.UseVisualStyleBackColor = true;
             this.btnSellPay.Click += new System.EventHandler(this.btnSellPay_Click);
@@ -97,7 +97,8 @@
             this.dataGridView1.RowHeadersWidth = 55;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(988, 323);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 50;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
             this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
@@ -152,6 +153,7 @@
             this.txtTotalPay.ReadOnly = true;
             this.txtTotalPay.Size = new System.Drawing.Size(109, 32);
             this.txtTotalPay.TabIndex = 2;
+            this.txtTotalPay.TabStop = false;
             this.txtTotalPay.Text = "0.00";
             // 
             // tableLayoutPanel1
@@ -197,7 +199,7 @@
             this.SellMultipleProdukt.Margin = new System.Windows.Forms.Padding(6, 3, 6, 6);
             this.SellMultipleProdukt.Name = "SellMultipleProdukt";
             this.SellMultipleProdukt.Size = new System.Drawing.Size(307, 94);
-            this.SellMultipleProdukt.TabIndex = 3;
+            this.SellMultipleProdukt.TabIndex = 2;
             this.SellMultipleProdukt.Text = "Mehrere Produkte";
             this.SellMultipleProdukt.UseVisualStyleBackColor = true;
             this.SellMultipleProdukt.Click += new System.EventHandler(this.SellMultipleProdukt_Click);
@@ -210,7 +212,7 @@
             this.txtMultipleProdukt.Margin = new System.Windows.Forms.Padding(6, 7, 6, 3);
             this.txtMultipleProdukt.Name = "txtMultipleProdukt";
             this.txtMultipleProdukt.Size = new System.Drawing.Size(307, 31);
-            this.txtMultipleProdukt.TabIndex = 4;
+            this.txtMultipleProdukt.TabIndex = 3;
             // 
             // tableLayoutPanel7
             // 
@@ -235,7 +237,7 @@
             this.btnSellDeleteAll.Location = new System.Drawing.Point(3, 76);
             this.btnSellDeleteAll.Name = "btnSellDeleteAll";
             this.btnSellDeleteAll.Size = new System.Drawing.Size(314, 67);
-            this.btnSellDeleteAll.TabIndex = 4;
+            this.btnSellDeleteAll.TabIndex = 6;
             this.btnSellDeleteAll.Text = "Alle Produkte löschen";
             this.btnSellDeleteAll.UseVisualStyleBackColor = true;
             this.btnSellDeleteAll.Click += new System.EventHandler(this.btnSellDeleteAll_Click);
@@ -246,7 +248,7 @@
             this.btnPrintSell.Location = new System.Drawing.Point(3, 3);
             this.btnPrintSell.Name = "btnPrintSell";
             this.btnPrintSell.Size = new System.Drawing.Size(314, 67);
-            this.btnPrintSell.TabIndex = 3;
+            this.btnPrintSell.TabIndex = 5;
             this.btnPrintSell.Text = "Quittung ausdrucken";
             this.btnPrintSell.UseVisualStyleBackColor = true;
             this.btnPrintSell.Click += new System.EventHandler(this.btnPrintSell_Click);
@@ -348,6 +350,7 @@
             this.txtGehalt.ReadOnly = true;
             this.txtGehalt.Size = new System.Drawing.Size(176, 31);
             this.txtGehalt.TabIndex = 6;
+            this.txtGehalt.TabStop = false;
             // 
             // labelGehalt
             // 

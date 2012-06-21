@@ -10,6 +10,7 @@ using Phidgets.Events;
 using Phidgets;
 using System.Drawing.Printing;
 using Shoppy.RFIDInput;
+using Shoppy.Helpers;
 
 namespace Shoppy.Views
 {
@@ -82,23 +83,7 @@ namespace Shoppy.Views
         }
 
         /* Funktion zum überprüfen ob auf eine Zeile oder einen Button gedrückt wurde */
-        private bool BinEineZeile(DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewTextBoxColumn && e.RowIndex != -1)
-            {
-                return true;
-            }
-            return false;
-        }
         
-        private bool BinEinButton(DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex != -1)
-            {
-                return true;
-            }
-            return false;
-        }
 
         /* Anzahl Artikel ändern*/
         private void SellMultipleProdukt_Click(object sender, EventArgs e)
@@ -147,10 +132,10 @@ namespace Shoppy.Views
         /* Löscht den Eintrag bei dem der "löschbutton" betätigt wurde*/
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (BinEinButton(e))
+            if (Eingabeüberprüfung.BinEinButton(dataGridView1, e.RowIndex, e.ColumnIndex))
             {
                 DeleteRow(e);
-            } 
+            }
         }
         /* löscht den GANZEN Ihnalt der Verkaufstabelle*/
         private void btnSellDeleteAll_Click(object sender, EventArgs e)

@@ -61,7 +61,7 @@
             this.surveyViewCamSwitcher1.Margin = new System.Windows.Forms.Padding(0);
             this.surveyViewCamSwitcher1.Name = "surveyViewCamSwitcher1";
             this.surveyViewCamSwitcher1.Size = new System.Drawing.Size(500, 285);
-            this.surveyViewCamSwitcher1.TabIndex = 0;
+            this.surveyViewCamSwitcher1.TabIndex = 2;
             // 
             // surveyViewCamSwitcher2
             // 
@@ -79,7 +79,7 @@
             this.surveyViewCamSwitcher3.Margin = new System.Windows.Forms.Padding(0);
             this.surveyViewCamSwitcher3.Name = "surveyViewCamSwitcher3";
             this.surveyViewCamSwitcher3.Size = new System.Drawing.Size(500, 285);
-            this.surveyViewCamSwitcher3.TabIndex = 2;
+            this.surveyViewCamSwitcher3.TabIndex = 3;
             // 
             // surveyViewCamSwitcher4
             // 
@@ -87,7 +87,7 @@
             this.surveyViewCamSwitcher4.Location = new System.Drawing.Point(503, 288);
             this.surveyViewCamSwitcher4.Name = "surveyViewCamSwitcher4";
             this.surveyViewCamSwitcher4.Size = new System.Drawing.Size(494, 285);
-            this.surveyViewCamSwitcher4.TabIndex = 3;
+            this.surveyViewCamSwitcher4.TabIndex = 4;
             // 
             // SurveyView
             // 

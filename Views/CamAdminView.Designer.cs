@@ -54,11 +54,11 @@
             // btnUpdateCam
             // 
             this.btnUpdateCam.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdateCam.Location = new System.Drawing.Point(587, 80);
+            this.btnUpdateCam.Location = new System.Drawing.Point(585, 80);
             this.btnUpdateCam.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateCam.Name = "btnUpdateCam";
-            this.btnUpdateCam.Size = new System.Drawing.Size(387, 115);
-            this.btnUpdateCam.TabIndex = 0;
+            this.btnUpdateCam.Size = new System.Drawing.Size(389, 115);
+            this.btnUpdateCam.TabIndex = 5;
             this.btnUpdateCam.Text = "Kameraeinstellung anpassen";
             this.btnUpdateCam.UseVisualStyleBackColor = true;
             this.btnUpdateCam.Click += new System.EventHandler(this.btnUpdateCam_Click);
@@ -78,7 +78,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(980, 303);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -91,11 +92,11 @@
             // btnNewCam
             // 
             this.btnNewCam.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewCam.Location = new System.Drawing.Point(587, 207);
+            this.btnNewCam.Location = new System.Drawing.Point(585, 207);
             this.btnNewCam.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewCam.Name = "btnNewCam";
-            this.btnNewCam.Size = new System.Drawing.Size(387, 90);
-            this.btnNewCam.TabIndex = 2;
+            this.btnNewCam.Size = new System.Drawing.Size(389, 90);
+            this.btnNewCam.TabIndex = 10;
             this.btnNewCam.Text = "Neue Kamera erfassen";
             this.btnNewCam.UseVisualStyleBackColor = true;
             this.btnNewCam.Click += new System.EventHandler(this.btnNewCam_Click);
@@ -103,20 +104,20 @@
             // txtUpdateAnzeigename
             // 
             this.txtUpdateAnzeigename.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtUpdateAnzeigename.Location = new System.Drawing.Point(159, 80);
+            this.txtUpdateAnzeigename.Location = new System.Drawing.Point(158, 80);
             this.txtUpdateAnzeigename.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateAnzeigename.Name = "txtUpdateAnzeigename";
-            this.txtUpdateAnzeigename.Size = new System.Drawing.Size(142, 31);
-            this.txtUpdateAnzeigename.TabIndex = 3;
+            this.txtUpdateAnzeigename.Size = new System.Drawing.Size(141, 31);
+            this.txtUpdateAnzeigename.TabIndex = 2;
             // 
             // txtUpdateLoginname
             // 
             this.txtUpdateLoginname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtUpdateLoginname.Location = new System.Drawing.Point(313, 80);
+            this.txtUpdateLoginname.Location = new System.Drawing.Point(311, 80);
             this.txtUpdateLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateLoginname.Name = "txtUpdateLoginname";
             this.txtUpdateLoginname.Size = new System.Drawing.Size(123, 31);
-            this.txtUpdateLoginname.TabIndex = 4;
+            this.txtUpdateLoginname.TabIndex = 3;
             // 
             // txtUpdateIP
             // 
@@ -124,8 +125,8 @@
             this.txtUpdateIP.Location = new System.Drawing.Point(6, 80);
             this.txtUpdateIP.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateIP.Name = "txtUpdateIP";
-            this.txtUpdateIP.Size = new System.Drawing.Size(141, 31);
-            this.txtUpdateIP.TabIndex = 5;
+            this.txtUpdateIP.Size = new System.Drawing.Size(140, 31);
+            this.txtUpdateIP.TabIndex = 1;
             // 
             // txtNewIP
             // 
@@ -133,13 +134,13 @@
             this.txtNewIP.Location = new System.Drawing.Point(6, 207);
             this.txtNewIP.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewIP.Name = "txtNewIP";
-            this.txtNewIP.Size = new System.Drawing.Size(141, 31);
-            this.txtNewIP.TabIndex = 9;
+            this.txtNewIP.Size = new System.Drawing.Size(140, 31);
+            this.txtNewIP.TabIndex = 6;
             // 
             // txtNewLoginname
             // 
             this.txtNewLoginname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtNewLoginname.Location = new System.Drawing.Point(313, 207);
+            this.txtNewLoginname.Location = new System.Drawing.Point(311, 207);
             this.txtNewLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewLoginname.Name = "txtNewLoginname";
             this.txtNewLoginname.Size = new System.Drawing.Size(123, 31);
@@ -148,10 +149,10 @@
             // txtNewAnzeigename
             // 
             this.txtNewAnzeigename.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtNewAnzeigename.Location = new System.Drawing.Point(159, 207);
+            this.txtNewAnzeigename.Location = new System.Drawing.Point(158, 207);
             this.txtNewAnzeigename.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewAnzeigename.Name = "txtNewAnzeigename";
-            this.txtNewAnzeigename.Size = new System.Drawing.Size(142, 31);
+            this.txtNewAnzeigename.Size = new System.Drawing.Size(141, 31);
             this.txtNewAnzeigename.TabIndex = 7;
             // 
             // tableLayoutPanel1
@@ -161,7 +162,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.30675F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 398F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tableLayoutPanel1.Controls.Add(this.txtNewIP, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewAnzeigename, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtNewLoginname, 2, 2);
@@ -190,7 +191,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(159, 0);
+            this.label2.Location = new System.Drawing.Point(158, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 50);
@@ -200,7 +201,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(313, 0);
+            this.label3.Location = new System.Drawing.Point(311, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 25);
@@ -210,16 +211,16 @@
             // txtUpdatePasswort
             // 
             this.txtUpdatePasswort.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtUpdatePasswort.Location = new System.Drawing.Point(448, 80);
+            this.txtUpdatePasswort.Location = new System.Drawing.Point(446, 80);
             this.txtUpdatePasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
             this.txtUpdatePasswort.Size = new System.Drawing.Size(127, 31);
-            this.txtUpdatePasswort.TabIndex = 14;
+            this.txtUpdatePasswort.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(448, 0);
+            this.label4.Location = new System.Drawing.Point(446, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 25);
@@ -229,11 +230,11 @@
             // txtNewPasswort
             // 
             this.txtNewPasswort.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtNewPasswort.Location = new System.Drawing.Point(448, 207);
+            this.txtNewPasswort.Location = new System.Drawing.Point(446, 207);
             this.txtNewPasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewPasswort.Name = "txtNewPasswort";
             this.txtNewPasswort.Size = new System.Drawing.Size(127, 31);
-            this.txtNewPasswort.TabIndex = 16;
+            this.txtNewPasswort.TabIndex = 9;
             // 
             // Anzeigename
             // 

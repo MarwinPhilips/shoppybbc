@@ -34,6 +34,7 @@ namespace Shoppy.Views
                 View_Unload();
                 tabcontrol.Visible = true;
                 tabcontrol.Enabled = true;
+                txtUserRFID.Text = "";
             }
             else
             {

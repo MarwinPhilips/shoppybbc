@@ -59,7 +59,7 @@
             this.btnUpdateClient.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateClient.Name = "btnUpdateClient";
             this.btnUpdateClient.Size = new System.Drawing.Size(185, 67);
-            this.btnUpdateClient.TabIndex = 0;
+            this.btnUpdateClient.TabIndex = 5;
             this.btnUpdateClient.Text = "Kundeninfo anpassen";
             this.btnUpdateClient.UseVisualStyleBackColor = true;
             this.btnUpdateClient.Click += new System.EventHandler(this.btnUpdateClient_Click);
@@ -78,7 +78,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(980, 303);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Löschen
@@ -93,7 +94,7 @@
             this.btnNewClient.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewClient.Name = "btnNewClient";
             this.btnNewClient.Size = new System.Drawing.Size(185, 154);
-            this.btnNewClient.TabIndex = 2;
+            this.btnNewClient.TabIndex = 10;
             this.btnNewClient.Text = "Neue Kunde erfassen";
             this.btnNewClient.UseVisualStyleBackColor = true;
             this.btnNewClient.Click += new System.EventHandler(this.btnNewClient_Click);
@@ -104,7 +105,7 @@
             this.txtUpdateVorname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateVorname.Name = "txtUpdateVorname";
             this.txtUpdateVorname.Size = new System.Drawing.Size(151, 31);
-            this.txtUpdateVorname.TabIndex = 4;
+            this.txtUpdateVorname.TabIndex = 3;
             // 
             // txtNewVorname
             // 
@@ -174,7 +175,7 @@
             this.txtUpdateGeld.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateGeld.Name = "txtUpdateGeld";
             this.txtUpdateGeld.Size = new System.Drawing.Size(151, 31);
-            this.txtUpdateGeld.TabIndex = 14;
+            this.txtUpdateGeld.TabIndex = 4;
             this.txtUpdateGeld.TextChanged += new System.EventHandler(this.txtUpdateGeld_TextChanged);
             // 
             // label4
@@ -193,7 +194,7 @@
             this.txtNewGeld.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewGeld.Name = "txtNewGeld";
             this.txtNewGeld.Size = new System.Drawing.Size(151, 31);
-            this.txtNewGeld.TabIndex = 16;
+            this.txtNewGeld.TabIndex = 9;
             this.txtNewGeld.TextChanged += new System.EventHandler(this.txtNewGeld_TextChanged);
             // 
             // Anzeigename
@@ -209,31 +210,32 @@
             // txtUpdateRFID
             // 
             this.txtUpdateRFID.Enabled = false;
+            this.txtUpdateRFID.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtUpdateRFID.Location = new System.Drawing.Point(3, 61);
             this.txtUpdateRFID.Name = "txtUpdateRFID";
             this.txtUpdateRFID.Size = new System.Drawing.Size(100, 31);
-            this.txtUpdateRFID.TabIndex = 23;
+            this.txtUpdateRFID.TabIndex = 1;
             // 
             // txtUpdateName
             // 
             this.txtUpdateName.Location = new System.Drawing.Point(186, 61);
             this.txtUpdateName.Name = "txtUpdateName";
             this.txtUpdateName.Size = new System.Drawing.Size(100, 31);
-            this.txtUpdateName.TabIndex = 24;
+            this.txtUpdateName.TabIndex = 2;
             // 
             // txtNewRFID
             // 
             this.txtNewRFID.Location = new System.Drawing.Point(3, 140);
             this.txtNewRFID.Name = "txtNewRFID";
             this.txtNewRFID.Size = new System.Drawing.Size(100, 31);
-            this.txtNewRFID.TabIndex = 25;
+            this.txtNewRFID.TabIndex = 6;
             // 
             // txtNewName
             // 
             this.txtNewName.Location = new System.Drawing.Point(186, 140);
             this.txtNewName.Name = "txtNewName";
             this.txtNewName.Size = new System.Drawing.Size(100, 31);
-            this.txtNewName.TabIndex = 26;
+            this.txtNewName.TabIndex = 7;
             // 
             // label1
             // 

@@ -44,7 +44,7 @@
             this.btnLogin.Location = new System.Drawing.Point(3, 126);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(239, 36);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -73,6 +73,7 @@
             this.txtUserRFID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUserRFID.Location = new System.Drawing.Point(3, 35);
             this.txtUserRFID.Name = "txtUserRFID";
+            this.txtUserRFID.PasswordChar = '*';
             this.txtUserRFID.Size = new System.Drawing.Size(239, 20);
             this.txtUserRFID.TabIndex = 1;
             // 
@@ -84,7 +85,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 32);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Client RFID";
+            this.label1.Text = "RFID";
             // 
             // label2
             // 
