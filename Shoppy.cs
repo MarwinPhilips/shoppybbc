@@ -18,7 +18,9 @@ namespace Shoppy
             Form1 f = new Form1();
             Application.Run(f);
             f.Close();
-            f.Dispose();          
+            f.Dispose();
+            Application.DoEvents();
+            Application.Exit();
         }
     }
 }

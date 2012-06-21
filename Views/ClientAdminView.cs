@@ -25,17 +25,23 @@ namespace Shoppy.Views
 			InitializeComponent();
             FillData();
         }
-        
+        private void FillDGV(DataTable table)
+        {
+            dataGridView1.Visible = false;
+            dataGridView1.DataSource = table;
+            dataGridView1.Visible = true;
+            dataGridView1.Refresh();
+        }
         private void FillData()
         {
             if (client.Equals(""))
             {
-                dataGridView1.DataSource = database.GetClient();
+                FillDGV(database.GetClient());
             }
             else if (!(client.Equals("")))
             {
                 client = rfid_num;
-                dataGridView1.DataSource = database.GetClientOnRFID(client);
+                FillDGV(database.GetClientOnRFID(client));
             }
         }
 
@@ -141,18 +147,6 @@ namespace Shoppy.Views
             }
         }
 
-        /*private void txtNewRFID_TextChanged(object sender, EventArgs e)
-        {
-            if (isnumber(txtNewRFID.Text) == false)
-            {
-                MessageBox.Show("Es können nur Zahlen eingegeben werden");
-
-                if (txtNewRFID.Text.Length != 0)
-                {
-                    txtNewRFID.Text = txtNewRFID.Text.Remove(txtNewRFID.Text.Length - 1);
-                }
-            }
-        }*/
 
         public void RFIDChanged(string newRFID)
         {
