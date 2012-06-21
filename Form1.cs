@@ -42,6 +42,12 @@ namespace Shoppy
             clientAdminView1.rfidlistener.RFIDchanged += new RFIDInput.RFIDListener.RFIDTagChangedEventHandler(clientAdminView1.RFIDChanged);
 
 
+
+            login1.rfidlistener = listener;
+            login1.rfidlistener.RFIDAttached += new RFIDInput.RFIDListener.RFIDAttachedChangeEventHandler(login1.RFIDAttached);
+            login1.rfidlistener.RFIDchanged += new RFIDInput.RFIDListener.RFIDTagChangedEventHandler(login1.RFIDChanged);
+
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

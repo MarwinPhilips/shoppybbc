@@ -9,12 +9,14 @@ using System.Windows.Forms;
 using Shoppy.Database;
 using Phidgets.Events;
 using Phidgets;
+using Shoppy.RFIDInput;
 
 
 namespace Shoppy.Views
 {
     public partial class Login : UserControl
     {
+        public RFIDListener rfidlistener;
         SellerAdmin sa = new SellerAdmin();
         public TabControl tabcontrol;
         string rfid_num;
