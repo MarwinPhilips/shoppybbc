@@ -271,7 +271,6 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ClientAdminView";
             this.Size = new System.Drawing.Size(992, 630);
-            this.Load += new System.EventHandler(this.ClientAdminView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
