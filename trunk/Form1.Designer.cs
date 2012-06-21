@@ -30,22 +30,22 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.sellView1 = new Views.SellView();
+            this.sellView1 = new Shoppy.Views.SellView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.payment_View1 = new Views.Payment_View();
+            this.payment_View1 = new Shoppy.Views.Payment_View();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.surveyView1 = new Views.SurveyView();
+            this.surveyView1 = new Shoppy.Views.SurveyView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.clientAdminView1 = new Views.ClientAdminView();
+            this.clientAdminView1 = new Shoppy.Views.ClientAdminView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.sellAdminView1 = new Views.SellAdminView();
+            this.sellAdminView1 = new Shoppy.Views.SellAdminView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.camAdminView2 = new Views.CamAdminView();
+            this.camAdminView2 = new Shoppy.Views.CamAdminView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.sellerAdminView1 = new Views.SellerAdminView();
-            this.login1 = new Views.Login();
+            this.sellerAdminView1 = new Shoppy.Views.SellerAdminView();
+            this.login1 = new Shoppy.Views.Login();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -119,7 +119,7 @@
             this.payment_View1.Location = new System.Drawing.Point(6, 6);
             this.payment_View1.Margin = new System.Windows.Forms.Padding(6);
             this.payment_View1.Name = "payment_View1";
-            this.payment_View1.Size = new System.Drawing.Size(988, 662);
+            this.payment_View1.Size = new System.Drawing.Size(180, 62);
             this.payment_View1.TabIndex = 0;
             this.payment_View1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
@@ -141,7 +141,7 @@
             this.surveyView1.Location = new System.Drawing.Point(0, 0);
             this.surveyView1.Margin = new System.Windows.Forms.Padding(6);
             this.surveyView1.Name = "surveyView1";
-            this.surveyView1.Size = new System.Drawing.Size(1000, 674);
+            this.surveyView1.Size = new System.Drawing.Size(192, 74);
             this.surveyView1.TabIndex = 0;
             this.surveyView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
@@ -193,7 +193,6 @@
             this.clientAdminView1.Name = "clientAdminView1";
             this.clientAdminView1.Size = new System.Drawing.Size(980, 618);
             this.clientAdminView1.TabIndex = 0;
-            this.clientAdminView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage6
             // 
@@ -202,7 +201,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage6.Size = new System.Drawing.Size(992, 630);
+            this.tabPage6.Size = new System.Drawing.Size(184, 30);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sell";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -214,9 +213,8 @@
             this.sellAdminView1.Location = new System.Drawing.Point(6, 6);
             this.sellAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellAdminView1.Name = "sellAdminView1";
-            this.sellAdminView1.Size = new System.Drawing.Size(980, 618);
+            this.sellAdminView1.Size = new System.Drawing.Size(172, 36);
             this.sellAdminView1.TabIndex = 0;
-            this.sellAdminView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage7
             // 
@@ -224,7 +222,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 40);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(992, 630);
+            this.tabPage7.Size = new System.Drawing.Size(184, 30);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Survey";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -236,9 +234,8 @@
             this.camAdminView2.Location = new System.Drawing.Point(0, 0);
             this.camAdminView2.Margin = new System.Windows.Forms.Padding(6);
             this.camAdminView2.Name = "camAdminView2";
-            this.camAdminView2.Size = new System.Drawing.Size(992, 630);
+            this.camAdminView2.Size = new System.Drawing.Size(184, 48);
             this.camAdminView2.TabIndex = 0;
-            this.camAdminView2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage8
             // 
@@ -246,7 +243,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 40);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(992, 630);
+            this.tabPage8.Size = new System.Drawing.Size(184, 30);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Seller";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -258,9 +255,8 @@
             this.sellerAdminView1.Location = new System.Drawing.Point(0, 0);
             this.sellerAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellerAdminView1.Name = "sellerAdminView1";
-            this.sellerAdminView1.Size = new System.Drawing.Size(992, 630);
+            this.sellerAdminView1.Size = new System.Drawing.Size(184, 48);
             this.sellerAdminView1.TabIndex = 0;
-            this.sellerAdminView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // login1
             // 

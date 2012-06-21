@@ -152,6 +152,7 @@
             this.txtTotalPay.ReadOnly = true;
             this.txtTotalPay.Size = new System.Drawing.Size(109, 32);
             this.txtTotalPay.TabIndex = 2;
+            this.txtTotalPay.Text = "0.00";
             // 
             // tableLayoutPanel1
             // 
