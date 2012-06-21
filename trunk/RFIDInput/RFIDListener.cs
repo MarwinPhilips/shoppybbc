@@ -7,7 +7,7 @@ using Phidgets;
 
 namespace Shoppy.RFIDInput
 {
-    class RFIDListener
+    public class RFIDListener
     {
         private static RFIDListener instance;
         private RFID rfid;

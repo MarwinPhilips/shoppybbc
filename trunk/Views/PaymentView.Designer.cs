@@ -69,7 +69,8 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(988, 325);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -110,7 +111,7 @@
             this.btnEnter.Margin = new System.Windows.Forms.Padding(6);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(159, 88);
-            this.btnEnter.TabIndex = 3;
+            this.btnEnter.TabIndex = 2;
             this.btnEnter.Text = "Aufladen";
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnInsert);

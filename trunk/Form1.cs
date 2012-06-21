@@ -19,6 +19,8 @@ namespace Shoppy
             //pageIndex = 0;
             login1.tabcontrol = tabControl1;
             addListener();
+            logout1.login = login1;
+            logout1.control = tabControl1;
             
         }
         private void addListener()

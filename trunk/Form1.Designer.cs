@@ -30,22 +30,24 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.sellView1 = new Shoppy.Views.SellView();
+            this.sellView1 = new Views.SellView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.payment_View1 = new Shoppy.Views.Payment_View();
+            this.payment_View1 = new Views.Payment_View();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.surveyView1 = new Shoppy.Views.SurveyView();
+            this.surveyView1 = new Views.SurveyView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.clientAdminView1 = new Shoppy.Views.ClientAdminView();
+            this.clientAdminView1 = new Views.ClientAdminView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.sellAdminView1 = new Shoppy.Views.SellAdminView();
+            this.sellAdminView1 = new Views.SellAdminView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.camAdminView2 = new Shoppy.Views.CamAdminView();
+            this.camAdminView2 = new Views.CamAdminView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.sellerAdminView1 = new Shoppy.Views.SellerAdminView();
-            this.login1 = new Shoppy.Views.Login();
+            this.sellerAdminView1 = new Views.SellerAdminView();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.login1 = new Views.Login();
+            this.logout1 = new Views.Logout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -56,6 +58,7 @@
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -64,6 +67,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage9);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Enabled = false;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,6 +262,16 @@
             this.sellerAdminView1.Size = new System.Drawing.Size(184, 48);
             this.sellerAdminView1.TabIndex = 0;
             // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.logout1);
+            this.tabPage9.Location = new System.Drawing.Point(4, 40);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(1000, 674);
+            this.tabPage9.TabIndex = 4;
+            this.tabPage9.Text = "Logout";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
             // login1
             // 
             this.login1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -266,6 +280,15 @@
             this.login1.Name = "login1";
             this.login1.Size = new System.Drawing.Size(1008, 718);
             this.login1.TabIndex = 1;
+            // 
+            // logout1
+            // 
+            this.logout1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logout1.Location = new System.Drawing.Point(0, 0);
+            this.logout1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.logout1.Name = "logout1";
+            this.logout1.Size = new System.Drawing.Size(192, 74);
+            this.logout1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -290,6 +313,7 @@
             this.tabPage6.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -314,6 +338,8 @@
         private Views.Login login1;
         private System.Windows.Forms.TabPage tabPage1;
         private Views.SellView sellView1;
+        private System.Windows.Forms.TabPage tabPage9;
+        private Views.Logout logout1;
 
 
 

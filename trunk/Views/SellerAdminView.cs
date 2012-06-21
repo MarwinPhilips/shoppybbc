@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Shoppy.Database;
 using Phidgets; //Needed for the RFID class and the PhidgetException class
 using Phidgets.Events; //Needed for the phidget event handling classes
+using Shoppy.Helpers;
 
 namespace Shoppy.Views
 {
@@ -27,11 +28,11 @@ namespace Shoppy.Views
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (BinEinButton(e))
+            if (Eingabeüberprüfung.BinEinButton(dataGridView1,e.RowIndex,e.ColumnIndex))
             {
                 DeleteRow(e);
             }
-            else if (BinEineZeile(e))
+            else if (Eingabeüberprüfung.BinEineZeile(dataGridView1, e.RowIndex, e.ColumnIndex))
             {
                 FillUpdateBoxes(e);
             }
@@ -51,24 +52,6 @@ namespace Shoppy.Views
         {
             database.DeleteSeller(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
             FillRows();
-        }
-
-        private bool BinEineZeile(DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewTextBoxColumn && e.RowIndex != -1)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private bool BinEinButton(DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex != -1)
-            {
-                return true;
-            }
-            return false;
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
