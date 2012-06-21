@@ -17,7 +17,6 @@ namespace Shoppy.Views
     {
         SellerAdmin sa = new SellerAdmin();
         public TabControl tabcontrol;
-        RFID rfid;
         string rfid_num;
         
         public Login()
@@ -31,7 +30,6 @@ namespace Shoppy.Views
             {
                 this.Visible = false;
                 this.Enabled = false;
-                View_Unload();
                 tabcontrol.Visible = true;
                 tabcontrol.Enabled = true;
                 txtUserRFID.Text = "";
@@ -42,85 +40,30 @@ namespace Shoppy.Views
             }
         }
 
-        void rfid_Tag(object sender, TagEventArgs e)
+        public void RFIDChanged(string newRFID)
         {
-            rfid_num = e.Tag;
-            txtUserRFID.Text = rfid_num;
-            
-        }
-
-        void rfid_TagLost(object sender, TagEventArgs e)
-        {
-            rfid_num = "";
-            txtUserRFID.Text = "";
-        }
-
-
-        void rfid_Attach(object sender, AttachEventArgs e)
-        {
-            RFID attached = (RFID)sender;
-
-            if (rfid.outputs.Count > 0)
+            if (newRFID == "")
             {
-                rfid.Antenna = true;
+                rfid_num = "";
+                txtUserRFID.Text = "";
+            }
+            else
+            {
+                rfid_num = newRFID;
+                txtUserRFID.Text = rfid_num; ;
             }
         }
 
-        void rfid_Detach(object sender, DetachEventArgs e)
+        public void RFIDAttached(bool IsAttached)
         {
-            RFID detached = (RFID)sender;
-
-            if (rfid.outputs.Count < 0)
+            if (IsAttached)
             {
-
-                rfid.Antenna = false;
-
+                label3.Text = "RFID: Angeschlossen.";
             }
-
-        }
-
-        public void View_Unload()
-        {
-            if (rfid != null)
+            else
             {
-                rfid.Attach -= new AttachEventHandler(rfid_Attach);
-                rfid.Detach -= new DetachEventHandler(rfid_Detach);
-
-                rfid.Tag -= new TagEventHandler(rfid_Tag);
-                rfid.TagLost -= new TagEventHandler(rfid_TagLost);
-                rfid.close();
+                label3.Text = "RFID: Nicht angeschlossen.";
             }
-
-        }
-
-        public void View_MyLoad()
-        {
-            if (rfid == null)
-            {
-                rfid = new RFID();
-            }
-
-            rfid.Attach += new AttachEventHandler(rfid_Attach);
-            rfid.Detach += new DetachEventHandler(rfid_Detach);
-
-            rfid.Tag += new TagEventHandler(rfid_Tag);
-            rfid.TagLost += new TagEventHandler(rfid_TagLost);
-            rfid.open(-1);
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            if (rfid == null)
-            {
-                rfid = new RFID();
-            }
-
-            rfid.Attach += new AttachEventHandler(rfid_Attach);
-            rfid.Detach += new DetachEventHandler(rfid_Detach);
-
-            rfid.Tag += new TagEventHandler(rfid_Tag);
-            rfid.TagLost += new TagEventHandler(rfid_TagLost);
-            rfid.open(-1);
         }
     }
 }

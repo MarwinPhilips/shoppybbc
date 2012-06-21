@@ -16,10 +16,9 @@ namespace Shoppy.Views
 {
 	public partial class SellView: UserControl
 	{
-        private RFID rfid;
         SellAdmin sa = new SellAdmin();
         string rfid_num;
-        private RFIDListener rfidlistener;
+        public RFIDListener rfidlistener;
 
 		public SellView()
 		{
@@ -30,6 +29,7 @@ namespace Shoppy.Views
         /* Der Barcode leser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
          das der Code nun fertig ist. Danach wird der Barcode in einer anderen Funktion mit der Datanbank-Einträgen
          verglichen und das barcode Textfeld wieder leer gesetzt*/
+        #region inputs
         private void txtInputBarcode_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -38,7 +38,7 @@ namespace Shoppy.Views
                 txtInputBarcode.Text = "";
             }
         }
-
+        
         /* Beim aufruf dieser Funtkion wird der Artikel aus der Datanbank herausgelesen und in die Tabelle gelesen*/
         private void addprodukt(string BarCode)
         {
@@ -161,6 +161,9 @@ namespace Shoppy.Views
                 newPreis();
             }
         }
+
+        #endregion
+ 
         /*
         /*Event wenn RFID gefunden und eigebatcht ist
         void rfid_Tag(object sender, TagEventArgs e)
@@ -213,19 +216,6 @@ namespace Shoppy.Views
 
         }*/
 
-       public void View_Unload()
-        {
-           
-            rfidlistener.RFIDAttached -= new RFIDListener.RFIDAttachedChangeEventHandler(RFIDAttached);
-            rfidlistener.RFIDchanged -= new RFIDListener.RFIDTagChangedEventHandler(RFIDChanged);
-        }
-
-        public void View_MyLoad()
-        {
-            rfidlistener.RFIDAttached += new RFIDListener.RFIDAttachedChangeEventHandler(RFIDAttached);
-            rfidlistener.RFIDchanged += new RFIDListener.RFIDTagChangedEventHandler(RFIDChanged);
-        }
-
         private void btnPrintSell_Click(object sender, EventArgs e)
         {
             PrintSell sellPrint = new PrintSell(double.Parse(txtTotalPay.Text.ToString()),dataGridView1);
@@ -236,11 +226,13 @@ namespace Shoppy.Views
         {
             txtInputBarcode.Select();
         }
-        private void RFIDAttached(bool isAttached)
+
+        public void RFIDAttached(bool IsAttached)
         {
 
         }
-        private void RFIDChanged(string newRFID)
+
+        public void RFIDChanged(string newRFID)
         {
             if (rfid_num != newRFID)
             {
