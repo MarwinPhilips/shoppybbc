@@ -9,6 +9,7 @@ using Shoppy.Database;
 using Phidgets.Events;
 using Phidgets;
 using System.Drawing.Printing;
+using Shoppy.RFIDInput;
 
 namespace Shoppy.Views
 {
@@ -17,10 +18,12 @@ namespace Shoppy.Views
         private RFID rfid;
         SellAdmin sa = new SellAdmin();
         string rfid_num;
+        private RFIDListener rfidlistener;
 
 		public SellView()
 		{
 			InitializeComponent();
+            rfidlistener = RFIDListener.GetInstance();
 		}
 
         /* Der Barcode leser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
@@ -173,8 +176,8 @@ namespace Shoppy.Views
                 newPreis();
             }
         }
-
-        /*Event wenn RFID gefunden und eigebatcht ist*/
+        /*
+        /*Event wenn RFID gefunden und eigebatcht ist
         void rfid_Tag(object sender, TagEventArgs e)
         {
             rfid_num = e.Tag;
@@ -185,13 +188,13 @@ namespace Shoppy.Views
                 btnSellPay.Enabled = true;
                 btnPrintSell.Enabled = true;
             }
-            catch   /*Wenn der Kunde (RFID) nicht in der Datenbank vorhanden ist, wird eine Fehlermeldung ausgegeben*/
+            catch   /*Wenn der Kunde (RFID) nicht in der Datenbank vorhanden ist, wird eine Fehlermeldung ausgegeben
             {
                 MessageBox.Show("Fehler: Der RFID konnte nicht gefunden werden. Bitte RFID als neuer Kunde hinzufügen.");
             }        
         }
 
-        /*Event wenn RFID wieder weggenommen wird*/
+        /*Event wenn RFID wieder weggenommen wird
         void rfid_TagLost(object sender, TagEventArgs e)
         {
             rfid_num = "";
@@ -223,36 +226,19 @@ namespace Shoppy.Views
 
             }
 
-        }
+        }*/
 
        public void View_Unload()
         {
-            if (rfid != null)
-            {
-                rfid.Attach -= new AttachEventHandler(rfid_Attach);
-                rfid.Detach -= new DetachEventHandler(rfid_Detach);
-
-                rfid.Tag -= new TagEventHandler(rfid_Tag);
-                rfid.TagLost -= new TagEventHandler(rfid_TagLost);
-                rfid.close();
-            }
-
+           
+            rfidlistener.RFIDAttached -= new RFIDListener.RFIDAttachedChangeEventHandler(RFIDAttached);
+            rfidlistener.RFIDchanged -= new RFIDListener.RFIDTagChangedEventHandler(RFIDChanged);
         }
 
         public void View_MyLoad()
         {
-            
-            if (rfid == null)
-            {
-                rfid = new RFID();
-            }
-
-                rfid.Attach += new AttachEventHandler(rfid_Attach);
-                rfid.Detach += new DetachEventHandler(rfid_Detach);
-
-                rfid.Tag += new TagEventHandler(rfid_Tag);
-                rfid.TagLost += new TagEventHandler(rfid_TagLost);
-                rfid.open(-1);
+            rfidlistener.RFIDAttached += new RFIDListener.RFIDAttachedChangeEventHandler(RFIDAttached);
+            rfidlistener.RFIDchanged += new RFIDListener.RFIDTagChangedEventHandler(RFIDChanged);
         }
 
         private void btnPrintSell_Click(object sender, EventArgs e)
@@ -264,6 +250,36 @@ namespace Shoppy.Views
         private void SellView_Load(object sender, EventArgs e)
         {
             txtInputBarcode.Select();
+        }
+        private void RFIDAttached(bool isAttached)
+        {
+
+        }
+        private void RFIDChanged(string newRFID)
+        {
+            if (rfid_num != newRFID)
+            {
+                rfid_num = newRFID;
+            }
+            if (rfid_num == "")
+            {
+                btnSellPay.Enabled = false;
+                txtGehalt.Text = "";
+            }
+            else
+            {
+                try
+                {
+                    string Gehalt = sa.GetPayClient(rfid_num).ToString();
+                    txtGehalt.Text = Gehalt;
+                    btnSellPay.Enabled = true;
+                    btnPrintSell.Enabled = true;
+                }
+                catch   /*Wenn der Kunde (RFID) nicht in der Datenbank vorhanden ist, wird eine Fehlermeldung ausgegeben*/
+                {
+                    MessageBox.Show("Fehler: Der RFID konnte nicht gefunden werden. Bitte RFID als neuer Kunde hinzufügen.");
+                }
+            }
         }
 
 	}

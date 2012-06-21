@@ -10,7 +10,6 @@ namespace Shoppy
 {
     public partial class Form1 : Form
     {
-
         int pageIndex;
         int pageIndex2;
 
@@ -19,6 +18,14 @@ namespace Shoppy
             InitializeComponent();
             //pageIndex = 0;
             login1.tabcontrol = tabControl1;
+            addListener();
+            
+        }
+        private void addListener()
+        {
+            payment_View1.listener = RFIDInput.RFIDListener.GetInstance();
+            payment_View1.listener.RFIDAttached +=new RFIDInput.RFIDListener.RFIDAttachedChangeEventHandler(payment_View1.RFIDAttached);
+            payment_View1.listener.RFIDchanged += new RFIDInput.RFIDListener.RFIDTagChangedEventHandler(payment_View1.RFIDChanged);
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

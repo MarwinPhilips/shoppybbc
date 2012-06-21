@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Shoppy.Database;
 using Phidgets; //Needed for the RFID class and the PhidgetException class
 using Phidgets.Events; //Needed for the phidget event handling classes
+using Shoppy.RFIDInput;
 
 namespace Shoppy.Views
 {
@@ -16,10 +17,14 @@ namespace Shoppy.Views
         private RFID rfid; //Declare an RFID object
         ClientAdmin database = new ClientAdmin();
         string rfid_num;
+        public RFIDListener listener;
+        
 
         public Payment_View()
         {
             InitializeComponent();
+            listener = RFIDListener.GetInstance();
+
         }
 
         private void FillData()
@@ -48,26 +53,43 @@ namespace Shoppy.Views
             {
                 rfid = new RFID();
             }
-                rfid.Attach += new AttachEventHandler(rfid_Attach);
-                rfid.Detach += new DetachEventHandler(rfid_Detach);
-
-                rfid.Tag += new TagEventHandler(rfid_Tag);
-                rfid.TagLost += new TagEventHandler(rfid_TagLost);
-                rfid.open(-1);
+            listener.RFIDAttached +=new RFIDListener.RFIDAttachedChangeEventHandler(RFIDAttached);
+            listener.RFIDchanged +=new RFIDListener.RFIDTagChangedEventHandler(RFIDChanged);
         }
-
+        public void RFIDChanged(string newRFID)
+        {
+            if (newRFID == "")
+            {
+                btnEnter.Enabled = false;
+                rfid_num = "";
+                dataGridView1.DataSource = "";
+            }
+            else
+            {
+                btnEnter.Enabled = true;
+                rfid_num = newRFID;
+                FillData();
+            }
+        }
+        public void RFIDAttached(bool IsAttached)
+        {
+            if (IsAttached)
+            {
+                label2.Text = "RFID: Angeschlossen.";
+            }
+            else
+            {
+                label2.Text = "RFID: Nicht angeschlossen.";
+            }
+        }
         void rfid_Tag(object sender, TagEventArgs e)
         {
-            btnEnter.Enabled = true;
-            rfid_num = e.Tag;
-            FillData();
+            
         }
 
         void rfid_TagLost(object sender, TagEventArgs e)
         {
-            btnEnter.Enabled = false;
-            rfid_num = "";
-            dataGridView1.DataSource = "";
+            
         }
 
         void rfid_Attach(object sender, AttachEventArgs e)
