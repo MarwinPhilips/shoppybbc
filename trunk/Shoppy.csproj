@@ -121,6 +121,12 @@
     <Compile Include="Cam\CamViewer.Designer.cs">
       <DependentUpon>CamViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DataGridViewPlus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\DataGridViewPlus.Designer.cs">
+      <DependentUpon>DataGridViewPlus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Eingabeüberprüfung.cs" />
     <Compile Include="PrintSell.cs" />
     <Compile Include="RFIDInput\RFIDListener.cs" />

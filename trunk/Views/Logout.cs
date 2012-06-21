@@ -25,6 +25,7 @@ namespace Shoppy.Views
             login.Enabled = true;
             control.Enabled = false;
             control.Visible = false;
+            control.SelectTab(0);
         }
     }
 }

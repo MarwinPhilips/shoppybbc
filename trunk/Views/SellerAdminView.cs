@@ -58,7 +58,7 @@ namespace Shoppy.Views
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
-            database.UpdateSeller(txtUpdateRFID.Text, txtUpdateLoginname.Text, txtUpdatePasswort.Text, txtUpdateName.Text, txtNewVorname.Text);
+            database.UpdateSeller(txtUpdateRFID.Text, txtUpdateLoginname.Text, txtUpdatePasswort.Text, txtUpdateName.Text, txtUpdateVorname.Text);
             FillRows();
         }
 
@@ -68,33 +68,6 @@ namespace Shoppy.Views
             FillRows();
         }
 
-        private void rfid_Tag(object sender, TagEventArgs e)
-        {
-            
-            
-            DataTable table = database.GetSeller(e.Tag);
-            if (table.Rows.Count == 1)
-            {
-                txtUpdateLoginname.Text = table.Rows[0].ItemArray[1].ToString();
-                txtUpdateName.Text = table.Rows[0].ItemArray[3].ToString();
-                txtUpdatePasswort.Text = table.Rows[0].ItemArray[2].ToString();
-                txtUpdateVorname.Text = table.Rows[0].ItemArray[4].ToString();
-                dataGridView1.DataSource = table;
-                txtUpdateRFID.Text = e.Tag;
-            }
-            else
-            {
-                txtNewRFID.Text = e.Tag;
-            }
-
-        }
-
-        /*Event wenn RFID wieder weggenommen wird*/
-        private void rfid_TagLost(object sender, TagEventArgs e)
-        {
-            
-            FillRows();
-        }
 
         public void RFIDChanged(string newRFID)
         {

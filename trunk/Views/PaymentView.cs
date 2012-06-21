@@ -9,6 +9,7 @@ using Shoppy.Database;
 using Phidgets; //Needed for the RFID class and the PhidgetException class
 using Phidgets.Events; //Needed for the phidget event handling classes
 using Shoppy.RFIDInput;
+using Shoppy.Helpers;
 
 namespace Shoppy.Views
 {
@@ -23,10 +24,25 @@ namespace Shoppy.Views
         {
             InitializeComponent();
         }
-
+        private void FillDGV(DataTable table)
+        {
+            dataGridView1.DataSource = table;
+        }
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        {
+            try
+            {
+                base.OnPaint(e);
+            }
+            catch (Exception ex)
+            {
+                this.Invalidate();
+                ex.ToString();
+            }
+        }
         private void FillData()
         {
-            dataGridView1.DataSource = database.GetClientOnRFID(rfid_num);
+            FillDGV(database.GetClientOnRFID(rfid_num));
         }
 
         public void RFIDChanged(string newRFID)

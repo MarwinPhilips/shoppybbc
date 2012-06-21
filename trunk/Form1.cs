@@ -42,7 +42,6 @@ namespace Shoppy
             clientAdminView1.rfidlistener.RFIDchanged += new RFIDInput.RFIDListener.RFIDTagChangedEventHandler(clientAdminView1.RFIDChanged);
 
 
-
             login1.rfidlistener = listener;
             login1.rfidlistener.RFIDAttached += new RFIDInput.RFIDListener.RFIDAttachedChangeEventHandler(login1.RFIDAttached);
             login1.rfidlistener.RFIDchanged += new RFIDInput.RFIDListener.RFIDTagChangedEventHandler(login1.RFIDChanged);
@@ -64,96 +63,7 @@ namespace Shoppy
                 login1.Enabled = true;
                 login1.Visible = true;
             }
-            e.Handled = true;
         }
-
-        /*private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
-        {
-            //--------Entfernen----------
-            //SellView
-            if (pageIndex == 0)
-            {
-                sellView1.View_Unload();
-            }
-            //Payment
-            else if (pageIndex == 1)
-            {
-                payment_View1.Payment_View_Unload();
-            }
-            else if (e.TabPageIndex == 2)
-            {
-                sellView1.View_Unload();
-                payment_View1.Payment_View_Unload();
-                surveyView1.Survey_View_Load();
-            }
-            else if (e.TabPageIndex == 3)
-            {
-                sellView1.View_Unload();
-                payment_View1.Payment_View_Unload();
-            }
-            else if (pageIndex == 3)
-            {
-                sellerAdminView1.View_Unload();
-                clientAdminView1.View_Unload();
-            }
-            
-            
-            //-------Hinzufügen----------
-            //Payment
-            if (e.TabPageIndex == 1)
-            {
-                payment_View1.Payment_View_MyLoad();
-                
-            }
-            //SellView
-            else if (e.TabPageIndex == 0)
-            {
-                sellView1.View_MyLoad();
-            }
-            else if (e.TabPageIndex == 2)
-            {
-                surveyView1.Survey_View_Load();
-            }           
-
-            pageIndex = e.TabPageIndex;
-
-        }
-
-
-       private void tabControl2_Selecting(object sender, TabControlCancelEventArgs e)
-       {
-             
-            //--------Entfernen---------
-            if (pageIndex2 == 0)
-            {
-                clientAdminView1.View_Unload();
-            }
-
-            //Seller
-            else if (pageIndex2 == 3)
-            {
-                sellerAdminView1.View_Unload();
-            }
-            if (e.TabPageIndex == 1 || e.TabPageIndex == 2)
-            {
-                sellerAdminView1.View_Unload();
-                clientAdminView1.View_Unload();
-            }
-            
-
-            //---------Hinzufügen----------
-            //ClientAdmin
-            if (e.TabPageIndex == 0)
-            {
-                clientAdminView1.View_MyLoad();
-            }
-            else if (e.TabPageIndex == 3)
-            {
-                sellerAdminView1.View_MyLoad();
-            }
-
-            pageIndex2 = e.TabPageIndex;
-       }*/
     }
 }
 

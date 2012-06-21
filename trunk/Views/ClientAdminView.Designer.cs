@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnUpdateClient = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new Helpers.DataGridViewPlus();
             this.Löschen = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnNewClient = new System.Windows.Forms.Button();
             this.txtUpdateVorname = new System.Windows.Forms.TextBox();
