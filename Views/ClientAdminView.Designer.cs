@@ -44,7 +44,7 @@
             this.txtNewRFID = new System.Windows.Forms.TextBox();
             this.txtNewName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new Helpers.DataGridViewPlus();
+            this.dataGridView1 = new Shoppy.Helpers.DataGridViewPlus();
             this.Löschen = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -72,7 +72,7 @@
             this.btnNewClient.Name = "btnNewClient";
             this.btnNewClient.Size = new System.Drawing.Size(184, 89);
             this.btnNewClient.TabIndex = 10;
-            this.btnNewClient.Text = "Neue Clien";
+            this.btnNewClient.Text = "Neuen Kunden erfassen";
             this.btnNewClient.UseVisualStyleBackColor = true;
             this.btnNewClient.Click += new System.EventHandler(this.btnNewClient_Click);
             // 
@@ -231,7 +231,7 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
