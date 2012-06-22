@@ -205,11 +205,11 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.sellAdminView1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 40);
+            this.tabPage6.Location = new System.Drawing.Point(4, 54);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage6.Size = new System.Drawing.Size(184, 30);
+            this.tabPage6.Size = new System.Drawing.Size(184, 16);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sell";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -221,16 +221,16 @@
             this.sellAdminView1.Location = new System.Drawing.Point(6, 6);
             this.sellAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellAdminView1.Name = "sellAdminView1";
-            this.sellAdminView1.Size = new System.Drawing.Size(172, 36);
+            this.sellAdminView1.Size = new System.Drawing.Size(956, 588);
             this.sellAdminView1.TabIndex = 0;
             // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.camAdminView2);
-            this.tabPage7.Location = new System.Drawing.Point(4, 40);
+            this.tabPage7.Location = new System.Drawing.Point(4, 54);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(184, 30);
+            this.tabPage7.Size = new System.Drawing.Size(184, 16);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Survey";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -242,16 +242,16 @@
             this.camAdminView2.Location = new System.Drawing.Point(0, 0);
             this.camAdminView2.Margin = new System.Windows.Forms.Padding(6);
             this.camAdminView2.Name = "camAdminView2";
-            this.camAdminView2.Size = new System.Drawing.Size(184, 48);
+            this.camAdminView2.Size = new System.Drawing.Size(184, 16);
             this.camAdminView2.TabIndex = 0;
             // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.sellerAdminView1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 40);
+            this.tabPage8.Location = new System.Drawing.Point(4, 54);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(184, 30);
+            this.tabPage8.Size = new System.Drawing.Size(184, 16);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Seller";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -263,7 +263,7 @@
             this.sellerAdminView1.Location = new System.Drawing.Point(0, 0);
             this.sellerAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellerAdminView1.Name = "sellerAdminView1";
-            this.sellerAdminView1.Size = new System.Drawing.Size(184, 48);
+            this.sellerAdminView1.Size = new System.Drawing.Size(184, 16);
             this.sellerAdminView1.TabIndex = 0;
             // 
             // tabPage9

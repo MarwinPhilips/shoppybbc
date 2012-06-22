@@ -268,7 +268,7 @@
             this.text.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.text.MinimumSize = new System.Drawing.Size(100, 89);
             this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(200, 89);
+            this.text.Size = new System.Drawing.Size(199, 89);
             this.text.TabIndex = 4;
             this.text.Text = "Gesamtbetrag:";
             // 
@@ -276,7 +276,7 @@
             // 
             this.txtInputBarcode.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtInputBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtInputBarcode.Location = new System.Drawing.Point(219, 75);
+            this.txtInputBarcode.Location = new System.Drawing.Point(218, 75);
             this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(7, 0, 6, 6);
             this.txtInputBarcode.MinimumSize = new System.Drawing.Size(180, 32);
             this.txtInputBarcode.Name = "txtInputBarcode";
@@ -293,7 +293,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.MinimumSize = new System.Drawing.Size(125, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 76);
+            this.label1.Size = new System.Drawing.Size(199, 76);
             this.label1.TabIndex = 4;
             this.label1.Text = "Produkt-BarCode:";
             // 
@@ -344,12 +344,12 @@
             this.tableLayoutPanel4.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtGehalt, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(218, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(217, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(752, 69);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(753, 69);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // labelGehalt
@@ -384,7 +384,7 @@
             this.txtGehalt.MinimumSize = new System.Drawing.Size(150, 31);
             this.txtGehalt.Name = "txtGehalt";
             this.txtGehalt.ReadOnly = true;
-            this.txtGehalt.Size = new System.Drawing.Size(182, 31);
+            this.txtGehalt.Size = new System.Drawing.Size(183, 31);
             this.txtGehalt.TabIndex = 6;
             this.txtGehalt.TabStop = false;
             // 
