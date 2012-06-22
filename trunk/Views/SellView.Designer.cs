@@ -49,9 +49,9 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtGehalt = new System.Windows.Forms.TextBox();
             this.labelGehalt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtGehalt = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -354,17 +354,6 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(759, 83);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
-            // txtGehalt
-            // 
-            this.txtGehalt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGehalt.Location = new System.Drawing.Point(555, 3);
-            this.txtGehalt.MinimumSize = new System.Drawing.Size(150, 31);
-            this.txtGehalt.Name = "txtGehalt";
-            this.txtGehalt.ReadOnly = true;
-            this.txtGehalt.Size = new System.Drawing.Size(201, 31);
-            this.txtGehalt.TabIndex = 6;
-            this.txtGehalt.TabStop = false;
-            // 
             // labelGehalt
             // 
             this.labelGehalt.AutoSize = true;
@@ -389,6 +378,17 @@
             this.label3.Size = new System.Drawing.Size(295, 81);
             this.label3.TabIndex = 5;
             this.label3.Text = "CHF";
+            // 
+            // txtGehalt
+            // 
+            this.txtGehalt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGehalt.Location = new System.Drawing.Point(555, 3);
+            this.txtGehalt.MinimumSize = new System.Drawing.Size(150, 31);
+            this.txtGehalt.Name = "txtGehalt";
+            this.txtGehalt.ReadOnly = true;
+            this.txtGehalt.Size = new System.Drawing.Size(201, 31);
+            this.txtGehalt.TabIndex = 6;
+            this.txtGehalt.TabStop = false;
             // 
             // tableLayoutPanel5
             // 

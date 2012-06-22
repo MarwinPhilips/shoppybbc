@@ -44,15 +44,31 @@ namespace Shoppy.Views
         private void addprodukt(string BarCode)
         {
             string[,] produkt = sa.GetProdukt(BarCode);
-            int AnzahlZeilen = dataGridView1.Rows.Count - 1;
-            try
+            int AnzahlZeilen = dataGridView1.Rows.Count;
+            if (AnzahlZeilen != 0)
             {
-                dataGridView1.Rows.Add("", produkt[0, 0], produkt[0, 1], produkt[0, 2], 1);
+                for (int i = 0; i < AnzahlZeilen; i++)
+                {
+                    if (BarCode.Equals(dataGridView1.Rows[AnzahlZeilen - 1].Cells[2].Value.ToString()))
+                    {
+                        int Produktanzahl = int.Parse(dataGridView1.Rows[AnzahlZeilen - 1].Cells[4].Value.ToString());
+                        Produktanzahl += 1;
+                        dataGridView1.Rows[AnzahlZeilen - 1].Cells[4].Value = Produktanzahl;
+                    }
+                }
             }
-            catch   /*Wenn der Barcode (Artikel) nicht in der Datenbank vorhanden ist, wird eine fehlermeldung ausgegeben*/
+            else 
             {
-                MessageBox.Show("Fehler:Dieser Artikel ist nicht vorhanden");
+                try
+                {
+                    dataGridView1.Rows.Add("", produkt[0, 0], produkt[0, 1], produkt[0, 2], 1);
+                }
+                catch   /*Wenn der Barcode (Artikel) nicht in der Datenbank vorhanden ist, wird eine fehlermeldung ausgegeben*/
+                {
+                    MessageBox.Show("Fehler:Dieser Artikel ist nicht vorhanden");
+                }
             }
+
         }
 
 
