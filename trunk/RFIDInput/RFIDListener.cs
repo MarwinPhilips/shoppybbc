@@ -101,6 +101,11 @@ namespace Shoppy.RFIDInput
             rfid.Tag += new TagEventHandler(rfid_Tag);
             rfid.TagLost += new TagEventHandler(rfid_TagLost);
             rfid.open(-1);
+            
+        }
+        public void CheckAttached()
+        {
+            isAttached = rfid.Attached;
         }
     }
 }

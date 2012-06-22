@@ -36,9 +36,7 @@ namespace Shoppy.Views
                 tabcontrol.Visible = true;
                 tabcontrol.Enabled = true;
                 txtUserRFID.Text = "";
-                string Seller = "12345";
-                MessageBox.Show(Seller);
-                SellerName = sa.GetSellerName(Seller);
+                SellerName = sa.GetSellerName(rfid_num);
             }
             else
             {
@@ -62,16 +60,5 @@ namespace Shoppy.Views
             }
         }
 
-        public void RFIDAttached(bool IsAttached)
-        {
-            if (IsAttached)
-            {
-                label3.Text = "RFID: Angeschlossen.";
-            }
-            else
-            {
-                label3.Text = "RFID: Nicht angeschlossen.";
-            }
-        }
     }
 }

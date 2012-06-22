@@ -52,18 +52,10 @@ namespace Shoppy.Views
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (BinEineZeile(e))
+            if (Helpers.Eingabeüberprüfung.BinEineZeile(dataGridView1,e.RowIndex,e.ColumnIndex))
             {
                 SetCam(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
-        }
-        private bool BinEineZeile(DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewTextBoxColumn && e.RowIndex != -1)
-            {
-                return true;
-            }
-            return false;
         }
 
         internal void Survey_View_Cam_Switcher_Reload()

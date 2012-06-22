@@ -138,7 +138,7 @@ namespace Shoppy.Cam
             this.butHorizontal.Name = "butHorizontal";
             this.butHorizontal.Size = new System.Drawing.Size(39, 41);
             this.butHorizontal.TabIndex = 5;
-            this.butHorizontal.Text = "<>";
+            this.butHorizontal.Text = "--";
             this.butHorizontal.UseVisualStyleBackColor = true;
             this.butHorizontal.Click += new System.EventHandler(this.but_Click);
             // 
@@ -182,6 +182,7 @@ namespace Shoppy.Cam
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(320, 280);
             this.Name = "CamViewer";
             this.Size = new System.Drawing.Size(320, 280);
             this.tableLayoutPanel1.ResumeLayout(false);
