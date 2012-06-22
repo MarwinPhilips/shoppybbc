@@ -27,10 +27,7 @@ namespace Shoppy.Views
         }
         private void FillDGV(DataTable table)
         {
-            dataGridView1.Visible = false;
             dataGridView1.DataSource = table;
-            dataGridView1.Visible = true;
-            dataGridView1.Refresh();
         }
         private void FillData()
         {

@@ -282,7 +282,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnUpdateClient;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn Löschen;
         private System.Windows.Forms.Button btnNewClient;
         private System.Windows.Forms.TextBox txtUpdateVorname;
@@ -300,5 +299,6 @@
         private System.Windows.Forms.TextBox txtNewRFID;
         private System.Windows.Forms.TextBox txtNewName;
         private System.Windows.Forms.Label label1;
+        private Helpers.DataGridViewPlus dataGridView1;
     }
 }
