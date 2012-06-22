@@ -26,6 +26,7 @@ namespace Shoppy.Views
             control.Enabled = false;
             control.Visible = false;
             control.SelectTab(0);
+            Login.SellerName = "";
         }
     }
 }

@@ -76,7 +76,6 @@ namespace Shoppy.Views
         private void btnInsert(object sender, EventArgs e)
         {
             string kunde = dataGridView1.Rows[0].Cells[0].Value.ToString();
-            MessageBox.Show(kunde);
             double betrag = double.Parse(txtBetrag.Text);
             database.InsertBetrag(kunde, betrag);
             FillData();

@@ -20,6 +20,7 @@ namespace Shoppy.Views
         SellerAdmin sa = new SellerAdmin();
         public TabControl tabcontrol;
         string rfid_num;
+        public static string SellerName;
         
         public Login()
         {
@@ -35,6 +36,7 @@ namespace Shoppy.Views
                 tabcontrol.Visible = true;
                 tabcontrol.Enabled = true;
                 txtUserRFID.Text = "";
+                SellerName = sa.GetSellerName(rfid_num);
             }
             else
             {
@@ -48,11 +50,13 @@ namespace Shoppy.Views
             {
                 rfid_num = "";
                 txtUserRFID.Text = "";
+                btnLogin.Enabled = false;
             }
             else
             {
                 rfid_num = newRFID;
-                txtUserRFID.Text = rfid_num; ;
+                txtUserRFID.Text = rfid_num;
+                btnLogin.Enabled = true;
             }
         }
 

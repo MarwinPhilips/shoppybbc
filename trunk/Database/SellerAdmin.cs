@@ -47,5 +47,14 @@ namespace Shoppy.Database
             }
             return false;
         }
+
+        public string GetSellerName(string RFID)
+        {
+            string[,] result = Abfragen.Select("SELECT name, vorname FROM seller WHERE RFID = '" + RFID + "';");
+
+            string name = (result[0, 0] + " " + result[0, 1]);
+
+            return name;
+        }
 	}
 }
