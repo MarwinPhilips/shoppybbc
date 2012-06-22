@@ -156,7 +156,6 @@
             this.txtUpdateGeld.Name = "txtUpdateGeld";
             this.txtUpdateGeld.Size = new System.Drawing.Size(184, 31);
             this.txtUpdateGeld.TabIndex = 4;
-            this.txtUpdateGeld.TextChanged += new System.EventHandler(this.txtUpdateGeld_TextChanged);
             // 
             // label4
             // 

@@ -27,3 +27,5 @@ C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.exe.manifest
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.application
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.exe
 C:\Users\eprudd\Desktop\Shoopy\obj\Debug\Shoppy.pdb
+C:\Users\eprudd\Desktop\Shoopy\obj\Debug\ResGen.read.1.tlog
+C:\Users\eprudd\Desktop\Shoopy\obj\Debug\ResGen.write.1.tlog
