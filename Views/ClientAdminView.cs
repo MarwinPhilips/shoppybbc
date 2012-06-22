@@ -148,7 +148,7 @@ namespace Shoppy.Views
                 client = rfid_num;
                 FillData();
             }
-        }
+        }/*
         private void txtFields_Changed(object sender, EventArgs e)
         {
 
@@ -187,6 +187,6 @@ namespace Shoppy.Views
                 btnUpdateClient.Enabled = false;
             }
         }
-
+        */
     }
 }

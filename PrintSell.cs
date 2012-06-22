@@ -11,12 +11,14 @@ using MigraDoc.DocumentObjectModel;
 using System.Windows.Forms;
 using MigraDoc.Rendering;
 
-namespace Shoppy
+namespace Shoppy.Views
 {
     class PrintSell
     {
         private double totalbetrag;
         private DataGridView datagridSell;
+        Login logi = new Login();
+
 
         public PrintSell(double totalbetrag, DataGridView idatgridSell) 
         {
@@ -85,6 +87,7 @@ namespace Shoppy
                 {
                     for (int j = 0; j < CounterRows; j++)
                     {
+                        gfx.Dispose();
                         ChoosePage(i, pdfdocument, doc);
 
                         row = tabelle.AddRow();
@@ -162,7 +165,7 @@ namespace Shoppy
             bediennung.Format.Font.Name = "Arial";
             bediennung.Format.Font.Size = 12;
             bediennung.Format.Font.Color = MigraDoc.DocumentObjectModel.Colors.Black;
-            bediennung.AddText("Sie wurden bedient von 'Verkäufername'");
+            bediennung.AddText("Sie wurden bedient von " + Login.SellerName);
 
             MigraDoc.Rendering.DocumentRenderer docRendererr = new DocumentRenderer(doc);
             docRendererr.PrepareDocument();
@@ -179,11 +182,18 @@ namespace Shoppy
             {
                 for (int y = 0; y < onWitchPage; y++)
                 {
+                    PdfPage page = pdfdocument.Pages[y];
+                    XGraphics gfx = XGraphics.FromPdfPage(page);
+                    gfx.MUH = PdfFontEncoding.Unicode;
+                    gfx.MFEH = PdfFontEmbedding.Default;
+                    page.Orientation = PageOrientation.Portrait;
+                    Section sec = doc.AddSection();
                     MigraDoc.DocumentObjectModel.Tables.Table tabelle1 = tableheader(doc.Sections[y+1]);
                     tabelle1 = doc.Sections[y+1].AddTable();
                     tabelle1.SetEdge(0, 0, tabelle1.Columns.Count,
                     tabelle1.Rows.Count, MigraDoc.DocumentObjectModel.Tables.Edge.Box,
                     MigraDoc.DocumentObjectModel.BorderStyle.Single, 0.75);
+                    gfx.Dispose();
                 }
             }
         }
@@ -197,11 +207,6 @@ namespace Shoppy
                 for (int x = 0; x < anzNewPages; x++)
                 {
                     PdfPage page = pdfdocument.AddPage();
-                    XGraphics gfx = XGraphics.FromPdfPage(page);
-                    gfx.MUH = PdfFontEncoding.Unicode;
-                    gfx.MFEH = PdfFontEmbedding.Default;
-                    page.Orientation = PageOrientation.Portrait;
-                    Section sec = doc.AddSection();
                 }
                 return doc;
             }

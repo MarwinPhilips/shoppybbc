@@ -76,6 +76,7 @@
             this.txtUserRFID.PasswordChar = '*';
             this.txtUserRFID.Size = new System.Drawing.Size(239, 20);
             this.txtUserRFID.TabIndex = 1;
+            this.txtUserRFID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUserRFID_KeyUp);
             // 
             // label1
             // 

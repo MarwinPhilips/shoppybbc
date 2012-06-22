@@ -44,7 +44,7 @@
             this.txtNewRFID = new System.Windows.Forms.TextBox();
             this.txtNewName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new Shoppy.Helpers.DataGridViewPlus();
+            this.dataGridView1 = new Helpers.DataGridViewPlus();
             this.Löschen = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -93,7 +93,6 @@
             this.txtNewVorname.Name = "txtNewVorname";
             this.txtNewVorname.Size = new System.Drawing.Size(184, 31);
             this.txtNewVorname.TabIndex = 8;
-            this.txtNewVorname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // tableLayoutPanel1
             // 
@@ -175,7 +174,6 @@
             this.txtNewGeld.Name = "txtNewGeld";
             this.txtNewGeld.Size = new System.Drawing.Size(184, 31);
             this.txtNewGeld.TabIndex = 9;
-            this.txtNewGeld.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Anzeigename
             // 
@@ -212,7 +210,6 @@
             this.txtNewRFID.Name = "txtNewRFID";
             this.txtNewRFID.Size = new System.Drawing.Size(190, 31);
             this.txtNewRFID.TabIndex = 6;
-            this.txtNewRFID.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewName
             // 
@@ -221,7 +218,6 @@
             this.txtNewName.Name = "txtNewName";
             this.txtNewName.Size = new System.Drawing.Size(190, 31);
             this.txtNewName.TabIndex = 7;
-            this.txtNewName.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // tableLayoutPanel2
             // 

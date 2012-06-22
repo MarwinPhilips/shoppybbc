@@ -156,7 +156,7 @@
             this.txtTotalPay.MinimumSize = new System.Drawing.Size(109, 32);
             this.txtTotalPay.Name = "txtTotalPay";
             this.txtTotalPay.ReadOnly = true;
-            this.txtTotalPay.Size = new System.Drawing.Size(189, 32);
+            this.txtTotalPay.Size = new System.Drawing.Size(188, 32);
             this.txtTotalPay.TabIndex = 2;
             this.txtTotalPay.TabStop = false;
             this.txtTotalPay.Text = "0.00";
@@ -268,7 +268,7 @@
             this.text.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.text.MinimumSize = new System.Drawing.Size(100, 89);
             this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(193, 89);
+            this.text.Size = new System.Drawing.Size(200, 89);
             this.text.TabIndex = 4;
             this.text.Text = "Gesamtbetrag:";
             // 
@@ -276,7 +276,7 @@
             // 
             this.txtInputBarcode.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtInputBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtInputBarcode.Location = new System.Drawing.Point(212, 75);
+            this.txtInputBarcode.Location = new System.Drawing.Point(219, 75);
             this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(7, 0, 6, 6);
             this.txtInputBarcode.MinimumSize = new System.Drawing.Size(180, 32);
             this.txtInputBarcode.Name = "txtInputBarcode";
@@ -291,9 +291,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label1.Location = new System.Drawing.Point(6, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.MinimumSize = new System.Drawing.Size(120, 26);
+            this.label1.MinimumSize = new System.Drawing.Size(125, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 76);
+            this.label1.Size = new System.Drawing.Size(200, 76);
             this.label1.TabIndex = 4;
             this.label1.Text = "Produkt-BarCode:";
             // 
@@ -316,8 +316,8 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.0041F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.9959F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.72131F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.27869F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtInputBarcode, 1, 1);
@@ -344,19 +344,19 @@
             this.tableLayoutPanel4.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtGehalt, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(211, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(218, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(759, 69);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(752, 69);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // labelGehalt
             // 
             this.labelGehalt.AutoSize = true;
             this.labelGehalt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelGehalt.Location = new System.Drawing.Point(398, 6);
+            this.labelGehalt.Location = new System.Drawing.Point(396, 6);
             this.labelGehalt.Margin = new System.Windows.Forms.Padding(20, 6, 0, 0);
             this.labelGehalt.MinimumSize = new System.Drawing.Size(50, 30);
             this.labelGehalt.Name = "labelGehalt";
@@ -369,22 +369,22 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.Location = new System.Drawing.Point(189, 2);
+            this.label3.Location = new System.Drawing.Point(188, 2);
             this.label3.Margin = new System.Windows.Forms.Padding(0, 2, 6, 0);
             this.label3.MinimumSize = new System.Drawing.Size(60, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 81);
+            this.label3.Size = new System.Drawing.Size(182, 81);
             this.label3.TabIndex = 5;
             this.label3.Text = "CHF";
             // 
             // txtGehalt
             // 
             this.txtGehalt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGehalt.Location = new System.Drawing.Point(570, 3);
+            this.txtGehalt.Location = new System.Drawing.Point(567, 3);
             this.txtGehalt.MinimumSize = new System.Drawing.Size(150, 31);
             this.txtGehalt.Name = "txtGehalt";
             this.txtGehalt.ReadOnly = true;
-            this.txtGehalt.Size = new System.Drawing.Size(186, 31);
+            this.txtGehalt.Size = new System.Drawing.Size(182, 31);
             this.txtGehalt.TabIndex = 6;
             this.txtGehalt.TabStop = false;
             // 

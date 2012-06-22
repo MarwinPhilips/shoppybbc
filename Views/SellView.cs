@@ -44,21 +44,22 @@ namespace Shoppy.Views
         private void addprodukt(string BarCode)
         {
             string[,] produkt = sa.GetProdukt(BarCode);
-            int AnzahlZeilen = dataGridView1.Rows.Count;
-            Boolean isdouble = false;
+            //int AnzahlZeilen = dataGridView1.Rows.Count;
+            //Boolean isdouble = false;
 
-            for (int i = 0; i < AnzahlZeilen; i++)
-            {                               
-                if (BarCode.Equals(dataGridView1.Rows[i].Cells[2].Value.ToString()))
-                {
-                    int Produktanzahl = int.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
-                    Produktanzahl += 1;
-                    dataGridView1.Rows[i].Cells[4].Value = Produktanzahl;
-                    isdouble = true;
-                }
-            }
-            if (isdouble == false)
-            {
+            //for (int i = 0; i < AnzahlZeilen; i++)
+            //{                               
+            //    if (BarCode.Equals(dataGridView1.Rows[i].Cells[2].Value.ToString()))
+            //    {
+            //        int Produktanzahl = int.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+            //        Produktanzahl += 1;
+            //        dataGridView1.Rows[i].Cells[4].Value = Produktanzahl;
+            //        isdouble = true;
+            //        newPreis();
+            //    }
+            //}
+            //if (isdouble == false)
+            //{
                 try
                 {
                     dataGridView1.Rows.Add("", produkt[0, 0], produkt[0, 1], produkt[0, 2], 1);
@@ -67,7 +68,7 @@ namespace Shoppy.Views
                 {
                     MessageBox.Show("Fehler:Dieser Artikel ist nicht vorhanden");
                 }
-            }
+            //}
         }
 
 
