@@ -45,19 +45,19 @@ namespace Shoppy.Views
         {
             string[,] produkt = sa.GetProdukt(BarCode);
             int AnzahlZeilen = dataGridView1.Rows.Count;
-            if (AnzahlZeilen != 0)
-            {
-                for (int i = 0; i < AnzahlZeilen; i++)
+            Boolean isdouble = false;
+
+            for (int i = 0; i < AnzahlZeilen; i++)
+            {                               
+                if (BarCode.Equals(dataGridView1.Rows[i].Cells[2].Value.ToString()))
                 {
-                    if (BarCode.Equals(dataGridView1.Rows[AnzahlZeilen - 1].Cells[2].Value.ToString()))
-                    {
-                        int Produktanzahl = int.Parse(dataGridView1.Rows[AnzahlZeilen - 1].Cells[4].Value.ToString());
-                        Produktanzahl += 1;
-                        dataGridView1.Rows[AnzahlZeilen - 1].Cells[4].Value = Produktanzahl;
-                    }
+                    int Produktanzahl = int.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+                    Produktanzahl += 1;
+                    dataGridView1.Rows[i].Cells[4].Value = Produktanzahl;
+                    isdouble = true;
                 }
             }
-            else 
+            if (isdouble == false)
             {
                 try
                 {
@@ -68,7 +68,6 @@ namespace Shoppy.Views
                     MessageBox.Show("Fehler:Dieser Artikel ist nicht vorhanden");
                 }
             }
-
         }
 
 

@@ -42,7 +42,6 @@
             // btnLogin
             // 
             this.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLogin.Enabled = false;
             this.btnLogin.Location = new System.Drawing.Point(3, 126);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(239, 36);

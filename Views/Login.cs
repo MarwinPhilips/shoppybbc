@@ -36,7 +36,9 @@ namespace Shoppy.Views
                 tabcontrol.Visible = true;
                 tabcontrol.Enabled = true;
                 txtUserRFID.Text = "";
-                SellerName = sa.GetSellerName(rfid_num);
+                string Seller = "12345";
+                MessageBox.Show(Seller);
+                SellerName = sa.GetSellerName(Seller);
             }
             else
             {
