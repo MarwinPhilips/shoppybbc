@@ -60,5 +60,10 @@ namespace Shoppy.Views
             }
         }
 
+        private void txtUserRFID_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            rfid_num = txtUserRFID.Text;
+        }
+
     }
 }

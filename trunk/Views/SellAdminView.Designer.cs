@@ -54,7 +54,7 @@
             // txtNewProdukt
             // 
             this.txtNewProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewProdukt.Location = new System.Drawing.Point(6, 214);
+            this.txtNewProdukt.Location = new System.Drawing.Point(6, 216);
             this.txtNewProdukt.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewProdukt.Name = "txtNewProdukt";
             this.txtNewProdukt.Size = new System.Drawing.Size(285, 31);
@@ -63,7 +63,7 @@
             // txtNewPreis
             // 
             this.txtNewPreis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewPreis.Location = new System.Drawing.Point(600, 214);
+            this.txtNewPreis.Location = new System.Drawing.Point(600, 216);
             this.txtNewPreis.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewPreis.Name = "txtNewPreis";
             this.txtNewPreis.Size = new System.Drawing.Size(87, 31);
@@ -72,7 +72,7 @@
             // txtUpdateProdukt
             // 
             this.txtUpdateProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUpdateProdukt.Location = new System.Drawing.Point(6, 110);
+            this.txtUpdateProdukt.Location = new System.Drawing.Point(6, 111);
             this.txtUpdateProdukt.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateProdukt.Name = "txtUpdateProdukt";
             this.txtUpdateProdukt.Size = new System.Drawing.Size(285, 31);
@@ -81,7 +81,7 @@
             // txtUpdatePreis
             // 
             this.txtUpdatePreis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUpdatePreis.Location = new System.Drawing.Point(600, 110);
+            this.txtUpdatePreis.Location = new System.Drawing.Point(600, 111);
             this.txtUpdatePreis.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdatePreis.Name = "txtUpdatePreis";
             this.txtUpdatePreis.Size = new System.Drawing.Size(87, 31);
@@ -110,7 +110,7 @@
             // txtUpdateVorrat
             // 
             this.txtUpdateVorrat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUpdateVorrat.Location = new System.Drawing.Point(699, 110);
+            this.txtUpdateVorrat.Location = new System.Drawing.Point(699, 111);
             this.txtUpdateVorrat.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateVorrat.Name = "txtUpdateVorrat";
             this.txtUpdateVorrat.Size = new System.Drawing.Size(87, 31);
@@ -129,7 +129,7 @@
             // txtNewVorrat
             // 
             this.txtNewVorrat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewVorrat.Location = new System.Drawing.Point(699, 214);
+            this.txtNewVorrat.Location = new System.Drawing.Point(699, 216);
             this.txtNewVorrat.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewVorrat.Name = "txtNewVorrat";
             this.txtNewVorrat.Size = new System.Drawing.Size(87, 31);
@@ -148,10 +148,10 @@
             // btnUpdateSell
             // 
             this.btnUpdateSell.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdateSell.Location = new System.Drawing.Point(798, 110);
+            this.btnUpdateSell.Location = new System.Drawing.Point(798, 111);
             this.btnUpdateSell.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateSell.Name = "btnUpdateSell";
-            this.btnUpdateSell.Size = new System.Drawing.Size(188, 92);
+            this.btnUpdateSell.Size = new System.Drawing.Size(188, 93);
             this.btnUpdateSell.TabIndex = 5;
             this.btnUpdateSell.Text = "Artikel anpassen";
             this.btnUpdateSell.UseVisualStyleBackColor = true;
@@ -160,10 +160,10 @@
             // btnNewSell
             // 
             this.btnNewSell.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewSell.Location = new System.Drawing.Point(798, 214);
+            this.btnNewSell.Location = new System.Drawing.Point(798, 216);
             this.btnNewSell.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewSell.Name = "btnNewSell";
-            this.btnNewSell.Size = new System.Drawing.Size(188, 95);
+            this.btnNewSell.Size = new System.Drawing.Size(188, 93);
             this.btnNewSell.TabIndex = 10;
             this.btnNewSell.Text = "Neuer Artikel erfassen";
             this.btnNewSell.UseVisualStyleBackColor = true;
@@ -181,7 +181,7 @@
             this.Löschen});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(992, 315);
             this.dataGridView1.TabIndex = 0;
@@ -196,7 +196,7 @@
             // txtUpdateBarcode
             // 
             this.txtUpdateBarcode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUpdateBarcode.Location = new System.Drawing.Point(303, 110);
+            this.txtUpdateBarcode.Location = new System.Drawing.Point(303, 111);
             this.txtUpdateBarcode.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateBarcode.Name = "txtUpdateBarcode";
             this.txtUpdateBarcode.Size = new System.Drawing.Size(285, 31);
@@ -205,7 +205,7 @@
             // txtNewBarcode
             // 
             this.txtNewBarcode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewBarcode.Location = new System.Drawing.Point(303, 214);
+            this.txtNewBarcode.Location = new System.Drawing.Point(303, 216);
             this.txtNewBarcode.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewBarcode.Name = "txtNewBarcode";
             this.txtNewBarcode.Size = new System.Drawing.Size(285, 31);
@@ -235,7 +235,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtNewBarcode, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 315);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -253,7 +253,7 @@
             this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
