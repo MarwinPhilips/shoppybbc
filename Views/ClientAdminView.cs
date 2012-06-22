@@ -120,15 +120,7 @@ namespace Shoppy.Views
 
         private void txtNewGeld_TextChanged(object sender, EventArgs e)
         {
-            if (isnumber(txtNewGeld.Text) == false)
-            {
-                MessageBox.Show("Es können nur Zahlen eingegeben werden");
-                
-                if (txtNewGeld.Text.Length != 0)
-                {
-                    txtNewGeld.Text = txtNewGeld.Text.Remove(txtNewGeld.Text.Length - 1);
-                }
-            }
+
         }
 
         private void txtUpdateGeld_TextChanged(object sender, EventArgs e)
@@ -172,6 +164,19 @@ namespace Shoppy.Views
             else
             {
                 label2.Text = "RFID: Nicht angeschlossen.";
+            }
+        }
+
+        private void txtFields_Changed(object sender, EventArgs e)
+        {
+            TextBox[] textboxen = new TextBox[] { txtNewVorname, txtNewRFID, txtNewName, txtNewGeld };
+            if (Eingabeüberprüfung.TextBoxFilled(textboxen) == true)
+            {
+                btnNewClient.Enabled = true;
+            }
+            else
+            {
+                btnNewClient.Enabled = false;
             }
         }
 

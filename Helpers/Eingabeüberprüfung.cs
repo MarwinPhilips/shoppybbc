@@ -33,5 +33,15 @@ namespace Shoppy.Helpers
             }
             return false;
         }
+
+        public static bool TextBoxFilled(TextBox[] textboxen)
+        {
+            for (int i = 0; i < textboxen.GetLength(0); i++)
+            {
+                if (textboxen[i].Text == "")
+                    return false;
+            }
+            return true;
+        }
     }
 }
