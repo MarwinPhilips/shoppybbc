@@ -10,9 +10,9 @@ namespace Shoppy.Helpers
     {
         public static bool BinEineZeile(DataGridView dgv, int rowindex, int columnindex)
         {
-            if (columnindex != -1)
+            if (rowindex != -1)
             {
-                if (dgv.Columns[rowindex] is DataGridViewTextBoxColumn && rowindex != -1)
+                if (dgv.Columns[columnindex] is DataGridViewTextBoxColumn && columnindex != -1)
                 {
                     return true;
                 }
@@ -23,9 +23,9 @@ namespace Shoppy.Helpers
 
         public static bool BinEinButton(DataGridView dgv, int rowindex, int columnindex)
         {
-            if (columnindex != -1)
+            if (rowindex != -1)
             {
-                if (dgv.Columns[rowindex] is DataGridViewButtonColumn && rowindex != -1)
+                if (dgv.Columns[columnindex] is DataGridViewButtonColumn && columnindex != -1)
                 {
                     return true;
                 }
