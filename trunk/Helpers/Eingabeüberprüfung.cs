@@ -43,5 +43,24 @@ namespace Shoppy.Helpers
             }
             return true;
         }
+
+        public static bool txtBoxValue_IsNumber(TextBox[] textboxen)
+        {
+            for (int i = 0; i < textboxen.GetLength(0); i++)
+            {
+                if (textboxen[i].Text != null)
+                {
+                    try
+                    {
+                        double.Parse(textboxen[i].Text);
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
     }
 }

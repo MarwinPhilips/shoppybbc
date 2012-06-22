@@ -102,13 +102,13 @@ namespace Shoppy.Views
 
         }
 
-        private bool isnumber(string id)
+        /*private bool isnumber(string txt)
         {
-            if (txtNewGeld.Text.Length != 0 || txtUpdateGeld.Text.Length != 0 || txtNewRFID.Text.Length != 0)
+            if (txtNewGeld.Text.Length != 0 || txtUpdateGeld.Text.Length != 0)
             {
                 try
                 {
-                    double.Parse(id);
+                    double.Parse(txt);
                 }
                 catch
                 {
@@ -116,11 +116,6 @@ namespace Shoppy.Views
                 }
             }
             return true;
-        }
-
-        private void txtNewGeld_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtUpdateGeld_TextChanged(object sender, EventArgs e)
@@ -134,7 +129,7 @@ namespace Shoppy.Views
                     txtUpdateGeld.Text = txtUpdateGeld.Text.Remove(txtUpdateGeld.Text.Length - 1);
                 }
             }
-        }
+        }*/
 
 
         public void RFIDChanged(string newRFID)
@@ -156,14 +151,40 @@ namespace Shoppy.Views
         }
         private void txtFields_Changed(object sender, EventArgs e)
         {
-            TextBox[] textboxen = new TextBox[] { txtNewVorname, txtNewRFID, txtNewName, txtNewGeld };
-            if (Eingabeüberprüfung.TextBoxFilled(textboxen) == true)
+
+            TextBox[] txtBoxen = new TextBox[] {txtNewGeld,txtUpdateGeld};
+            if (Eingabeüberprüfung.txtBoxValue_IsNumber(txtBoxen)==false)
+            {
+                MessageBox.Show("Es können nur Zahlen eingegeben werden");
+                if (txtUpdateGeld.Text.Length != 0)
+                {
+                    txtUpdateGeld.Text = txtUpdateGeld.Text.Remove(txtUpdateGeld.Text.Length - 1);
+                }
+                else if (txtNewGeld.Text.Length != 0) 
+                {
+                    txtNewGeld.Text = txtNewGeld.Text.Remove(txtNewGeld.Text.Length - 1);
+                }
+            }
+
+            
+            TextBox[] txtBoxNew = new TextBox[] { txtNewVorname, txtNewRFID, txtNewName, txtNewGeld };
+            if (Eingabeüberprüfung.TextBoxFilled(txtBoxNew) == true)
             {
                 btnNewClient.Enabled = true;
             }
             else
             {
                 btnNewClient.Enabled = false;
+            }
+
+            TextBox[] txtBoxUpdate = new TextBox[] { txtUpdateVorname, txtUpdateRFID, txtUpdateName, txtUpdateGeld };
+            if (Eingabeüberprüfung.TextBoxFilled(txtBoxUpdate) == true)
+            {
+                btnUpdateClient.Enabled = true;
+            }
+            else
+            {
+                btnUpdateClient.Enabled = false;
             }
         }
 
