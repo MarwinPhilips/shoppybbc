@@ -49,44 +49,53 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.28487F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.71513F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00288F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.99713F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 674);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // surveyViewCamSwitcher1
             // 
             this.surveyViewCamSwitcher1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.surveyViewCamSwitcher1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.surveyViewCamSwitcher1.Location = new System.Drawing.Point(500, 0);
             this.surveyViewCamSwitcher1.Margin = new System.Windows.Forms.Padding(0);
+            this.surveyViewCamSwitcher1.MinimumSize = new System.Drawing.Size(500, 285);
             this.surveyViewCamSwitcher1.Name = "surveyViewCamSwitcher1";
-            this.surveyViewCamSwitcher1.Size = new System.Drawing.Size(500, 285);
+            this.surveyViewCamSwitcher1.Size = new System.Drawing.Size(500, 337);
             this.surveyViewCamSwitcher1.TabIndex = 2;
             // 
             // surveyViewCamSwitcher2
             // 
             this.surveyViewCamSwitcher2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.surveyViewCamSwitcher2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.surveyViewCamSwitcher2.Location = new System.Drawing.Point(0, 0);
             this.surveyViewCamSwitcher2.Margin = new System.Windows.Forms.Padding(0);
+            this.surveyViewCamSwitcher2.MinimumSize = new System.Drawing.Size(500, 285);
             this.surveyViewCamSwitcher2.Name = "surveyViewCamSwitcher2";
-            this.surveyViewCamSwitcher2.Size = new System.Drawing.Size(500, 285);
+            this.surveyViewCamSwitcher2.Size = new System.Drawing.Size(500, 337);
             this.surveyViewCamSwitcher2.TabIndex = 1;
             // 
             // surveyViewCamSwitcher3
             // 
-            this.surveyViewCamSwitcher3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.surveyViewCamSwitcher3.Location = new System.Drawing.Point(0, 285);
+            this.surveyViewCamSwitcher3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.surveyViewCamSwitcher3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surveyViewCamSwitcher3.Location = new System.Drawing.Point(0, 337);
             this.surveyViewCamSwitcher3.Margin = new System.Windows.Forms.Padding(0);
+            this.surveyViewCamSwitcher3.MinimumSize = new System.Drawing.Size(500, 285);
             this.surveyViewCamSwitcher3.Name = "surveyViewCamSwitcher3";
-            this.surveyViewCamSwitcher3.Size = new System.Drawing.Size(500, 285);
+            this.surveyViewCamSwitcher3.Size = new System.Drawing.Size(500, 337);
             this.surveyViewCamSwitcher3.TabIndex = 3;
             // 
             // surveyViewCamSwitcher4
             // 
-            this.surveyViewCamSwitcher4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.surveyViewCamSwitcher4.Location = new System.Drawing.Point(503, 288);
+            this.surveyViewCamSwitcher4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.surveyViewCamSwitcher4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.surveyViewCamSwitcher4.Location = new System.Drawing.Point(503, 340);
+            this.surveyViewCamSwitcher4.MinimumSize = new System.Drawing.Size(500, 285);
             this.surveyViewCamSwitcher4.Name = "surveyViewCamSwitcher4";
-            this.surveyViewCamSwitcher4.Size = new System.Drawing.Size(494, 285);
+            this.surveyViewCamSwitcher4.Size = new System.Drawing.Size(500, 331);
             this.surveyViewCamSwitcher4.TabIndex = 4;
             // 
             // SurveyView
@@ -96,6 +105,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimumSize = new System.Drawing.Size(1000, 674);
             this.Name = "SurveyView";
             this.Size = new System.Drawing.Size(1000, 674);
             this.tableLayoutPanel1.ResumeLayout(false);

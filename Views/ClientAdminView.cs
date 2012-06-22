@@ -154,19 +154,6 @@ namespace Shoppy.Views
                 FillData();
             }
         }
-
-        public void RFIDAttached(bool IsAttached)
-        {
-            if (IsAttached)
-            {
-                label2.Text = "RFID: Angeschlossen.";
-            }
-            else
-            {
-                label2.Text = "RFID: Nicht angeschlossen.";
-            }
-        }
-
         private void txtFields_Changed(object sender, EventArgs e)
         {
             TextBox[] textboxen = new TextBox[] { txtNewVorname, txtNewRFID, txtNewName, txtNewGeld };

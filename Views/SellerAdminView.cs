@@ -95,18 +95,5 @@ namespace Shoppy.Views
                 }
             }
         }
-
-        public void RFIDAttached(bool IsAttached)
-        {
-            if (IsAttached)
-            {
-                label2.Text = "RFID: Angeschlossen.";
-            }
-            else
-            {
-                label2.Text = "RFID: Nicht angeschlossen.";
-            }
-        }
-
 	}
 }

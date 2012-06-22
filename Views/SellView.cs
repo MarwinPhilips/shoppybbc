@@ -27,7 +27,7 @@ namespace Shoppy.Views
             rfidlistener = RFIDListener.GetInstance();
 		}
 
-        /* Der Barcode leser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
+        /* Der Barcodeleser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
          das der Code nun fertig ist. Danach wird der Barcode in einer anderen Funktion mit der Datanbank-Einträgen
          verglichen und das barcode Textfeld wieder leer gesetzt*/
         #region inputs
@@ -180,6 +180,7 @@ namespace Shoppy.Views
 
         #endregion
  
+        
 
         private void btnPrintSell_Click(object sender, EventArgs e)
         {
@@ -190,11 +191,6 @@ namespace Shoppy.Views
         private void SellView_Load(object sender, EventArgs e)
         {
             txtInputBarcode.Select();
-        }
-
-        public void RFIDAttached(bool IsAttached)
-        {
-
         }
 
         public void RFIDChanged(string newRFID)
