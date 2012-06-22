@@ -74,6 +74,7 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Enabled = false;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.ItemSize = new System.Drawing.Size(150, 50);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
@@ -86,11 +87,11 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.sellView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 40);
+            this.tabPage1.Location = new System.Drawing.Point(4, 54);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage1.Size = new System.Drawing.Size(976, 672);
+            this.tabPage1.Size = new System.Drawing.Size(976, 658);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sell";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -102,18 +103,18 @@
             this.sellView1.Location = new System.Drawing.Point(6, 6);
             this.sellView1.Margin = new System.Windows.Forms.Padding(0);
             this.sellView1.Name = "sellView1";
-            this.sellView1.Size = new System.Drawing.Size(964, 660);
+            this.sellView1.Size = new System.Drawing.Size(964, 646);
             this.sellView1.TabIndex = 0;
             this.sellView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.payment_View1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 40);
+            this.tabPage2.Location = new System.Drawing.Point(4, 54);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage2.Size = new System.Drawing.Size(883, 674);
+            this.tabPage2.Size = new System.Drawing.Size(976, 658);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Payment";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -125,17 +126,17 @@
             this.payment_View1.Location = new System.Drawing.Point(6, 6);
             this.payment_View1.Margin = new System.Windows.Forms.Padding(6);
             this.payment_View1.Name = "payment_View1";
-            this.payment_View1.Size = new System.Drawing.Size(871, 662);
+            this.payment_View1.Size = new System.Drawing.Size(180, 62);
             this.payment_View1.TabIndex = 0;
             this.payment_View1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.surveyView1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 40);
+            this.tabPage3.Location = new System.Drawing.Point(4, 54);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(883, 674);
+            this.tabPage3.Size = new System.Drawing.Size(976, 658);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Survey";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -155,10 +156,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.tabControl2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 40);
+            this.tabPage4.Location = new System.Drawing.Point(4, 54);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(883, 674);
+            this.tabPage4.Size = new System.Drawing.Size(976, 658);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Settings";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -170,22 +171,23 @@
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.ItemSize = new System.Drawing.Size(150, 50);
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(883, 674);
+            this.tabControl2.Size = new System.Drawing.Size(976, 658);
             this.tabControl2.TabIndex = 0;
             this.tabControl2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.clientAdminView1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 40);
+            this.tabPage5.Location = new System.Drawing.Point(4, 54);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage5.Size = new System.Drawing.Size(875, 630);
+            this.tabPage5.Size = new System.Drawing.Size(968, 600);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Client";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -197,7 +199,7 @@
             this.clientAdminView1.Location = new System.Drawing.Point(6, 6);
             this.clientAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.clientAdminView1.Name = "clientAdminView1";
-            this.clientAdminView1.Size = new System.Drawing.Size(863, 618);
+            this.clientAdminView1.Size = new System.Drawing.Size(956, 588);
             this.clientAdminView1.TabIndex = 0;
             // 
             // tabPage6
@@ -207,7 +209,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage6.Size = new System.Drawing.Size(875, 630);
+            this.tabPage6.Size = new System.Drawing.Size(184, 30);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sell";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -219,7 +221,7 @@
             this.sellAdminView1.Location = new System.Drawing.Point(6, 6);
             this.sellAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellAdminView1.Name = "sellAdminView1";
-            this.sellAdminView1.Size = new System.Drawing.Size(180, 62);
+            this.sellAdminView1.Size = new System.Drawing.Size(172, 36);
             this.sellAdminView1.TabIndex = 0;
             // 
             // tabPage7
@@ -228,7 +230,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 40);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(875, 630);
+            this.tabPage7.Size = new System.Drawing.Size(184, 30);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Survey";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -240,7 +242,7 @@
             this.camAdminView2.Location = new System.Drawing.Point(0, 0);
             this.camAdminView2.Margin = new System.Windows.Forms.Padding(6);
             this.camAdminView2.Name = "camAdminView2";
-            this.camAdminView2.Size = new System.Drawing.Size(192, 74);
+            this.camAdminView2.Size = new System.Drawing.Size(184, 48);
             this.camAdminView2.TabIndex = 0;
             // 
             // tabPage8
@@ -249,7 +251,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 40);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(875, 630);
+            this.tabPage8.Size = new System.Drawing.Size(184, 30);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Seller";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -261,15 +263,15 @@
             this.sellerAdminView1.Location = new System.Drawing.Point(0, 0);
             this.sellerAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellerAdminView1.Name = "sellerAdminView1";
-            this.sellerAdminView1.Size = new System.Drawing.Size(192, 74);
+            this.sellerAdminView1.Size = new System.Drawing.Size(184, 48);
             this.sellerAdminView1.TabIndex = 0;
             // 
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.logout1);
-            this.tabPage9.Location = new System.Drawing.Point(4, 40);
+            this.tabPage9.Location = new System.Drawing.Point(4, 54);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(883, 674);
+            this.tabPage9.Size = new System.Drawing.Size(976, 658);
             this.tabPage9.TabIndex = 4;
             this.tabPage9.Text = "Logout";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -280,7 +282,7 @@
             this.logout1.Location = new System.Drawing.Point(0, 0);
             this.logout1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.logout1.Name = "logout1";
-            this.logout1.Size = new System.Drawing.Size(883, 674);
+            this.logout1.Size = new System.Drawing.Size(192, 74);
             this.logout1.TabIndex = 0;
             // 
             // login1

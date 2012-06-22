@@ -47,7 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUpdatePasswort = new System.Windows.Forms.TextBox();
             this.txtNewPasswort = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new Shoppy.Helpers.DataGridViewPlus();
+            this.dataGridView1 = new Helpers.DataGridViewPlus();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
