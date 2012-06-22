@@ -70,6 +70,7 @@
             this.btnSellPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnSellPay.Location = new System.Drawing.Point(6, 6);
             this.btnSellPay.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSellPay.MinimumSize = new System.Drawing.Size(150, 70);
             this.btnSellPay.Name = "btnSellPay";
             this.btnSellPay.Size = new System.Drawing.Size(313, 140);
             this.btnSellPay.TabIndex = 4;
@@ -92,6 +93,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 55;
@@ -149,6 +151,7 @@
             this.txtTotalPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.txtTotalPay.Location = new System.Drawing.Point(0, 0);
             this.txtTotalPay.Margin = new System.Windows.Forms.Padding(0, 0, 0, 6);
+            this.txtTotalPay.MinimumSize = new System.Drawing.Size(109, 32);
             this.txtTotalPay.Name = "txtTotalPay";
             this.txtTotalPay.ReadOnly = true;
             this.txtTotalPay.Size = new System.Drawing.Size(109, 32);
@@ -197,6 +200,7 @@
             this.SellMultipleProdukt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.SellMultipleProdukt.Location = new System.Drawing.Point(6, 3);
             this.SellMultipleProdukt.Margin = new System.Windows.Forms.Padding(6, 3, 6, 6);
+            this.SellMultipleProdukt.MinimumSize = new System.Drawing.Size(140, 60);
             this.SellMultipleProdukt.Name = "SellMultipleProdukt";
             this.SellMultipleProdukt.Size = new System.Drawing.Size(307, 94);
             this.SellMultipleProdukt.TabIndex = 2;
@@ -210,6 +214,7 @@
             this.txtMultipleProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtMultipleProdukt.Location = new System.Drawing.Point(6, 110);
             this.txtMultipleProdukt.Margin = new System.Windows.Forms.Padding(6, 7, 6, 3);
+            this.txtMultipleProdukt.MinimumSize = new System.Drawing.Size(150, 32);
             this.txtMultipleProdukt.Name = "txtMultipleProdukt";
             this.txtMultipleProdukt.Size = new System.Drawing.Size(307, 31);
             this.txtMultipleProdukt.TabIndex = 3;
@@ -235,9 +240,10 @@
             this.btnSellDeleteAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSellDeleteAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnSellDeleteAll.Location = new System.Drawing.Point(3, 76);
+            this.btnSellDeleteAll.MinimumSize = new System.Drawing.Size(150, 60);
             this.btnSellDeleteAll.Name = "btnSellDeleteAll";
             this.btnSellDeleteAll.Size = new System.Drawing.Size(314, 67);
-            this.btnSellDeleteAll.TabIndex = 6;
+            this.btnSellDeleteAll.TabIndex = 4;
             this.btnSellDeleteAll.Text = "Alle Produkte löschen";
             this.btnSellDeleteAll.UseVisualStyleBackColor = true;
             this.btnSellDeleteAll.Click += new System.EventHandler(this.btnSellDeleteAll_Click);
@@ -246,6 +252,7 @@
             // 
             this.btnPrintSell.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPrintSell.Location = new System.Drawing.Point(3, 3);
+            this.btnPrintSell.MinimumSize = new System.Drawing.Size(150, 60);
             this.btnPrintSell.Name = "btnPrintSell";
             this.btnPrintSell.Size = new System.Drawing.Size(314, 67);
             this.btnPrintSell.TabIndex = 5;
@@ -260,6 +267,7 @@
             this.text.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.text.Location = new System.Drawing.Point(6, 0);
             this.text.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.text.MinimumSize = new System.Drawing.Size(100, 89);
             this.text.Name = "text";
             this.text.Size = new System.Drawing.Size(193, 89);
             this.text.TabIndex = 4;
@@ -271,6 +279,7 @@
             this.txtInputBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.txtInputBarcode.Location = new System.Drawing.Point(212, 89);
             this.txtInputBarcode.Margin = new System.Windows.Forms.Padding(7, 0, 6, 6);
+            this.txtInputBarcode.MinimumSize = new System.Drawing.Size(180, 32);
             this.txtInputBarcode.Name = "txtInputBarcode";
             this.txtInputBarcode.Size = new System.Drawing.Size(382, 32);
             this.txtInputBarcode.TabIndex = 1;
@@ -279,11 +288,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label1.Location = new System.Drawing.Point(6, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.MinimumSize = new System.Drawing.Size(120, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 26);
+            this.label1.Size = new System.Drawing.Size(193, 62);
             this.label1.TabIndex = 4;
             this.label1.Text = "Produkt-BarCode:";
             // 
@@ -324,15 +335,16 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 4;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
+            this.tableLayoutPanel4.ColumnCount = 5;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Controls.Add(this.txtTotalPay, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtGehalt, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.labelGehalt, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtGehalt, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(211, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 6);
@@ -345,34 +357,36 @@
             // txtGehalt
             // 
             this.txtGehalt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGehalt.Location = new System.Drawing.Point(580, 3);
+            this.txtGehalt.Location = new System.Drawing.Point(555, 3);
+            this.txtGehalt.MinimumSize = new System.Drawing.Size(150, 31);
             this.txtGehalt.Name = "txtGehalt";
             this.txtGehalt.ReadOnly = true;
-            this.txtGehalt.Size = new System.Drawing.Size(176, 31);
+            this.txtGehalt.Size = new System.Drawing.Size(201, 31);
             this.txtGehalt.TabIndex = 6;
             this.txtGehalt.TabStop = false;
             // 
             // labelGehalt
             // 
             this.labelGehalt.AutoSize = true;
-            this.labelGehalt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGehalt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelGehalt.Location = new System.Drawing.Point(391, 6);
-            this.labelGehalt.Margin = new System.Windows.Forms.Padding(10, 6, 0, 0);
+            this.labelGehalt.Location = new System.Drawing.Point(426, 6);
+            this.labelGehalt.Margin = new System.Windows.Forms.Padding(20, 6, 0, 0);
+            this.labelGehalt.MinimumSize = new System.Drawing.Size(50, 30);
             this.labelGehalt.Name = "labelGehalt";
-            this.labelGehalt.Size = new System.Drawing.Size(186, 77);
+            this.labelGehalt.Size = new System.Drawing.Size(116, 30);
             this.labelGehalt.TabIndex = 5;
-            this.labelGehalt.Text = "Kunden-Gehalt:";
+            this.labelGehalt.Text = "Kotostand:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.Location = new System.Drawing.Point(109, 2);
+            this.label3.Location = new System.Drawing.Point(105, 2);
             this.label3.Margin = new System.Windows.Forms.Padding(0, 2, 6, 0);
+            this.label3.MinimumSize = new System.Drawing.Size(60, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(266, 81);
+            this.label3.Size = new System.Drawing.Size(295, 81);
             this.label3.TabIndex = 5;
             this.label3.Text = "CHF";
             // 
@@ -441,7 +455,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Anzahl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button btnSellDeleteAll;
         private System.Windows.Forms.Button btnPrintSell;
+        private System.Windows.Forms.Button btnSellDeleteAll;
 	}
 }

@@ -187,6 +187,7 @@ namespace Shoppy.Views
         {
             rfid_num = "";
             btnSellPay.Enabled = false;
+            btnPrintSell.Enabled = false;
             txtGehalt.Text = "";
         }
 
@@ -258,6 +259,5 @@ namespace Shoppy.Views
                 }
             }
         }
-
 	}
 }
