@@ -90,12 +90,13 @@
             // btnNewClient
             // 
             this.btnNewClient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewClient.Enabled = false;
             this.btnNewClient.Location = new System.Drawing.Point(789, 143);
             this.btnNewClient.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewClient.Name = "btnNewClient";
             this.btnNewClient.Size = new System.Drawing.Size(185, 154);
             this.btnNewClient.TabIndex = 10;
-            this.btnNewClient.Text = "Neue Kunde erfassen";
+            this.btnNewClient.Text = "Neue Clien";
             this.btnNewClient.UseVisualStyleBackColor = true;
             this.btnNewClient.Click += new System.EventHandler(this.btnNewClient_Click);
             // 
@@ -114,6 +115,7 @@
             this.txtNewVorname.Name = "txtNewVorname";
             this.txtNewVorname.Size = new System.Drawing.Size(151, 31);
             this.txtNewVorname.TabIndex = 8;
+            this.txtNewVorname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // tableLayoutPanel1
             // 
@@ -195,7 +197,7 @@
             this.txtNewGeld.Name = "txtNewGeld";
             this.txtNewGeld.Size = new System.Drawing.Size(151, 31);
             this.txtNewGeld.TabIndex = 9;
-            this.txtNewGeld.TextChanged += new System.EventHandler(this.txtNewGeld_TextChanged);
+            this.txtNewGeld.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Anzeigename
             // 
@@ -229,6 +231,7 @@
             this.txtNewRFID.Name = "txtNewRFID";
             this.txtNewRFID.Size = new System.Drawing.Size(100, 31);
             this.txtNewRFID.TabIndex = 6;
+            this.txtNewRFID.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewName
             // 
@@ -236,6 +239,7 @@
             this.txtNewName.Name = "txtNewName";
             this.txtNewName.Size = new System.Drawing.Size(100, 31);
             this.txtNewName.TabIndex = 7;
+            this.txtNewName.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // label1
             // 
