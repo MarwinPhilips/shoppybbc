@@ -71,7 +71,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 258F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 259F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 252F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -116,7 +116,7 @@
             // txtNewVorname
             // 
             this.txtNewVorname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewVorname.Location = new System.Drawing.Point(201, 164);
+            this.txtNewVorname.Location = new System.Drawing.Point(200, 164);
             this.txtNewVorname.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewVorname.Name = "txtNewVorname";
             this.txtNewVorname.Size = new System.Drawing.Size(112, 31);
@@ -135,7 +135,7 @@
             // txtUpdateVorname
             // 
             this.txtUpdateVorname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUpdateVorname.Location = new System.Drawing.Point(201, 73);
+            this.txtUpdateVorname.Location = new System.Drawing.Point(200, 73);
             this.txtUpdateVorname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateVorname.Name = "txtUpdateVorname";
             this.txtUpdateVorname.Size = new System.Drawing.Size(112, 31);
@@ -154,7 +154,7 @@
             // Preis
             // 
             this.Preis.AutoSize = true;
-            this.Preis.Location = new System.Drawing.Point(201, 0);
+            this.Preis.Location = new System.Drawing.Point(200, 0);
             this.Preis.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Preis.Name = "Preis";
             this.Preis.Size = new System.Drawing.Size(98, 25);
@@ -164,7 +164,7 @@
             // txtUpdateLoginname
             // 
             this.txtUpdateLoginname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUpdateLoginname.Location = new System.Drawing.Point(325, 73);
+            this.txtUpdateLoginname.Location = new System.Drawing.Point(324, 73);
             this.txtUpdateLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateLoginname.Name = "txtUpdateLoginname";
             this.txtUpdateLoginname.Size = new System.Drawing.Size(186, 31);
@@ -173,7 +173,7 @@
             // Vorrat
             // 
             this.Vorrat.AutoSize = true;
-            this.Vorrat.Location = new System.Drawing.Point(325, 0);
+            this.Vorrat.Location = new System.Drawing.Point(324, 0);
             this.Vorrat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Vorrat.Name = "Vorrat";
             this.Vorrat.Size = new System.Drawing.Size(118, 25);
@@ -183,7 +183,7 @@
             // txtNewLoginname
             // 
             this.txtNewLoginname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewLoginname.Location = new System.Drawing.Point(325, 164);
+            this.txtNewLoginname.Location = new System.Drawing.Point(324, 164);
             this.txtNewLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewLoginname.Name = "txtNewLoginname";
             this.txtNewLoginname.Size = new System.Drawing.Size(186, 31);
@@ -205,7 +205,7 @@
             this.txtUpdateName.Location = new System.Drawing.Point(108, 73);
             this.txtUpdateName.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateName.Name = "txtUpdateName";
-            this.txtUpdateName.Size = new System.Drawing.Size(81, 31);
+            this.txtUpdateName.Size = new System.Drawing.Size(80, 31);
             this.txtUpdateName.TabIndex = 2;
             // 
             // txtNewName
@@ -214,16 +214,16 @@
             this.txtNewName.Location = new System.Drawing.Point(108, 164);
             this.txtNewName.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewName.Name = "txtNewName";
-            this.txtNewName.Size = new System.Drawing.Size(81, 31);
+            this.txtNewName.Size = new System.Drawing.Size(80, 31);
             this.txtNewName.TabIndex = 8;
             // 
             // btnUpdateSeller
             // 
             this.btnUpdateSeller.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdateSeller.Location = new System.Drawing.Point(727, 73);
+            this.btnUpdateSeller.Location = new System.Drawing.Point(726, 73);
             this.btnUpdateSeller.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateSeller.Name = "btnUpdateSeller";
-            this.btnUpdateSeller.Size = new System.Drawing.Size(247, 79);
+            this.btnUpdateSeller.Size = new System.Drawing.Size(248, 79);
             this.btnUpdateSeller.TabIndex = 6;
             this.btnUpdateSeller.Text = "Verkäufer anpassen";
             this.btnUpdateSeller.UseVisualStyleBackColor = true;
@@ -232,10 +232,10 @@
             // btnNewSeller
             // 
             this.btnNewSeller.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNewSeller.Location = new System.Drawing.Point(727, 164);
+            this.btnNewSeller.Location = new System.Drawing.Point(726, 164);
             this.btnNewSeller.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewSeller.Name = "btnNewSeller";
-            this.btnNewSeller.Size = new System.Drawing.Size(247, 116);
+            this.btnNewSeller.Size = new System.Drawing.Size(248, 116);
             this.btnNewSeller.TabIndex = 12;
             this.btnNewSeller.Text = "Neuen Verkäufer erfassen";
             this.btnNewSeller.UseVisualStyleBackColor = true;
@@ -244,7 +244,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(523, 0);
+            this.label1.Location = new System.Drawing.Point(522, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 25);
@@ -254,7 +254,7 @@
             // txtUpdatePasswort
             // 
             this.txtUpdatePasswort.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUpdatePasswort.Location = new System.Drawing.Point(523, 73);
+            this.txtUpdatePasswort.Location = new System.Drawing.Point(522, 73);
             this.txtUpdatePasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
             this.txtUpdatePasswort.Size = new System.Drawing.Size(192, 31);
@@ -263,7 +263,7 @@
             // txtNewPasswort
             // 
             this.txtNewPasswort.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNewPasswort.Location = new System.Drawing.Point(523, 164);
+            this.txtNewPasswort.Location = new System.Drawing.Point(522, 164);
             this.txtNewPasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtNewPasswort.Name = "txtNewPasswort";
             this.txtNewPasswort.Size = new System.Drawing.Size(192, 31);
@@ -273,9 +273,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(724, 0);
+            this.label2.Location = new System.Drawing.Point(723, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(253, 67);
+            this.label2.Size = new System.Drawing.Size(254, 67);
             this.label2.TabIndex = 24;
             this.label2.Text = "RFID: Nicht angeschlossen.";
             // 
