@@ -113,6 +113,10 @@ namespace Shoppy.Views
                 txtNewRFID.Text = rfid_num;
                 client = "";
                 FillData();
+                txtUpdateRFID.Text = "";
+                txtUpdateName.Text = "";
+                txtUpdateVorname.Text = "";
+                txtUpdateGeld.Text = "";
             }
             else
             {
@@ -120,6 +124,10 @@ namespace Shoppy.Views
                 txtNewRFID.Text = rfid_num;
                 client = rfid_num;
                 FillData();
+                txtUpdateRFID.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
+                txtUpdateName.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
+                txtUpdateVorname.Text = dataGridView1.Rows[0].Cells[3].Value.ToString();
+                txtUpdateGeld.Text = dataGridView1.Rows[0].Cells[4].Value.ToString();               
             }
         }
 
@@ -138,10 +146,19 @@ namespace Shoppy.Views
             if (Eingabeüberprüfung.TextBoxFilled(txtBoxUpdate))
             {
                 btnUpdateClient.Enabled = true;
+
+                txtUpdateName.Enabled = true;
+                txtUpdateVorname.Enabled = true;
+                txtUpdateGeld.Enabled = true;
             }
             else
             {
                 btnUpdateClient.Enabled = false;
+
+
+                txtUpdateName.Enabled = false;
+                txtUpdateVorname.Enabled = false;
+                txtUpdateGeld.Enabled = false;
             }
             
             

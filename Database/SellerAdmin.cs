@@ -34,7 +34,7 @@ namespace Shoppy.Database
         // Updatet den Verkäufer nach RFID
         public void UpdateSeller(string rfid, string username, string passwort, string name, string vorname)
         {
-            Abfragen.Update("update seller set username='" + username + "', passwort='" + passwort + "', name='" + name + "', vorname='" + name +
+            Abfragen.Update("update seller set username='" + username + "', passwort='" + passwort + "', name='" + name + "', vorname='" + vorname +
                "' where RFID='" + rfid + "';");
         }
         // Speichert einen neuen Verkäufer in der Datenkbank.
@@ -60,6 +60,16 @@ namespace Shoppy.Database
             string name = (result[0, 0] + " " + result[0, 1]);
 
             return name;
+        }
+
+        public DataTable GetSellerOnRFID(string RFID)
+        {
+            string selectquery = "SELECT RFID, username, passwort, name, vorname FROM Seller WHERE RFID = '" + RFID + "';";
+            MySqlDataAdapter da = new MySqlDataAdapter(selectquery, Abfragen.verbindung);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            da.Dispose();
+            return dt;
         }
 	}
 }
