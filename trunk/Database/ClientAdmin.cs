@@ -6,6 +6,7 @@ using System.Text;
 using System.Data;
 using MySql.Data.MySqlClient;
 using Shoppy.Database;
+using System.Windows.Forms;
 
 namespace Shoppy.Database
 {
@@ -52,6 +53,16 @@ namespace Shoppy.Database
             string[,] ins = Abfragen.Select("SELECT Geld FROM Kunde WHERE RFID ='" + RFID + "';");
             Betrag += double.Parse(ins[0, 0]);
             Abfragen.Update("UPDATE kunde SET Geld ='" + Betrag +"' WHERE RFID = '" + RFID + "';");
+        }
+
+        public bool ClientExist(string RFID)
+        {
+            string[,] client = Abfragen.Select("SELECT name FROM Kunde WHERE RFID ='" + RFID + "';");
+            if (client.Length == 0)
+            {
+                return false;
+            }
+            return true;
         }
         
 	}

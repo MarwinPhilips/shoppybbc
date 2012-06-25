@@ -80,7 +80,7 @@ namespace Shoppy.Views
 
         private void btnNewClient_Click(object sender, EventArgs e)
         {
-            if (ClientExist(txtNewRFID.Text) == false)
+            if (database.ClientExist(rfid_num) == true)
             {
                 MessageBox.Show("Die RFID "+ txtNewRFID.Text +" ist bereits gebucht");
             }
@@ -91,18 +91,7 @@ namespace Shoppy.Views
             }
         }
         
-        private bool ClientExist(string id)
-        {
-            for (int i = 0; i < dataGridView1.RowCount-1; i++)
-            {
-                  
-                if(dataGridView1.Rows[i].Cells[1].Value.ToString().Equals(id)){
-                    return false;
-                }
-            }
-            return true;
 
-        }
         // Wird der RFID-Wert geändert wird er in den Speicher rfid_num gespeichert und die TextBox txtNewRFID.Text
         // wird angepasst.
         public void RFIDChanged(string newRFID)
@@ -110,24 +99,42 @@ namespace Shoppy.Views
             if (newRFID == "")
             {
                 rfid_num = "";
-                txtNewRFID.Text = rfid_num;
                 client = "";
-                FillData();
                 txtUpdateRFID.Text = "";
                 txtUpdateName.Text = "";
                 txtUpdateVorname.Text = "";
                 txtUpdateGeld.Text = "";
+                txtNewRFID.Text = "";
+                txtNewName.Text = "";
+                txtNewGeld.Text = "";
+                txtNewVorname.Text = "";
+                FillData();
+
             }
-            else
+
+            if (database.ClientExist(newRFID))
             {
+                
                 rfid_num = newRFID;
-                txtNewRFID.Text = rfid_num;
                 client = rfid_num;
                 FillData();
-                txtUpdateRFID.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
-                txtUpdateName.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
-                txtUpdateVorname.Text = dataGridView1.Rows[0].Cells[3].Value.ToString();
-                txtUpdateGeld.Text = dataGridView1.Rows[0].Cells[4].Value.ToString();               
+                try
+                {
+                    txtUpdateRFID.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
+                    txtUpdateName.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
+                    txtUpdateVorname.Text = dataGridView1.Rows[0].Cells[3].Value.ToString();
+                    txtUpdateGeld.Text = dataGridView1.Rows[0].Cells[4].Value.ToString();
+                }
+                catch
+                {
+                }
+            }
+
+            else if(database.ClientExist(newRFID)==false)
+            {
+                rfid_num = newRFID;
+                txtNewRFID.Text = newRFID;
+                client = "";
             }
         }
 
@@ -154,7 +161,6 @@ namespace Shoppy.Views
             else
             {
                 btnUpdateClient.Enabled = false;
-
 
                 txtUpdateName.Enabled = false;
                 txtUpdateVorname.Enabled = false;
