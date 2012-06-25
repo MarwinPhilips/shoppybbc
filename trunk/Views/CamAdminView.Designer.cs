@@ -129,6 +129,7 @@
             this.txtUpdateIP.Name = "txtUpdateIP";
             this.txtUpdateIP.Size = new System.Drawing.Size(186, 31);
             this.txtUpdateIP.TabIndex = 1;
+            this.txtUpdateIP.TextChanged += new System.EventHandler(this.txtUpdateIP_TextChanged);
             // 
             // txtNewIP
             // 

@@ -68,5 +68,11 @@ namespace Shoppy.Views
             database.InsertBetrag(kunde, betrag);
             FillData();
         }
+
+        private void txtBetrag_TextChanged(object sender, EventArgs e)
+        {
+            TextBox[] txtBoxen_wthInt = new TextBox[] { txtBetrag };
+            Eingabeüberprüfung.txtBoxValue_IsNumber(txtBoxen_wthInt);
+        }
     }
 }
