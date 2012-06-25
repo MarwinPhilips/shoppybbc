@@ -242,7 +242,7 @@
             this.camAdminView2.Location = new System.Drawing.Point(0, 0);
             this.camAdminView2.Margin = new System.Windows.Forms.Padding(6);
             this.camAdminView2.Name = "camAdminView2";
-            this.camAdminView2.Size = new System.Drawing.Size(184, 16);
+            this.camAdminView2.Size = new System.Drawing.Size(968, 600);
             this.camAdminView2.TabIndex = 0;
             // 
             // tabPage8

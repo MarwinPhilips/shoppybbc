@@ -80,6 +80,7 @@
             // txtUpdateVorname
             // 
             this.txtUpdateVorname.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUpdateVorname.Enabled = false;
             this.txtUpdateVorname.Location = new System.Drawing.Point(398, 107);
             this.txtUpdateVorname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateVorname.Name = "txtUpdateVorname";
@@ -152,6 +153,7 @@
             // txtUpdateGeld
             // 
             this.txtUpdateGeld.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUpdateGeld.Enabled = false;
             this.txtUpdateGeld.Location = new System.Drawing.Point(594, 107);
             this.txtUpdateGeld.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateGeld.Name = "txtUpdateGeld";
@@ -202,6 +204,7 @@
             // txtUpdateName
             // 
             this.txtUpdateName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUpdateName.Enabled = false;
             this.txtUpdateName.Location = new System.Drawing.Point(199, 104);
             this.txtUpdateName.Name = "txtUpdateName";
             this.txtUpdateName.Size = new System.Drawing.Size(190, 31);

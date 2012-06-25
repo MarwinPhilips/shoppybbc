@@ -154,7 +154,7 @@
             // btnUpdateSell
             // 
             this.btnUpdateSell.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUpdateSell.Location = new System.Drawing.Point(798, 111);
+            this.btnUpdateSell.Enabled = false;
             this.btnUpdateSell.Location = new System.Drawing.Point(798, 111);
             this.btnUpdateSell.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateSell.Name = "btnUpdateSell";
