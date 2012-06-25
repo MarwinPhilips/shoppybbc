@@ -86,6 +86,7 @@
             this.txtUpdateVorname.Name = "txtUpdateVorname";
             this.txtUpdateVorname.Size = new System.Drawing.Size(184, 31);
             this.txtUpdateVorname.TabIndex = 3;
+            this.txtUpdateVorname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewVorname
             // 
@@ -95,6 +96,7 @@
             this.txtNewVorname.Name = "txtNewVorname";
             this.txtNewVorname.Size = new System.Drawing.Size(184, 31);
             this.txtNewVorname.TabIndex = 8;
+            this.txtNewVorname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // tableLayoutPanel1
             // 
@@ -158,6 +160,7 @@
             this.txtUpdateGeld.Name = "txtUpdateGeld";
             this.txtUpdateGeld.Size = new System.Drawing.Size(184, 31);
             this.txtUpdateGeld.TabIndex = 4;
+            this.txtUpdateGeld.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // label4
             // 
@@ -177,6 +180,7 @@
             this.txtNewGeld.Name = "txtNewGeld";
             this.txtNewGeld.Size = new System.Drawing.Size(184, 31);
             this.txtNewGeld.TabIndex = 9;
+            this.txtNewGeld.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Anzeigename
             // 
@@ -216,6 +220,7 @@
             this.txtNewRFID.Name = "txtNewRFID";
             this.txtNewRFID.Size = new System.Drawing.Size(190, 31);
             this.txtNewRFID.TabIndex = 6;
+            this.txtNewRFID.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewName
             // 
@@ -224,6 +229,7 @@
             this.txtNewName.Name = "txtNewName";
             this.txtNewName.Size = new System.Drawing.Size(190, 31);
             this.txtNewName.TabIndex = 7;
+            this.txtNewName.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // tableLayoutPanel2
             // 
