@@ -86,7 +86,6 @@
             this.txtUpdateVorname.Name = "txtUpdateVorname";
             this.txtUpdateVorname.Size = new System.Drawing.Size(184, 31);
             this.txtUpdateVorname.TabIndex = 3;
-            this.txtUpdateVorname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewVorname
             // 
@@ -159,7 +158,6 @@
             this.txtUpdateGeld.Name = "txtUpdateGeld";
             this.txtUpdateGeld.Size = new System.Drawing.Size(184, 31);
             this.txtUpdateGeld.TabIndex = 4;
-            this.txtUpdateGeld.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // label4
             // 

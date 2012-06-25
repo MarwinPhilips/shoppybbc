@@ -12,9 +12,11 @@ using Shoppy.Helpers;
 
 namespace Shoppy.Views
 {
+    // Dieses UserControl ermöglicht ein CRUD für die Produkte des Shopps.
     public partial class SellAdminView : UserControl
     {
         SellAdmin database = new SellAdmin();
+        // Initialisiert das Objekt und füllt das DataGridView.
         public SellAdminView()
         {
             InitializeComponent();
@@ -64,12 +66,6 @@ namespace Shoppy.Views
             database.NewSell(txtNewProdukt.Text, txtNewBarcode.Text, txtNewPreis.Text, txtNewVorrat.Text);
             FillData();
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void txtFields_Changed(object sender, EventArgs e)
         {
             TextBox[] txtBoxen_wthInt = new TextBox[] { txtNewBarcode, txtNewPreis, txtNewVorrat, txtUpdateBarcode, txtUpdatePreis, txtUpdateVorrat};

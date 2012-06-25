@@ -14,14 +14,18 @@ using Shoppy.RFIDInput;
 
 namespace Shoppy.Views
 {
+    // Ein Login-Form mit welchem man sich per RFID anmelden kann.
     public partial class Login : UserControl
     {
+        // An dieses Objekt werden die RFID-Actionlistener gemeldet.
         public RFIDListener rfidlistener;
         SellerAdmin sa = new SellerAdmin();
+        // Wird benötigt um die visible- und enabled-Eigenschaft zu verändern.
         public TabControl tabcontrol;
         string rfid_num;
+        // Der Eingeloggte Verkäufer wird hier gespeichert.
         public static string SellerName;
-        
+        // Initialisert das Login-UserControl.
         public Login()
         {
             InitializeComponent();
@@ -43,7 +47,7 @@ namespace Shoppy.Views
                 label2.Text = "Bitte mit gültigem RFID anmelden!";
             }
         }
-
+        // Wird die RFID gewechselt wird die Variable rfid_num angepasst und die TextBox txtUserRFID angepasst.
         public void RFIDChanged(string newRFID)
         {
             if (newRFID == "")

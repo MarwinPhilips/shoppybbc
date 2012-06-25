@@ -263,7 +263,7 @@
             this.sellerAdminView1.Location = new System.Drawing.Point(0, 0);
             this.sellerAdminView1.Margin = new System.Windows.Forms.Padding(6);
             this.sellerAdminView1.Name = "sellerAdminView1";
-            this.sellerAdminView1.Size = new System.Drawing.Size(184, 16);
+            this.sellerAdminView1.Size = new System.Drawing.Size(968, 600);
             this.sellerAdminView1.TabIndex = 0;
             // 
             // tabPage9

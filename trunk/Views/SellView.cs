@@ -15,16 +15,17 @@ using Shoppy.Views;
 
 namespace Shoppy.Views
 {
+    // Dieses UserControl ist für den Verkauf von Gegenständen verantwortlich.
 	public partial class SellView: UserControl
 	{
         SellAdmin sa = new SellAdmin();
         string rfid_num;
+        // An dieses Objekt werden die RFID-Listener gemeldet.
         public RFIDListener rfidlistener;
-
+        // Initialisert das Objekt.
 		public SellView()
 		{
 			InitializeComponent();
-            rfidlistener = RFIDListener.GetInstance();
 		}
 
         /* Der Barcodeleser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
@@ -193,7 +194,7 @@ namespace Shoppy.Views
         {
             txtInputBarcode.Select();
         }
-
+        // Wird die RFID gewechselt schreit diese Methode ins Textfeld rfid_num die neue RFID bzw resettet diese.
         public void RFIDChanged(string newRFID)
         {
             if (rfid_num != newRFID)

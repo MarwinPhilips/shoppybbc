@@ -13,13 +13,15 @@ using Shoppy.RFIDInput;
 
 namespace Shoppy.Views
 {
+    // Managed die Kunden welche für die Sell- und Payment-view Benötigt werden. CRUD für Kunden.
 	public partial class ClientAdminView: UserControl
 	{
+        // Auf diesen Listener werden die RFID-Events gemelde4t.
         public RFIDListener rfidlistener;
         string rfid_num;
         ClientAdmin database = new ClientAdmin();
         string client = "";
-       
+       // Initialisert das ClientAdminView und füllt das DGV.
 		public ClientAdminView()
 		{
 			InitializeComponent();
@@ -101,7 +103,8 @@ namespace Shoppy.Views
             return true;
 
         }
-
+        // Wird der RFID-Wert geändert wird er in den Speicher rfid_num gespeichert und die TextBox txtNewRFID.Text
+        // wird angepasst.
         public void RFIDChanged(string newRFID)
         {
             if (newRFID == "")

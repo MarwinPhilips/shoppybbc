@@ -12,6 +12,7 @@ using System.Threading;
 
 namespace Shoppy.Cam
 {
+    // Die Klasse stellt die Grundfunktionalitäten des Camviewers zur Verfügung.
     public partial class CamViewer : UserControl, System.ComponentModel.ISupportInitialize
     {
 
