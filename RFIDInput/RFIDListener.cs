@@ -7,19 +7,22 @@ using Phidgets;
 
 namespace Shoppy.RFIDInput
 {
-    public class RFIDListener
+    // Diese Klasse ist als Singleton programmiert und als Erzähler des Observer-Designpatterns.
+    // Sie erzeugt die Events RFIDAttached und RFIDchanged.
+    public class RFIDListener 
     {
         private static RFIDListener instance;
         private RFID rfid;
-        
+        // Delegate welches das RFIDAttached Event vereinfacht auf bool
         public delegate void RFIDAttachedChangeEventHandler(bool IsAttached);
         public event RFIDAttachedChangeEventHandler RFIDAttached;
-
+        // Delegate welches das RFIDchanged Event vereinfacht auf string
         public delegate void RFIDTagChangedEventHandler(string newRFID); 
         public event RFIDTagChangedEventHandler RFIDchanged;
        
 
         private bool _isAttached;
+        //getter/setter welcher beim set das RFIDAttached-Event erzeugt.
         public bool isAttached
         {
             get { return this._isAttached; }
@@ -31,6 +34,7 @@ namespace Shoppy.RFIDInput
             }
         }
         private string _rfidtag;
+        // Getter/Setter welcher beim Setten das RFIDchanged-Event erzeugt.
         public String rfidtag
         {
             get { return this._rfidtag; }
@@ -46,6 +50,7 @@ namespace Shoppy.RFIDInput
             isAttached = false;
             MyLoad();
         }
+        // Gibt die eigene Instanz zurück (Singleton)
         public static RFIDListener GetInstance()
         {
             if (instance == null) { instance = new RFIDListener(); }
@@ -103,6 +108,7 @@ namespace Shoppy.RFIDInput
             rfid.open(-1);
             
         }
+        // Die Variable isAttached wird auf den aktuellen Zustand der Variable rfid.Attached gesetzt.
         public void CheckAttached()
         {
             isAttached = rfid.Attached;

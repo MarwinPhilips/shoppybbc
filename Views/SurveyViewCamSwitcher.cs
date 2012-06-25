@@ -14,6 +14,7 @@ namespace Shoppy.Views
 	public partial class SurveyViewCamSwitcher: UserControl
 	{
         CamAdmin database = new CamAdmin();
+        // Initialisert das Objekt und füllt das DGV.
 		public SurveyViewCamSwitcher()
 		{
 			InitializeComponent();
@@ -57,10 +58,13 @@ namespace Shoppy.Views
                 SetCam(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
-
-        internal void Survey_View_Cam_Switcher_Reload()
+        // Initialisiert das KameraFeld
+        internal void Survey_View_Cam_Switcher_Reload(int position)
         {
-            FillCams();
+            if((dataGridView1.Rows.Count>position) && dataGridView1.Rows[position-1].Cells[0].Value.ToString() != "")
+            {
+                SetCam(dataGridView1.Rows[position-1].Cells[0].Value.ToString());
+            }
         }
     }
 }

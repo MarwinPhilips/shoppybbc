@@ -11,6 +11,7 @@ namespace Shoppy
     public partial class Form1 : Form
     {
         RFIDInput.RFIDListener rfidlistener;
+        // Initialisiert das Form1
         public Form1()
         {
             InitializeComponent();

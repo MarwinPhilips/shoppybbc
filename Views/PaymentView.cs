@@ -13,13 +13,15 @@ using Shoppy.Helpers;
 
 namespace Shoppy.Views
 {
+    // Das UserControl zum Einzahlen von Geld auf die RFID.
     public partial class Payment_View : UserControl
     {
         ClientAdmin database = new ClientAdmin();
         string rfid_num;
+        // An dieses Objekt werden die RFID-Actionlistener angehängt.
         public RFIDListener rfidlistener;
         
-
+        // Initialisiert das Payment_View
         public Payment_View()
         {
             InitializeComponent();
@@ -28,23 +30,13 @@ namespace Shoppy.Views
         {
             dataGridView1.DataSource = table;
         }
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
-        {
-            try
-            {
-                base.OnPaint(e);
-            }
-            catch (Exception ex)
-            {
-                this.Invalidate();
-                ex.ToString();
-            }
-        }
+
         private void FillData()
         {
             FillDGV(database.GetClientOnRFID(rfid_num));
         }
-
+        // Wird der RFIDChanged Event ausgelöst ändert diese Methode die rfid_num und passt btnEnter und das data
+        // GridView1 an
         public void RFIDChanged(string newRFID)
         {
             if (newRFID == "")

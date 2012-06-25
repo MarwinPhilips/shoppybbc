@@ -8,16 +8,17 @@ namespace Shoppy.Database
 {
 	static class Abfragen
     {
+        // Mit diesem String wird mit der Datenbank verbunden.
         public static string verbindung = "Data Source=172.16.2.63; User=shoppy;Password=bbc; Database=shoppy;";
-        public static MySqlConnection conn = new MySqlConnection(verbindung);
+
+        private static MySqlConnection conn = new MySqlConnection(verbindung);
         private static MySqlCommand command = conn.CreateCommand();
         private static MySqlDataReader reader;
         
-
+        // Diese Methode gibt ein 2D-String-Array als Resultat auf ein Select-Query zurück.
         public static string[,] Select(String query)
         {
             setCommandText(query);
-            command.CommandText = query;
             int counterh = 0;
             int counterw = 0;
             try
@@ -56,7 +57,7 @@ namespace Shoppy.Database
             conn.Close();
             return rueckgabe;
         }
-
+        // Führt ein Insert-Query aus.
         public static void Insert(String query)
         {
             setCommandText(query);
@@ -75,10 +76,12 @@ namespace Shoppy.Database
             command.ExecuteNonQuery();
             conn.Close();
         }
+        // Führt ein Updatequery aus. Da Update gleich behandelt wird wie Insert wird auf die Insertmethode verwiesen.
         public static void Update(String query)
         {
             Insert(query);
         }
+        // Führt ein Deletequery aus. Da Update gleich behandelt wird wie Insert wird auf die Insertmethode verwiesen.
         public static void Delete(String query)
         {
             Insert(query);

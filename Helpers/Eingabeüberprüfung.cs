@@ -8,8 +8,10 @@ using System.Text.RegularExpressions;
 
 namespace Shoppy.Helpers
 {
+    // Diese Statische Klasse stellt Funktionen zur Eingabeüberprüfung zur Verfügung.
     static class Eingabeüberprüfung
     {
+        // Ist das angeklickte Element des DataGridView eine normale Zeile wird true zurückgegeben, sonst false. 
         public static bool BinEineZeile(DataGridView dgv, int rowindex, int columnindex)
         {
             if (rowindex != -1)
@@ -22,7 +24,7 @@ namespace Shoppy.Helpers
             }
             return false;
         }
-
+        // Ist das angeklickte Element des DataGridView ein Button wird true zurückgegeben, sonst false.
         public static bool BinEinButton(DataGridView dgv, int rowindex, int columnindex)
         {
             if (rowindex != -1)
@@ -35,7 +37,7 @@ namespace Shoppy.Helpers
             }
             return false;
         }
-
+        // Überprüft ob alle übergebenen TextBoxen gefüllt sind.
         public static bool TextBoxFilled(TextBox[] textboxen)
         {
             for (int i = 0; i < textboxen.GetLength(0); i++)
@@ -45,7 +47,7 @@ namespace Shoppy.Helpers
             }
             return true;
         }
-
+        // Überprüft ob die übergebenen TextBoxen nur Zahlen enthalten.
         public static void txtBoxValue_IsNumber(TextBox[] textboxen)
         {
             for (int i = 0; i < textboxen.GetLength(0); i++)

@@ -14,6 +14,7 @@ using Shoppy.Views;
 
 namespace Shoppy
 {
+    // Erstellt ein PDF-Dokument welches anschliessend gedruckt werden kann.
     class PrintSell
     {
         private double totalbetrag;
@@ -23,12 +24,13 @@ namespace Shoppy
         private int pageCounter = -1;
         private int position = 0;
         private XGraphics gfx;
+
         public PrintSell(double totalbetrag, DataGridView idatgridSell) 
         {
             this.totalbetrag = totalbetrag;
             this.datagridSell = idatgridSell;
         }
-
+        // Initiiert den Erstellungsprozess
         public void Kontrollblatt()
         {
             PdfDocument pdfdocument = new PdfDocument();
@@ -66,6 +68,7 @@ namespace Shoppy
             ueberschrift.AddText("Quittung - ShoppyMarket");
             return ueberschrift;
         }
+
         private Paragraph getDate(Section sec)
         {
             Paragraph date = sec.AddParagraph();
@@ -157,6 +160,7 @@ namespace Shoppy
             else
                 return positioncounter;
         }
+
         private MigraDoc.DocumentObjectModel.Tables.Table tableheader(Section sec)
         {
             Table tabelle = sec.AddTable();

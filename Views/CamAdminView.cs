@@ -10,9 +10,12 @@ using Shoppy.Helpers;
 
 namespace Shoppy.Views
 {
+    // CamAdminView erbt von UserControl und managed die Datenbankeinträge welche für die CamView benötigt werden.
+    // CRUD für CameraView
 	public partial class CamAdminView: UserControl
 	{
         CamAdmin database = new CamAdmin();
+        // Initialisiert die CamAdminView und füllt das Datagridview
 		public CamAdminView()
 		{
 			InitializeComponent();

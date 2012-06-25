@@ -9,11 +9,10 @@ using Shoppy.Database;
 
 namespace Shoppy.Database
 {
+    // Die Datenbankabfragen für Programmteile, welche mit dem Kunden zu tun haben, werden hier geschrieben.
     class ClientAdmin
     {
-
-        
-
+        // Gibt alle Kunden zurück.
         public DataTable GetClient()
         {
             MySqlDataAdapter da = new MySqlDataAdapter("SELECT RFID, Name, Vorname,Geld FROM kunde", Abfragen.verbindung);
@@ -22,20 +21,22 @@ namespace Shoppy.Database
             da.Dispose();
             return dt;
         }
+        // Löscht einen Kunden nach RFID
         public void DeleteClient(String RFID)
         {
             Abfragen.Delete("DELETE FROM kunde WHERE RFID='" + RFID + "';");
         }
+        // Updatet einen Kunden nach RFID.
         public void UpdateClient(string RFID, string Name, string Vorname, string Geld)
         {
             Abfragen.Update("update kunde set Name='" + Name + "', Vorname='" + Vorname + "', Geld='" + Geld + "' WHERE RFID='" + RFID + "';");
         }
-
-        internal void NewClient(string RFID, string Name, string Vorname, string Geld)
+        // Erzeugt einen neuen Datenbankeintrag.
+        public void NewClient(string RFID, string Name, string Vorname, string Geld)
         {
             Abfragen.Insert("INSERT INTO kunde(RFID,name,vorname,geld) VALUES('" + RFID + "','" + Name + "','" + Vorname + "','" + Geld +"');");
         }
-
+        // Gibt die Kundendaten eines Kunden zurück.
         public DataTable GetClientOnRFID(string RFID)
         {
             string selectquery = "SELECT RFID, name, vorname, geld FROM Kunde WHERE RFID = '" + RFID + "';";
@@ -45,11 +46,10 @@ namespace Shoppy.Database
             da.Dispose();
             return dt;
         }
-
+        // Lädt das Konto eines Kunden um den Betrag auf.
         public void InsertBetrag(string RFID, double Betrag)
         {
             string[,] ins = Abfragen.Select("SELECT Geld FROM Kunde WHERE RFID ='" + RFID + "';");
-            double.Parse(ins[0, 0]);
             Betrag += double.Parse(ins[0, 0]);
             Abfragen.Update("UPDATE kunde SET Geld ='" + Betrag +"' WHERE RFID = '" + RFID + "';");
         }

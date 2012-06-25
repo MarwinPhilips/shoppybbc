@@ -6,20 +6,20 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using Shoppy.Database;
-using Phidgets; //Needed for the RFID class and the PhidgetException class
-using Phidgets.Events; //Needed for the phidget event handling classes
 using Shoppy.RFIDInput;
 using Shoppy.Helpers;
 
 namespace Shoppy.Views
 {
+    // Dieses UserControl ermöglicht CRUD für Verkäufer.
 	public partial class SellerAdminView: UserControl
 	{
         SellerAdmin database = new SellerAdmin();
+        // An dieses Objekt werden die RFID-Events gemeldet.
         public RFIDListener rfidlistener;
         string rfid_num;
 
-
+        // Initialisiert das Objekt.
 		public SellerAdminView()
 		{
 			InitializeComponent();
@@ -68,7 +68,7 @@ namespace Shoppy.Views
             FillRows();
         }
 
-
+        // Wird die RFID gewechselt passt diese Methode die Variable rifd_num und die verschiedenen Textboxen an.
         public void RFIDChanged(string newRFID)
         {
             if (newRFID == "")
