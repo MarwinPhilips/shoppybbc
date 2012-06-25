@@ -95,5 +95,35 @@ namespace Shoppy.Views
                 }
             }
         }
+
+        private void txtFields_Changed(object sender, EventArgs e)
+        {
+            TextBox[] txtBoxen_wthString = new TextBox[] { txtUpdateName, txtUpdateVorname, txtNewName, txtNewVorname };
+            Eingabeüberprüfung.txtBoxValue_IsString(txtBoxen_wthString);
+
+
+
+            TextBox[] txtBoxUpdate = new TextBox[] { txtUpdateVorname, txtUpdateRFID, txtUpdateName, txtUpdateLoginname, txtUpdatePasswort};
+            if (Eingabeüberprüfung.TextBoxFilled(txtBoxUpdate))
+            {
+                btnUpdateSeller.Enabled = true;
+            }
+            else
+            {
+                btnUpdateSeller.Enabled = false;
+            }
+
+
+            TextBox[] txtBoxNew = new TextBox[] { txtNewVorname, txtNewRFID, txtNewName, txtNewPasswort };
+            if (Eingabeüberprüfung.TextBoxFilled(txtBoxNew))
+            {
+                btnNewSeller.Enabled = true;
+                
+            }
+            else
+            {
+                btnNewSeller.Enabled = false;
+            }  
+        }
 	}
 }

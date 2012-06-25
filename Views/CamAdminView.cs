@@ -65,6 +65,11 @@ namespace Shoppy.Views
             FillData();
         }
 
+        private void txtUpdateIP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 	}
 }

@@ -59,6 +59,7 @@
             this.txtNewProdukt.Name = "txtNewProdukt";
             this.txtNewProdukt.Size = new System.Drawing.Size(285, 31);
             this.txtNewProdukt.TabIndex = 6;
+            this.txtNewProdukt.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewPreis
             // 
@@ -68,6 +69,7 @@
             this.txtNewPreis.Name = "txtNewPreis";
             this.txtNewPreis.Size = new System.Drawing.Size(87, 31);
             this.txtNewPreis.TabIndex = 8;
+            this.txtNewPreis.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtUpdateProdukt
             // 
@@ -77,6 +79,7 @@
             this.txtUpdateProdukt.Name = "txtUpdateProdukt";
             this.txtUpdateProdukt.Size = new System.Drawing.Size(285, 31);
             this.txtUpdateProdukt.TabIndex = 1;
+            this.txtUpdateProdukt.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtUpdatePreis
             // 
@@ -86,6 +89,7 @@
             this.txtUpdatePreis.Name = "txtUpdatePreis";
             this.txtUpdatePreis.Size = new System.Drawing.Size(87, 31);
             this.txtUpdatePreis.TabIndex = 3;
+            this.txtUpdatePreis.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Barcode
             // 
@@ -115,6 +119,7 @@
             this.txtUpdateVorrat.Name = "txtUpdateVorrat";
             this.txtUpdateVorrat.Size = new System.Drawing.Size(87, 31);
             this.txtUpdateVorrat.TabIndex = 4;
+            this.txtUpdateVorrat.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Vorrat
             // 
@@ -134,6 +139,7 @@
             this.txtNewVorrat.Name = "txtNewVorrat";
             this.txtNewVorrat.Size = new System.Drawing.Size(87, 31);
             this.txtNewVorrat.TabIndex = 9;
+            this.txtNewVorrat.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Produkt
             // 
@@ -149,6 +155,7 @@
             // 
             this.btnUpdateSell.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnUpdateSell.Location = new System.Drawing.Point(798, 111);
+            this.btnUpdateSell.Location = new System.Drawing.Point(798, 111);
             this.btnUpdateSell.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateSell.Name = "btnUpdateSell";
             this.btnUpdateSell.Size = new System.Drawing.Size(188, 93);
@@ -160,6 +167,7 @@
             // btnNewSell
             // 
             this.btnNewSell.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewSell.Enabled = false;
             this.btnNewSell.Location = new System.Drawing.Point(798, 216);
             this.btnNewSell.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewSell.Name = "btnNewSell";
@@ -201,6 +209,7 @@
             this.txtUpdateBarcode.Name = "txtUpdateBarcode";
             this.txtUpdateBarcode.Size = new System.Drawing.Size(285, 31);
             this.txtUpdateBarcode.TabIndex = 2;
+            this.txtUpdateBarcode.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewBarcode
             // 
@@ -210,6 +219,7 @@
             this.txtNewBarcode.Name = "txtNewBarcode";
             this.txtNewBarcode.Size = new System.Drawing.Size(285, 31);
             this.txtNewBarcode.TabIndex = 7;
+            this.txtNewBarcode.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // tableLayoutPanel1
             // 

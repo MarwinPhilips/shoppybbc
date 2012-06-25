@@ -107,6 +107,7 @@
             this.txtNewRFID.Name = "txtNewRFID";
             this.txtNewRFID.Size = new System.Drawing.Size(151, 31);
             this.txtNewRFID.TabIndex = 7;
+            this.txtNewRFID.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewVorname
             // 
@@ -116,6 +117,7 @@
             this.txtNewVorname.Name = "txtNewVorname";
             this.txtNewVorname.Size = new System.Drawing.Size(151, 31);
             this.txtNewVorname.TabIndex = 9;
+            this.txtNewVorname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtUpdateRFID
             // 
@@ -126,6 +128,7 @@
             this.txtUpdateRFID.Name = "txtUpdateRFID";
             this.txtUpdateRFID.Size = new System.Drawing.Size(151, 31);
             this.txtUpdateRFID.TabIndex = 1;
+            this.txtUpdateRFID.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtUpdateVorname
             // 
@@ -135,6 +138,7 @@
             this.txtUpdateVorname.Name = "txtUpdateVorname";
             this.txtUpdateVorname.Size = new System.Drawing.Size(151, 31);
             this.txtUpdateVorname.TabIndex = 3;
+            this.txtUpdateVorname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Barcode
             // 
@@ -166,6 +170,7 @@
             this.txtUpdateLoginname.Name = "txtUpdateLoginname";
             this.txtUpdateLoginname.Size = new System.Drawing.Size(151, 31);
             this.txtUpdateLoginname.TabIndex = 4;
+            this.txtUpdateLoginname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Vorrat
             // 
@@ -186,6 +191,7 @@
             this.txtNewLoginname.Name = "txtNewLoginname";
             this.txtNewLoginname.Size = new System.Drawing.Size(151, 31);
             this.txtNewLoginname.TabIndex = 10;
+            this.txtNewLoginname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Produkt
             // 
@@ -206,6 +212,7 @@
             this.txtUpdateName.Name = "txtUpdateName";
             this.txtUpdateName.Size = new System.Drawing.Size(151, 31);
             this.txtUpdateName.TabIndex = 2;
+            this.txtUpdateName.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewName
             // 
@@ -215,10 +222,12 @@
             this.txtNewName.Name = "txtNewName";
             this.txtNewName.Size = new System.Drawing.Size(151, 31);
             this.txtNewName.TabIndex = 8;
+            this.txtNewName.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // btnUpdateSeller
             // 
             this.btnUpdateSeller.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdateSeller.Enabled = false;
             this.btnUpdateSeller.Location = new System.Drawing.Point(821, 107);
             this.btnUpdateSeller.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateSeller.Name = "btnUpdateSeller";
@@ -231,6 +240,7 @@
             // btnNewSeller
             // 
             this.btnNewSeller.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewSeller.Enabled = false;
             this.btnNewSeller.Location = new System.Drawing.Point(821, 208);
             this.btnNewSeller.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewSeller.Name = "btnNewSeller";
@@ -259,6 +269,7 @@
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
             this.txtUpdatePasswort.Size = new System.Drawing.Size(151, 31);
             this.txtUpdatePasswort.TabIndex = 5;
+            this.txtUpdatePasswort.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewPasswort
             // 
@@ -268,6 +279,7 @@
             this.txtNewPasswort.Name = "txtNewPasswort";
             this.txtNewPasswort.Size = new System.Drawing.Size(151, 31);
             this.txtNewPasswort.TabIndex = 11;
+            this.txtNewPasswort.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // dataGridView1
             // 

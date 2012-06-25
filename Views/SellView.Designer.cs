@@ -282,6 +282,7 @@
             this.txtInputBarcode.Name = "txtInputBarcode";
             this.txtInputBarcode.Size = new System.Drawing.Size(382, 32);
             this.txtInputBarcode.TabIndex = 1;
+            this.txtInputBarcode.TextChanged += new System.EventHandler(this.txtFields_Changed);
             this.txtInputBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInputBarcode_KeyPress);
             // 
             // label1

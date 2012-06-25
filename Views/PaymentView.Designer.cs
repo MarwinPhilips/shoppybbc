@@ -48,6 +48,7 @@
             this.txtBetrag.Name = "txtBetrag";
             this.txtBetrag.Size = new System.Drawing.Size(82, 31);
             this.txtBetrag.TabIndex = 1;
+            this.txtBetrag.TextChanged += new System.EventHandler(this.txtBetrag_TextChanged);
             // 
             // label1
             // 

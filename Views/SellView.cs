@@ -220,5 +220,11 @@ namespace Shoppy.Views
                 }
             }
         }
+
+        private void txtFields_Changed(object sender, EventArgs e)
+        {
+            TextBox[] txtBoxen_wthInt = new TextBox[] { txtInputBarcode };
+            Eingabeüberprüfung.txtBoxValue_IsNumber(txtBoxen_wthInt);
+        }
 	}
 }

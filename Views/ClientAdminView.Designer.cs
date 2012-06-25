@@ -54,6 +54,7 @@
             // btnUpdateClient
             // 
             this.btnUpdateClient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdateClient.Enabled = false;
             this.btnUpdateClient.Location = new System.Drawing.Point(790, 107);
             this.btnUpdateClient.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateClient.Name = "btnUpdateClient";
@@ -84,6 +85,7 @@
             this.txtUpdateVorname.Name = "txtUpdateVorname";
             this.txtUpdateVorname.Size = new System.Drawing.Size(184, 31);
             this.txtUpdateVorname.TabIndex = 3;
+            this.txtUpdateVorname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewVorname
             // 
@@ -155,6 +157,7 @@
             this.txtUpdateGeld.Name = "txtUpdateGeld";
             this.txtUpdateGeld.Size = new System.Drawing.Size(184, 31);
             this.txtUpdateGeld.TabIndex = 4;
+            this.txtUpdateGeld.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // label4
             // 
@@ -194,6 +197,7 @@
             this.txtUpdateRFID.Name = "txtUpdateRFID";
             this.txtUpdateRFID.Size = new System.Drawing.Size(190, 31);
             this.txtUpdateRFID.TabIndex = 1;
+            this.txtUpdateRFID.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtUpdateName
             // 
@@ -202,6 +206,7 @@
             this.txtUpdateName.Name = "txtUpdateName";
             this.txtUpdateName.Size = new System.Drawing.Size(190, 31);
             this.txtUpdateName.TabIndex = 2;
+            this.txtUpdateName.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewRFID
             // 
