@@ -15,7 +15,7 @@ namespace Shoppy.Database
         // gibt alle Artikel zurück
         public DataTable GetSell()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("select id_artikel as artikelID, Name,BarCode,Preis,Vorrat from artikel", Abfragen.verbindung);
+            MySqlDataAdapter da = new MySqlDataAdapter("select id_artikel as artikelID, Name,BarCode,Preis from artikel", Abfragen.verbindung);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -32,15 +32,14 @@ namespace Shoppy.Database
             Abfragen.Delete("delete from artikel where id_artikel='" + id + "';");
         }
         // Updatet ein Produkt nach ID
-        public void UpdateSell(string id, string Produkt, string BarCode, string Preis, string Vorrat)
+        public void UpdateSell(string id, string Produkt, string BarCode, string Preis)
         {
-            Abfragen.Update("update artikel set Name='" + Produkt + "', BarCode='" + BarCode + "', Preis='" + Preis + "', Vorrat='" + Vorrat +
-               "' where id_artikel='" + id + "';");
+            Abfragen.Update("update artikel set Name='" + Produkt + "', BarCode='" + BarCode + "', Preis='" + Preis + "' where id_artikel='" + id + "';");
         }
         // Speichert ein neues Produkt in die Datenbank.
-        public void NewSell(string Produkt, string BarCode, string Preis, string Vorrat)
+        public void NewSell(string Produkt, string BarCode, string Preis)
         {
-            Abfragen.Insert("insert into artikel(Name,BarCode,Preis,Vorrat) values('" + Produkt + "','" + BarCode + "','" + Preis + "','" + Vorrat + "');");
+            Abfragen.Insert("insert into artikel(Name,BarCode,Preis) values('" + Produkt + "','" + BarCode + "','" + Preis + "');");
         }
 
         /* zahlenden Kunden aussuchen*/

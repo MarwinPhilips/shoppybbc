@@ -25,6 +25,7 @@ namespace Shoppy.Views
         public Payment_View()
         {
             InitializeComponent();
+            dataGridView1.ReadOnly = true;
         }
         private void FillDGV(DataTable table)
         {

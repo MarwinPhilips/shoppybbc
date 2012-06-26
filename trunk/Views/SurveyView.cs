@@ -18,7 +18,7 @@ namespace Shoppy.Views
             surveyViewCamSwitcher1.Survey_View_Cam_Switcher_Reload(1);
             surveyViewCamSwitcher2.Survey_View_Cam_Switcher_Reload(2);
             surveyViewCamSwitcher3.Survey_View_Cam_Switcher_Reload(3);
-            surveyViewCamSwitcher4.Survey_View_Cam_Switcher_Reload(4);         
+            surveyViewCamSwitcher4.Survey_View_Cam_Switcher_Reload(4);
 		}
     }
 }
