@@ -54,14 +54,15 @@ namespace Shoppy.Helpers
             {
                 if (textboxen[i].Text != null && !textboxen[i].Text.Equals(""))
                 {
+                    double a;
                     try
                     {
-                        double.Parse(textboxen[i].Text);
+                        a = double.Parse(textboxen[i].Text);
                     }
                     catch
                     {
                         string txt = textboxen[i].Text;
-                        string p = @"[0-9.]";
+                        string p = @"[0-9.]{4}";
 
                         MatchCollection matches = Regex.Matches(txt, p);
                         string[] str = new string[matches.Count];
@@ -107,7 +108,7 @@ namespace Shoppy.Helpers
                 {
 
                     string txt = textboxen[i].Text;
-                    string p = @"[^a-zA-z]";
+                    string p = @"[^a-zA-zöüäÖÜÄ]";
 
                     MatchCollection matches = Regex.Matches(txt, p);
                     string[] str = new string[matches.Count];

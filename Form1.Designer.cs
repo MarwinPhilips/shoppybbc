@@ -30,7 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.sellView1 = new Views.SellView();
+            sellView1 = new Views.SellView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.payment_View1 = new Views.Payment_View();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -86,7 +86,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.sellView1);
+            this.tabPage1.Controls.Add(sellView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 54);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
@@ -98,14 +98,14 @@
             // 
             // sellView1
             // 
-            this.sellView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sellView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellView1.Location = new System.Drawing.Point(6, 6);
-            this.sellView1.Margin = new System.Windows.Forms.Padding(0);
-            this.sellView1.Name = "sellView1";
-            this.sellView1.Size = new System.Drawing.Size(964, 646);
-            this.sellView1.TabIndex = 0;
-            this.sellView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
+            sellView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            sellView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sellView1.Location = new System.Drawing.Point(6, 6);
+            sellView1.Margin = new System.Windows.Forms.Padding(0);
+            sellView1.Name = "sellView1";
+            sellView1.Size = new System.Drawing.Size(964, 646);
+            sellView1.TabIndex = 0;
+            sellView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tabControl1_KeyPress);
             // 
             // tabPage2
             // 
@@ -362,7 +362,7 @@
         private Views.ClientAdminView clientAdminView1;
         private Views.Login login1;
         private System.Windows.Forms.TabPage tabPage1;
-        private Views.SellView sellView1;
+        static public Views.SellView sellView1;
         private System.Windows.Forms.TabPage tabPage9;
         private Views.Logout logout1;
         private System.Windows.Forms.StatusStrip statusStrip1;

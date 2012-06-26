@@ -41,6 +41,7 @@
             // btnLogin
             // 
             this.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogin.Enabled = false;
             this.btnLogin.Location = new System.Drawing.Point(3, 126);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(239, 36);
@@ -76,7 +77,7 @@
             this.txtUserRFID.PasswordChar = '*';
             this.txtUserRFID.Size = new System.Drawing.Size(239, 20);
             this.txtUserRFID.TabIndex = 1;
-            this.txtUserRFID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUserRFID_KeyUp);
+            this.txtUserRFID.TextChanged += new System.EventHandler(this.txtUserRFID_TextChanged);
             // 
             // label1
             // 

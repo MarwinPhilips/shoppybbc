@@ -12,6 +12,7 @@ using System.Drawing.Printing;
 using Shoppy.RFIDInput;
 using Shoppy.Helpers;
 using Shoppy.Views;
+using System.Linq;
 
 namespace Shoppy.Views
 {
@@ -25,7 +26,7 @@ namespace Shoppy.Views
         // Initialisert das Objekt.
 		public SellView()
 		{
-			InitializeComponent();
+                InitializeComponent();
 		}
 
         /* Der Barcodeleser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
@@ -181,8 +182,6 @@ namespace Shoppy.Views
         }
 
         #endregion
- 
-        
 
         private void btnPrintSell_Click(object sender, EventArgs e)
         {

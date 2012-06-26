@@ -436,7 +436,6 @@
         private System.Windows.Forms.TextBox txtTotalPay;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label text;
-        private System.Windows.Forms.TextBox txtInputBarcode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -456,5 +455,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button btnPrintSell;
         private System.Windows.Forms.Button btnSellDeleteAll;
+        public System.Windows.Forms.TextBox txtInputBarcode;
 	}
 }
