@@ -26,7 +26,7 @@ namespace Shoppy.Database
             da.Fill(dt);
             return dt;
         }
-        // Léscht einen einzelnen Seller nach ID
+        // Löscht einen einzelnen Seller nach ID
         public void DeleteSeller(string id)
         {
             Abfragen.Delete("delete from seller where rfid='" + id + "';");
@@ -70,6 +70,16 @@ namespace Shoppy.Database
             da.Fill(dt);
             da.Dispose();
             return dt;
+        }
+
+        public bool SellerExist(string RFID)
+        {
+            string[,] client = Abfragen.Select("SELECT name FROM seller WHERE RFID ='" + RFID + "';");
+            if (client.Length == 0)
+            {
+                return false;
+            }
+            return true;
         }
 	}
 }

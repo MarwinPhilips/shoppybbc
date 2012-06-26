@@ -23,6 +23,7 @@ namespace Shoppy.Views
 		public SellerAdminView()
 		{
 			InitializeComponent();
+            FillRows();
 		}
         private void FillRows()
         {
@@ -81,6 +82,10 @@ namespace Shoppy.Views
                 txtUpdateName.Text = "";
                 txtUpdateVorname.Text = "";
                 txtNewRFID.Text = "";
+                txtNewVorname.Text = "";
+                txtNewPasswort.Text = "";
+                txtNewName.Text = "";
+                txtNewLoginname.Text = "";
             }
             else
             {
@@ -92,7 +97,6 @@ namespace Shoppy.Views
                     txtUpdateName.Text = table.Rows[0].ItemArray[3].ToString();
                     txtUpdatePasswort.Text = table.Rows[0].ItemArray[2].ToString();
                     txtUpdateVorname.Text = table.Rows[0].ItemArray[4].ToString();
-                    txtNewRFID.Text = rfid_num;
                     dataGridView1.DataSource = table;
                     txtUpdateRFID.Text = rfid_num;
                 }

@@ -26,6 +26,7 @@ namespace Shoppy.Views
         // Der Eingeloggte Verkäufer wird hier gespeichert.
         public static string SellerName;
         // Initialisert das Login-UserControl.
+
         public Login()
         {
             InitializeComponent();
@@ -41,6 +42,9 @@ namespace Shoppy.Views
                 tabcontrol.Enabled = true;
                 SellerName = sa.GetSellerName(txtUserRFID.Text);
                 txtUserRFID.Text = "";
+                MessageBox.Show("Hallo" + " "+SellerName);
+                Form1.sellView1.txtInputBarcode.Select();
+
             }
             else
             {
@@ -55,6 +59,7 @@ namespace Shoppy.Views
                 rfid_num = "";
                 txtUserRFID.Text = "";
                 btnLogin.Enabled = false;
+                label2.Text = "";
             }
             else
             {
@@ -64,9 +69,16 @@ namespace Shoppy.Views
             }
         }
 
-        private void txtUserRFID_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void txtUserRFID_TextChanged(object sender, EventArgs e)
         {
-            rfid_num = txtUserRFID.Text;
+            if (!txtUserRFID.Text.Equals(""))
+            {
+                btnLogin.Enabled = true;
+            }
+            else
+            {
+                btnLogin.Enabled = false;
+            }
         }
 
     }
