@@ -48,24 +48,44 @@ namespace Shoppy.Views
             }
             else
             {
-                btnEnter.Enabled = true;
                 rfid_num = newRFID;
                 FillData();
+                btnEnter.Enabled = true;
+
+                TextBox[] txtBox_Fill = new TextBox[] { txtBetrag };
+                if (Eingabeüberprüfung.TextBoxFilled(txtBox_Fill))
+                {
+                    btnEnter.Enabled = true;
+                }
+                else { btnEnter.Enabled = false; }
             }
         }
       
         private void btnInsert(object sender, EventArgs e)
         {
-            string kunde = dataGridView1.Rows[0].Cells[0].Value.ToString();
-            double betrag = double.Parse(txtBetrag.Text);
+            double betrag;
+            string kunde;
+            kunde = dataGridView1.Rows[0].Cells[0].Value.ToString();
+            betrag = double.Parse(txtBetrag.Text);
+            betrag = Math.Round(betrag, 2);
             database.InsertBetrag(kunde, betrag);
             FillData();
+            txtBetrag.Text = "";
         }
 
         private void txtBetrag_TextChanged(object sender, EventArgs e)
         {
             TextBox[] txtBoxen_wthInt = new TextBox[] { txtBetrag };
+
             Eingabeüberprüfung.txtBoxValue_IsNumber(txtBoxen_wthInt);
+
+            TextBox[] txtBox_Fill = new TextBox[] { txtBetrag };
+
+            if (Eingabeüberprüfung.TextBoxFilled(txtBox_Fill)&&rfid_num != "")
+            {
+                btnEnter.Enabled = true;
+            }
+            else { btnEnter.Enabled = false; }
         }
     }
 }

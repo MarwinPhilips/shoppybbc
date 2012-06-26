@@ -71,6 +71,7 @@
             // txtUpdateProdukt
             // 
             this.txtUpdateProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUpdateProdukt.Enabled = false;
             this.txtUpdateProdukt.Location = new System.Drawing.Point(6, 111);
             this.txtUpdateProdukt.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateProdukt.Name = "txtUpdateProdukt";
@@ -81,6 +82,7 @@
             // txtUpdatePreis
             // 
             this.txtUpdatePreis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUpdatePreis.Enabled = false;
             this.txtUpdatePreis.Location = new System.Drawing.Point(666, 111);
             this.txtUpdatePreis.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdatePreis.Name = "txtUpdatePreis";
@@ -171,6 +173,7 @@
             // txtUpdateBarcode
             // 
             this.txtUpdateBarcode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUpdateBarcode.Enabled = false;
             this.txtUpdateBarcode.Location = new System.Drawing.Point(336, 111);
             this.txtUpdateBarcode.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateBarcode.Name = "txtUpdateBarcode";

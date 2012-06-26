@@ -47,6 +47,8 @@ namespace Shoppy.Helpers
             }
             return true;
         }
+
+       
         // Überprüft ob die übergebenen TextBoxen nur Zahlen enthalten.
         public static void txtBoxValue_IsNumber(TextBox[] textboxen)
         {
@@ -58,16 +60,29 @@ namespace Shoppy.Helpers
                     try
                     {
                         a = double.Parse(textboxen[i].Text);
+                        if (a < 0)
+                        {
+                            string b;
+                            b = a.ToString();
+                            b = b + "asd";
+                            double.Parse(b);
+                        }
+
+                        if (a > 10000000000000000000)
+                        {
+                            MessageBox.Show("HAHA, TRY TO DO IT ONE MORE TIME");
+                            textboxen[i].Text = "";
+                        }
+                        
                     }
                     catch
                     {
                         string txt = textboxen[i].Text;
-                        string p = @"[0-9.]{4}";
+                        string p = @"[0-9.-]";
 
                         MatchCollection matches = Regex.Matches(txt, p);
                         string[] str = new string[matches.Count];
                         int punkt = 0;
-
 
                         for (int j = 0; j < matches.Count; j++)
                         {
@@ -89,6 +104,14 @@ namespace Shoppy.Helpers
                                     str[r] = "";
                                 }
                             }
+
+                            
+
+                            if(str[r].Equals("-"))
+                            {
+                                str[r] = "";
+                            }
+
                         }
 
                         string result = string.Join("",str);
@@ -100,6 +123,82 @@ namespace Shoppy.Helpers
             }
         }
         // Überprüft ob die übergebenen TextBoxen nur Buchstaben enthalten.
+        /*public static void txtBoxValue_IsNumber(TextBox[] textboxen)
+        {
+            for (int i = 0; i < textboxen.GetLength(0); i++)
+            {
+                if (textboxen[i].Text != null && !textboxen[i].Text.Equals(""))
+                {
+                    double a;
+                    Boolean isString = false;
+                    try
+                    {
+                        a = double.Parse(textboxen[i].Text);
+
+                    }
+                    catch
+                    {
+                        isString = true;
+                    }
+
+                    if (a < 0)
+                    {
+                        string b;
+                        b = a.ToString();
+                        b = b + "asd";
+                        double.Parse(b);
+                    }
+
+                    if (a > 10000000000000000000)
+                    {
+                        MessageBox.Show("HAHA, TRY TO DO IT ONE MORE TIME");
+                        textboxen[i].Text = "";
+                    }
+
+                    string txt = textboxen[i].Text;
+                    string p = @"[0-9.-]";
+
+                    MatchCollection matches = Regex.Matches(txt, p);
+                    string[] str = new string[matches.Count];
+                    int punkt = 0;
+
+                    for (int j = 0; j < matches.Count; j++)
+                    {
+                        str[j] = matches[j].Value;
+                    }
+
+                    for (int r = 0; r < str.Length; r++)
+                    {
+                        if (str[0].Equals("."))
+                        {
+                            str[0] = "";
+                        }
+
+                        if (str[r].Equals("."))
+                        {
+                            punkt++;
+                            if (punkt > 1)
+                            {
+                                str[r] = "";
+                            }
+                        }
+
+                        if (str[r].Equals("-"))
+                        {
+                            str[r] = "";
+                        }
+
+                    }
+
+                    string result = string.Join("", str);
+                    MessageBox.Show("Geben Sie bitte die Zahl richtig ein");
+                    textboxen[i].Text = result;
+                    textboxen[i].Select(textboxen[i].Text.Length, 0);
+                }
+            }
+        }*/
+
+
         public static void txtBoxValue_IsString(TextBox[] textboxen)
         {
             for (int i = 0; i < textboxen.GetLength(0); i++)
@@ -137,7 +236,7 @@ namespace Shoppy.Helpers
                         string result = string.Join("", str2);
                         MessageBox.Show("Es können keine Zahlen oder Sonderzeichen eingegeben werden");
                         textboxen[i].Text = result;
-                        textboxen[i].Select(textboxen[i].Text.Length, 0);
+                        //textboxen[i].Select(textboxen[i].Text.Length, 0);
 
                     }
                 }

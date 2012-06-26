@@ -62,12 +62,22 @@ namespace Shoppy.Views
         {
             database.UpdateSeller(txtUpdateRFID.Text, txtUpdateLoginname.Text, txtUpdatePasswort.Text, txtUpdateName.Text, txtUpdateVorname.Text);
             FillRows();
+            txtUpdateLoginname.Text = "";
+            txtUpdateName.Text = "";
+            txtUpdatePasswort.Text = "";
+            txtUpdateRFID.Text = "";
+            txtUpdateVorname.Text = "";
         }
 
         private void btnNewSeller_Click(object sender, EventArgs e)
         {
             database.NewSeller(txtNewRFID.Text, txtNewLoginname.Text, txtNewPasswort.Text, txtNewName.Text, txtNewVorname.Text);
             FillRows();
+            txtNewLoginname.Text="";
+            txtNewName.Text="";
+            txtNewPasswort.Text = "";
+            txtNewRFID.Text = "";
+            txtNewVorname.Text = "";
         }
 
         // Wird die RFID gewechselt passt diese Methode die Variable rifd_num und die verschiedenen Textboxen an.
