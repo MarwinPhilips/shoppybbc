@@ -2,7 +2,6 @@ C:\Desktop\shoppy\bin\Debug\Shoppy.exe.config
 C:\Desktop\shoppy\bin\Debug\Shoppy.exe.manifest
 C:\Desktop\shoppy\bin\Debug\Shoppy.application
 C:\Desktop\shoppy\bin\Debug\Shoppy.exe
-C:\Desktop\shoppy\bin\Debug\Shoppy.pdb
 C:\Desktop\shoppy\obj\Debug\ResolveAssemblyReference.cache
 C:\Desktop\shoppy\obj\Debug\Interop.LCC11.dll
 C:\Desktop\shoppy\obj\Debug\Interop.SBEServerLib.dll
@@ -27,3 +26,4 @@ C:\Desktop\shoppy\obj\Debug\Shoppy.exe.manifest
 C:\Desktop\shoppy\obj\Debug\Shoppy.application
 C:\Desktop\shoppy\obj\Debug\Shoppy.exe
 C:\Desktop\shoppy\obj\Debug\Shoppy.pdb
+C:\Desktop\shoppy\bin\Debug\Shoppy.pdb

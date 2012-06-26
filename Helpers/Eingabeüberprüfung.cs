@@ -99,7 +99,7 @@ namespace Shoppy.Helpers
                 }
             }
         }
-
+        // Überprüft ob die übergebenen TextBoxen nur Buchstaben enthalten.
         public static void txtBoxValue_IsString(TextBox[] textboxen)
         {
             for (int i = 0; i < textboxen.GetLength(0); i++)
@@ -141,6 +141,61 @@ namespace Shoppy.Helpers
 
                     }
                 }
+            }
+        }
+        /* Überprüft ob eingabe eine gültige IP-adresse ist*/
+        public static bool txtBoxValue_validIP(TextBox txtbox) 
+        {
+            bool ipvalid = true; 
+            string boxText = txtbox.Text;
+            if (txtbox.Text.Length > 0) 
+            {   //IP in blöcke aufteilen
+                String[] ipRange = boxText.Split('.');
+
+                if (ipRange.Length == 4)
+                {
+                    for (int i = 0; i < ipRange.Length; i++)
+                    {
+                        //isNumber();
+                        if (ipRange[i].Length > 3 || BinKeineZahl(ipRange[i])) 
+                        {
+                            ipvalid =  false;
+                        }
+
+                        int ipRangeInt = int.Parse(ipRange[i]);
+
+                        if (i == 0)
+                        {
+                            //1. IP-adressen Block muss im Bereich 10 bis 255 liegen
+                            if (ipRangeInt < 10 || ipRangeInt > 255)
+                            {
+                                MessageBox.Show("1. IP-adressen Block muss im Bereich 10 bis 255 liegen");
+                                ipvalid =  false;
+                            }
+                        }
+                        else 
+                        {   // ip muss zwischen 0 und 255 liegen
+                            if (ipRangeInt < 0 || ipRangeInt > 255) 
+                            {
+                                MessageBox.Show("ungültige IP-adresse");
+                                ipvalid = false;
+                            }
+                        }
+                    }
+                }
+            }
+            return ipvalid;
+        }
+        private static bool BinKeineZahl(string txtNumb) 
+        {
+            try
+            {
+                int gehtes = int.Parse(txtNumb);
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

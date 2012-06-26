@@ -17,18 +17,18 @@ using System.Linq;
 namespace Shoppy.Views
 {
     // Dieses UserControl ist für den Verkauf von Gegenständen verantwortlich.
-	public partial class SellView: UserControl
-	{
+    public partial class SellView : UserControl
+    {
         SellAdmin sa = new SellAdmin();
         string rfid_num;
         // An dieses Objekt werden die RFID-Listener gemeldet.
         public RFIDListener rfidlistener;
         // Initialisert das Objekt.
-		public SellView()
-		{
-                InitializeComponent();
-                dataGridView1.ReadOnly = true;
-		}
+        public SellView()
+        {
+            InitializeComponent();
+            dataGridView1.ReadOnly = true;
+        }
 
         /* Der Barcodeleser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
          das der Code nun fertig ist. Danach wird der Barcode in einer anderen Funktion mit der Datanbank-Einträgen
@@ -42,7 +42,7 @@ namespace Shoppy.Views
                 txtInputBarcode.Text = "";
             }
         }
-        
+
         /* Beim aufruf dieser Funtkion wird der Artikel aus der Datanbank herausgelesen und in die Tabelle gelesen*/
         private void addprodukt(string BarCode)
         {
@@ -51,7 +51,7 @@ namespace Shoppy.Views
             Boolean isdouble = false;
 
             for (int i = 0; i < AnzahlZeilen; i++)
-            {                               
+            {
                 if (BarCode.Equals(dataGridView1.Rows[i].Cells[2].Value.ToString()))
                 {
                     int Produktanzahl = int.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
@@ -62,8 +62,8 @@ namespace Shoppy.Views
                 }
             }
             if (isdouble == false)
-              {
-            try
+            {
+                try
                 {
                     dataGridView1.Rows.Add("", produkt[0, 0], produkt[0, 1], produkt[0, 2], 1);
                 }
@@ -78,12 +78,12 @@ namespace Shoppy.Views
 
 
         /* Hier wird der GesamtPreis aller Aller Artikel zusammen gezählt und angezeigt*/
-        private void newPreis() 
+        private void newPreis()
         {
             int AnzahlZeilen = dataGridView1.Rows.Count;
             double TotalPreis = 0;
             for (int i = 0; i < AnzahlZeilen; i++)
-            { 
+            {
                 string preis = dataGridView1.Rows[i].Cells[3].Value.ToString();
                 double Anzahl = double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
                 double intPreis = double.Parse(preis);
@@ -92,8 +92,17 @@ namespace Shoppy.Views
                     intPreis = Anzahl * intPreis;
                 }
                 TotalPreis = TotalPreis + intPreis;
+                if (TotalPreis > 0) 
+                {
+                    SellMultipleProdukt.Enabled = true;
+                }
+                else if (TotalPreis == 0) 
+                {
+                    SellMultipleProdukt.Enabled = false;
+                }
+
             }
-            txtTotalPay.Text = String.Format("{0:0.00}", TotalPreis);   
+            txtTotalPay.Text = String.Format("{0:0.00}", TotalPreis);
         }
 
         /*löscht den Inhalt und die Zeile von der Zeile bei der der "lösch"-Button betätigt wurde*/
@@ -103,16 +112,16 @@ namespace Shoppy.Views
         }
 
         /* Funktion zum überprüfen ob auf eine Zeile oder einen Button gedrückt wurde */
-        
+
 
         /* Anzahl Artikel ändern*/
         private void SellMultipleProdukt_Click(object sender, EventArgs e)
         {
             if (txtMultipleProdukt.Text.Equals("") || BinEineZahl(txtMultipleProdukt.Text))
             {
-                MessageBox.Show("Achtung! Ungültige Eingabe Im Eingabefeld. Bitte eine Zahl eingeben.");
+                MessageBox.Show("Achtung! Ungültige Eingabe Im Eingabefeld. Bitte eine gültige Zahl eingeben.");
                 txtMultipleProdukt.Text = "";
-                TabIndex.Equals(4);
+                txtMultipleProdukt.Focus();
             }
             else
             {
@@ -177,7 +186,7 @@ namespace Shoppy.Views
                 double newKundenGehalt = kundenGehalt - zuBezahlenBetrag;
                 sa.UpdatePayClient(rfid_num, newKundenGehalt);
                 txtGehalt.Text = newKundenGehalt.ToString();
-                PrintSell sellPrint = new PrintSell(double.Parse(txtTotalPay.Text.ToString()),dataGridView1);
+                PrintSell sellPrint = new PrintSell(double.Parse(txtTotalPay.Text.ToString()), dataGridView1);
                 sellPrint.Kontrollblatt();
                 dataGridView1.Rows.Clear();
                 newPreis();
@@ -188,7 +197,7 @@ namespace Shoppy.Views
 
         private void btnPrintSell_Click(object sender, EventArgs e)
         {
-            PrintSell sellPrint = new PrintSell(double.Parse(txtTotalPay.Text.ToString()),dataGridView1);
+            PrintSell sellPrint = new PrintSell(double.Parse(txtTotalPay.Text.ToString()), dataGridView1);
             sellPrint.Kontrollblatt();
         }
 
@@ -226,8 +235,8 @@ namespace Shoppy.Views
 
         private void txtFields_Changed(object sender, EventArgs e)
         {
-            TextBox[] txtBoxen_wthInt = new TextBox[] { txtInputBarcode };
+            TextBox[] txtBoxen_wthInt = new TextBox[] { txtInputBarcode, txtMultipleProdukt };
             Eingabeüberprüfung.txtBoxValue_IsNumber(txtBoxen_wthInt);
         }
-	}
+    }
 }
