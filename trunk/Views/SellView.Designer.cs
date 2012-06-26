@@ -197,6 +197,7 @@
             // SellMultipleProdukt
             // 
             this.SellMultipleProdukt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SellMultipleProdukt.Enabled = false;
             this.SellMultipleProdukt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.SellMultipleProdukt.Location = new System.Drawing.Point(6, 3);
             this.SellMultipleProdukt.Margin = new System.Windows.Forms.Padding(6, 3, 6, 6);
@@ -204,7 +205,7 @@
             this.SellMultipleProdukt.Name = "SellMultipleProdukt";
             this.SellMultipleProdukt.Size = new System.Drawing.Size(307, 94);
             this.SellMultipleProdukt.TabIndex = 2;
-            this.SellMultipleProdukt.Text = "Mehrere Produkte";
+            this.SellMultipleProdukt.Text = "Anzahl Produkte";
             this.SellMultipleProdukt.UseVisualStyleBackColor = true;
             this.SellMultipleProdukt.Click += new System.EventHandler(this.SellMultipleProdukt_Click);
             // 

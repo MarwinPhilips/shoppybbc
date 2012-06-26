@@ -54,6 +54,7 @@
             // btnUpdateCam
             // 
             this.btnUpdateCam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdateCam.Enabled = false;
             this.btnUpdateCam.Location = new System.Drawing.Point(798, 111);
             this.btnUpdateCam.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateCam.Name = "btnUpdateCam";
@@ -94,6 +95,7 @@
             // btnNewCam
             // 
             this.btnNewCam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewCam.Enabled = false;
             this.btnNewCam.Location = new System.Drawing.Point(798, 216);
             this.btnNewCam.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewCam.Name = "btnNewCam";
@@ -111,6 +113,7 @@
             this.txtUpdateAnzeigename.Name = "txtUpdateAnzeigename";
             this.txtUpdateAnzeigename.Size = new System.Drawing.Size(186, 31);
             this.txtUpdateAnzeigename.TabIndex = 2;
+            this.txtUpdateAnzeigename.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtUpdateLoginname
             // 
@@ -120,6 +123,7 @@
             this.txtUpdateLoginname.Name = "txtUpdateLoginname";
             this.txtUpdateLoginname.Size = new System.Drawing.Size(186, 31);
             this.txtUpdateLoginname.TabIndex = 3;
+            this.txtUpdateLoginname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtUpdateIP
             // 
@@ -129,7 +133,7 @@
             this.txtUpdateIP.Name = "txtUpdateIP";
             this.txtUpdateIP.Size = new System.Drawing.Size(186, 31);
             this.txtUpdateIP.TabIndex = 1;
-            this.txtUpdateIP.TextChanged += new System.EventHandler(this.txtUpdateIP_TextChanged);
+            this.txtUpdateIP.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewIP
             // 
@@ -139,6 +143,7 @@
             this.txtNewIP.Name = "txtNewIP";
             this.txtNewIP.Size = new System.Drawing.Size(186, 31);
             this.txtNewIP.TabIndex = 6;
+            this.txtNewIP.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewLoginname
             // 
@@ -148,6 +153,7 @@
             this.txtNewLoginname.Name = "txtNewLoginname";
             this.txtNewLoginname.Size = new System.Drawing.Size(186, 31);
             this.txtNewLoginname.TabIndex = 8;
+            this.txtNewLoginname.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // txtNewAnzeigename
             // 
@@ -157,6 +163,7 @@
             this.txtNewAnzeigename.Name = "txtNewAnzeigename";
             this.txtNewAnzeigename.Size = new System.Drawing.Size(186, 31);
             this.txtNewAnzeigename.TabIndex = 7;
+            this.txtNewAnzeigename.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // tableLayoutPanel1
             // 
@@ -219,6 +226,7 @@
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
             this.txtUpdatePasswort.Size = new System.Drawing.Size(186, 31);
             this.txtUpdatePasswort.TabIndex = 4;
+            this.txtUpdatePasswort.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // label4
             // 
@@ -238,6 +246,7 @@
             this.txtNewPasswort.Name = "txtNewPasswort";
             this.txtNewPasswort.Size = new System.Drawing.Size(186, 31);
             this.txtNewPasswort.TabIndex = 9;
+            this.txtNewPasswort.TextChanged += new System.EventHandler(this.txtFields_Changed);
             // 
             // Anzeigename
             // 

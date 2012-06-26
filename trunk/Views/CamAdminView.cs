@@ -64,15 +64,42 @@ namespace Shoppy.Views
 
         private void btnNewCam_Click(object sender, EventArgs e)
         {
-            database.NewCam(txtNewIP.Text, txtNewAnzeigename.Text, txtNewLoginname.Text, txtNewPasswort.Text);
-            FillData();
+            if (Eingabeüberprüfung.txtBoxValue_validIP(txtNewIP))
+            {
+                txtNewIP.Text = "";
+                MessageBox.Show("Fehler bei IPeingabe");
+            }
+            else 
+            {
+                database.NewCam(txtNewIP.Text, txtNewAnzeigename.Text, txtNewLoginname.Text, txtNewPasswort.Text);
+                FillData();
+            }
+            
         }
 
-        private void txtUpdateIP_TextChanged(object sender, EventArgs e)
+        private void txtFields_Changed(object sender, EventArgs e)
         {
+            TextBox[] txtBoxNew = new TextBox[] { txtNewAnzeigename, txtNewIP, txtNewLoginname, txtNewPasswort };
 
+
+            if (Eingabeüberprüfung.TextBoxFilled(txtBoxNew))
+            {
+                btnNewCam.Enabled = true;
+            }
+            else
+            {
+                btnNewCam.Enabled = false;
+            }
+
+            TextBox[] txtBoxUpdate = new TextBox[] { txtUpdateAnzeigename, txtUpdateIP, txtUpdateLoginname, txtUpdatePasswort };
+            if (Eingabeüberprüfung.TextBoxFilled(txtBoxUpdate))
+            {
+                btnUpdateCam.Enabled = true;
+            }
+            else
+            {
+                btnUpdateCam.Enabled = false;
+            }
         }
-
-
 	}
 }
