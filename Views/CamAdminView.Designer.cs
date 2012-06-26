@@ -108,6 +108,7 @@
             // txtUpdateAnzeigename
             // 
             this.txtUpdateAnzeigename.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtUpdateAnzeigename.Enabled = false;
             this.txtUpdateAnzeigename.Location = new System.Drawing.Point(204, 111);
             this.txtUpdateAnzeigename.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateAnzeigename.Name = "txtUpdateAnzeigename";
@@ -118,6 +119,7 @@
             // txtUpdateLoginname
             // 
             this.txtUpdateLoginname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtUpdateLoginname.Enabled = false;
             this.txtUpdateLoginname.Location = new System.Drawing.Point(402, 111);
             this.txtUpdateLoginname.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateLoginname.Name = "txtUpdateLoginname";
@@ -128,6 +130,7 @@
             // txtUpdateIP
             // 
             this.txtUpdateIP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtUpdateIP.Enabled = false;
             this.txtUpdateIP.Location = new System.Drawing.Point(6, 111);
             this.txtUpdateIP.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdateIP.Name = "txtUpdateIP";
@@ -221,6 +224,7 @@
             // txtUpdatePasswort
             // 
             this.txtUpdatePasswort.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtUpdatePasswort.Enabled = false;
             this.txtUpdatePasswort.Location = new System.Drawing.Point(600, 111);
             this.txtUpdatePasswort.Margin = new System.Windows.Forms.Padding(6);
             this.txtUpdatePasswort.Name = "txtUpdatePasswort";
