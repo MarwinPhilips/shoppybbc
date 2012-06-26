@@ -20,7 +20,7 @@ namespace Shoppy.Views
 		{
 			InitializeComponent();
             FillData();
-            
+            dataGridView1.ReadOnly = true;
 		}
 
         private void FillData()

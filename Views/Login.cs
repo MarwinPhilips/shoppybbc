@@ -43,7 +43,8 @@ namespace Shoppy.Views
                 SellerName = sa.GetSellerName(txtUserRFID.Text);
                 txtUserRFID.Text = "";
                 MessageBox.Show("Hallo" + " "+SellerName);
-                Form1.sellView1.txtInputBarcode.Select();
+                SellView sv = new SellView();
+                sv.txtInputBarcode.Select();
 
             }
             else

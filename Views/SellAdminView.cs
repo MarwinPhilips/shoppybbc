@@ -21,6 +21,7 @@ namespace Shoppy.Views
         {
             InitializeComponent();
             FillData();
+            dataGridView1.ReadOnly = true;
         }
 
         private void FillData()
@@ -46,7 +47,6 @@ namespace Shoppy.Views
             txtUpdateBarcode.Text = row.Cells[3].Value.ToString();
             txtUpdatePreis.Text = row.Cells[4].Value.ToString();
             txtUpdateProdukt.Text = row.Cells[2].Value.ToString();
-            txtUpdateVorrat.Text = row.Cells[5].Value.ToString();
             btnUpdateSell.Tag = row.Cells[1].Value.ToString();
         }
         private void DeleteRow(DataGridViewCellEventArgs e)
@@ -57,21 +57,28 @@ namespace Shoppy.Views
 
         private void btnUpdateSell_Click(object sender, EventArgs e) 
         {
-            database.UpdateSell(btnUpdateSell.Tag.ToString(), txtUpdateProdukt.Text, txtUpdateBarcode.Text, txtUpdatePreis.Text, txtUpdateVorrat.Text);
+            database.UpdateSell(btnUpdateSell.Tag.ToString(), txtUpdateProdukt.Text, txtUpdateBarcode.Text, txtUpdatePreis.Text);
             FillData();
+            txtUpdateBarcode.Text = "";
+            txtUpdatePreis.Text = "";
+            txtUpdateProdukt.Text = "";
         }
 
         private void btnNewSell_Click(object sender, EventArgs e)
         {
-            database.NewSell(txtNewProdukt.Text, txtNewBarcode.Text, txtNewPreis.Text, txtNewVorrat.Text);
+            database.NewSell(txtNewProdukt.Text, txtNewBarcode.Text, txtNewPreis.Text);
             FillData();
+            txtNewBarcode.Text = "";
+            txtNewPreis.Text = "";
+            txtNewProdukt.Text = "";
+
         }
         private void txtFields_Changed(object sender, EventArgs e)
         {
-            TextBox[] txtBoxen_wthInt = new TextBox[] { txtNewBarcode, txtNewPreis, txtNewVorrat, txtUpdateBarcode, txtUpdatePreis, txtUpdateVorrat};
+            TextBox[] txtBoxen_wthInt = new TextBox[] { txtNewBarcode, txtNewPreis, txtUpdateBarcode, txtUpdatePreis};
             Eingabeüberprüfung.txtBoxValue_IsNumber(txtBoxen_wthInt);
 
-            TextBox[] txtBoxNew = new TextBox[] { txtUpdateBarcode, txtUpdatePreis, txtUpdateProdukt, txtUpdateVorrat };
+            TextBox[] txtBoxNew = new TextBox[] { txtUpdateBarcode, txtUpdatePreis, txtUpdateProdukt };
             if (Eingabeüberprüfung.TextBoxFilled(txtBoxNew))
             {
                 btnUpdateSell.Enabled = true;
@@ -81,7 +88,7 @@ namespace Shoppy.Views
                 btnUpdateSell.Enabled = false;
             } 
             
-            TextBox[] txtBoxUpdate = new TextBox[] { txtNewBarcode,txtNewPreis,txtNewProdukt,txtNewVorrat };
+            TextBox[] txtBoxUpdate = new TextBox[] { txtNewBarcode,txtNewPreis,txtNewProdukt };
             if (Eingabeüberprüfung.TextBoxFilled(txtBoxUpdate))
             {
                 btnNewSell.Enabled = true;                

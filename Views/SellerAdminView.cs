@@ -24,6 +24,7 @@ namespace Shoppy.Views
 		{
 			InitializeComponent();
             FillRows();
+            dataGridView1.ReadOnly = true;
 		}
         private void FillRows()
         {

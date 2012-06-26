@@ -27,6 +27,7 @@ namespace Shoppy.Views
 		public SellView()
 		{
                 InitializeComponent();
+                dataGridView1.ReadOnly = true;
 		}
 
         /* Der Barcodeleser liest den Code ein und gibt zum schluss noch eine Enter aus, damit das System weiss,
@@ -176,6 +177,8 @@ namespace Shoppy.Views
                 double newKundenGehalt = kundenGehalt - zuBezahlenBetrag;
                 sa.UpdatePayClient(rfid_num, newKundenGehalt);
                 txtGehalt.Text = newKundenGehalt.ToString();
+                PrintSell sellPrint = new PrintSell(double.Parse(txtTotalPay.Text.ToString()),dataGridView1);
+                sellPrint.Kontrollblatt();
                 dataGridView1.Rows.Clear();
                 newPreis();
             }
