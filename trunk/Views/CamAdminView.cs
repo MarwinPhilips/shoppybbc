@@ -84,7 +84,7 @@ namespace Shoppy.Views
 
             if (Eingabeüberprüfung.TextBoxFilled(txtBoxNew))
             {
-                btnNewCam.Enabled = true;
+                btnNewCam.Enabled = true;                
             }
             else
             {
@@ -95,10 +95,18 @@ namespace Shoppy.Views
             if (Eingabeüberprüfung.TextBoxFilled(txtBoxUpdate))
             {
                 btnUpdateCam.Enabled = true;
+                txtUpdateAnzeigename.Enabled = true;
+                txtUpdateIP.Enabled = true;
+                txtUpdateLoginname.Enabled = true;
+                txtUpdatePasswort.Enabled = true;
             }
             else
             {
                 btnUpdateCam.Enabled = false;
+                txtUpdateAnzeigename.Enabled = false;
+                txtUpdateIP.Enabled = false;
+                txtUpdateLoginname.Enabled = false;
+                txtUpdatePasswort.Enabled = false;
             }
         }
 	}
