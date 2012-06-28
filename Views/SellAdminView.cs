@@ -78,18 +78,24 @@ namespace Shoppy.Views
             TextBox[] txtBoxen_wthInt = new TextBox[] { txtNewBarcode, txtNewPreis, txtUpdateBarcode, txtUpdatePreis};
             Eingabeüberprüfung.txtBoxValue_IsNumber(txtBoxen_wthInt);
 
-            TextBox[] txtBoxNew = new TextBox[] { txtUpdateBarcode, txtUpdatePreis, txtUpdateProdukt };
-            if (Eingabeüberprüfung.TextBoxFilled(txtBoxNew))
+            TextBox[] txtBoxUpdate = new TextBox[] { txtUpdateBarcode, txtUpdatePreis, txtUpdateProdukt };
+            if (Eingabeüberprüfung.TextBoxFilled(txtBoxUpdate))
             {
                 btnUpdateSell.Enabled = true;
+                txtUpdateBarcode.Enabled = true;
+                txtUpdatePreis.Enabled = true;
+                txtUpdateProdukt.Enabled = true;
             }
             else
             {
                 btnUpdateSell.Enabled = false;
-            } 
+                txtUpdateBarcode.Enabled = false;
+                txtUpdatePreis.Enabled = false;
+                txtUpdateProdukt.Enabled = false;
+            }
             
-            TextBox[] txtBoxUpdate = new TextBox[] { txtNewBarcode,txtNewPreis,txtNewProdukt };
-            if (Eingabeüberprüfung.TextBoxFilled(txtBoxUpdate))
+            TextBox[] txtBoxNew = new TextBox[] { txtNewBarcode,txtNewPreis,txtNewProdukt };
+            if (Eingabeüberprüfung.TextBoxFilled(txtBoxNew))
             {
                 btnNewSell.Enabled = true;                
             }
